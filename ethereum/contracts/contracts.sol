@@ -1,4 +1,6 @@
 pragma solidity ^0.4.25;
+//counrty manager 0x755014Da263Fc47d238078Bb47d217F743E5B6a5
+//ISP 0xd19f982DBf2F8C7f5B4C78Ce8dEB1715BDCc5AFA school 0x1163C90F4F22ca7294f2E0206B4a2bDE45e27e1e
 
 contract Main{
     countryManager public newCountryManager;
@@ -60,6 +62,7 @@ contract ISP{
     
     //organizes the daily average of connectivity information from the the ISP
     struct connectivityInfo{
+        uint gigabytes;
         uint uploadSpeed;
         uint downloadSpeed;
     }
@@ -74,11 +77,12 @@ contract ISP{
         ispID = _ID;
     }
     
-     //receives connectivity information from an IOT device or another source at the schoo
-    function addConnectivityInfo(uint _date, uint _uploadSpeed,uint _downloadSpeed) public {
+     //receives connectivity information from ISP
+    function addConnectivityInfo(uint _date, uint _uploadSpeed,uint _downloadSpeed, uint _gigabytes) public {
         connectivityInfo memory info;
         info.uploadSpeed = _uploadSpeed;
         info.downloadSpeed = _downloadSpeed;
+        info.gigabytes = _gigabytes;
         connectivityRegistry[_date] = info;
     }
 }
@@ -95,6 +99,7 @@ contract School{
     struct connectivityInfo{
         uint uploadSpeed;
         uint downloadSpeed;
+        uint gigabytes;
     }
     // stores daily connectivity information
     mapping (uint=>connectivityInfo) public connectivityRegistry;
@@ -107,11 +112,12 @@ contract School{
         schoolPopulation = _population;
     }
     
-    //receives connectivity information from an IOT device or another source at the schoo
-    function addConnectivityInfo(uint _date, uint _uploadSpeed,uint _downloadSpeed) public {
+    //receives connectivity information from an IOT device or another reliable source at the school
+    function addConnectivityInfo(uint _date, uint _uploadSpeed,uint _downloadSpeed, uint _gigabytes) public {
         connectivityInfo memory info;
         info.uploadSpeed = _uploadSpeed;
         info.downloadSpeed = _downloadSpeed;
+        info.gigabytes = _gigabytes;
         connectivityRegistry[_date] = info;
     }
     
