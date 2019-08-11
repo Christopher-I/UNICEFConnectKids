@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Button } from "antd";
+import { Link } from "../../routes";
 
 class ApplyModal extends React.Component {
 	render() {
@@ -11,10 +12,16 @@ class ApplyModal extends React.Component {
 				onCancel={this.props.applyModalhandleCancel}
 			>
 				<div style={{ marginBottom: 16 }}>
-					<Button block>Apply As School</Button>
+					<Link route={"/applicationForms/schoolApplication"}>
+						<Button block onClick>
+							Apply As School
+						</Button>
+					</Link>
 					<br />
 					<br />
-					<Button block>Apply As ISP</Button>
+					<Link route={"/applicationForms/ISPApplication"}>
+						<Button block>Apply As ISP</Button>
+					</Link>
 				</div>
 			</Modal>
 		);

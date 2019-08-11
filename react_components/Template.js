@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Head from "./Head";
-import NigeriaMap from "./maps/NigeriaMap";
 import ListOfSchools from "./tables/SchoolTable";
 import LoginModal from "./modals/LoginModal";
 import ApplyModal from "./modals/ApplyModal";
+import ViewConnectivity from "./ViewConnectivity";
+import { Link, Router } from "../routes";
 //import {openLoginModal} from "./modals/modalFunctions"
 import {
 	Layout,
@@ -16,20 +17,13 @@ import {
 	Dropdown,
 	Tabs,
 	Divider,
-	Breadcrumb,
-	Progress,
-	Card
+	Progress
 } from "antd";
 
 //define extract child properties
 const { Header, Content, Footer } = Layout;
-const { Meta } = Card;
 const { SubMenu } = Menu;
 const { TabPane } = Tabs;
-
-function callback(key) {
-	console.log(key);
-}
 
 class Template extends React.Component {
 	state = {
@@ -98,6 +92,12 @@ class Template extends React.Component {
 						mode="horizontal"
 						theme="dark"
 					>
+						<Menu.Item>
+							<Link route={"/"}>
+								<a> Home</a>
+							</Link>
+						</Menu.Item>
+
 						<SubMenu
 							title={
 								<span className="submenu-title-wrapper">
@@ -141,113 +141,7 @@ class Template extends React.Component {
 					</Menu>
 				</Header>
 
-				{this.state.countrySelected ? (
-					<div>
-						{" "}
-						<Content style={{ padding: "25px 50px" }}>
-							<div
-								style={{
-									background: "#fff",
-									padding: 10,
-									height: 100
-								}}
-							>
-								<Row>
-									<Col span={22}>
-										<div>
-											Connected Schools:
-											<Progress
-												type="circle"
-												strokeColor={{
-													"0%": "#108ee9",
-													"100%": "#87d068"
-												}}
-												percent={
-													this.state
-														.percentageOfConnectedSchool
-												}
-												width={80}
-											/>
-											<Divider type="vertical" />
-											Total Number of Schools:{" "}
-											{this.state.TotalNumberofSchools}
-											<Divider type="vertical" />
-											Funding Needed to Connect All
-											Schools:{" "}
-											{
-												this.state
-													.FundingNeededtoConnectAllSchools
-											}{" "}
-											ETH
-											<Divider type="vertical" />
-											Funding Received:
-											{this.state.FundingReceived} ETH
-											<Divider type="vertical" />
-											Amount Needed to Fund additional
-											School:{" "}
-											{
-												this.state
-													.AmountNeededtoFundadditionalSchool
-											}{" "}
-											ETH
-										</div>
-									</Col>
-
-									<Col span={2}>
-										<Button type="primary">Donate</Button>
-									</Col>
-								</Row>{" "}
-							</div>
-						</Content>
-						<Content style={{ padding: "0 50px" }}>
-							<div
-								style={{
-									background: "#fff",
-									padding: 24,
-									minHeight: 500
-								}}
-							>
-								<Row>
-									<Col span={12}>
-										<NigeriaMap />
-									</Col>
-
-									<Col span={12}>
-										<Tabs
-											defaultActiveKey="1"
-											onChange={callback}
-										>
-											<TabPane
-												tab="List Of Schools"
-												key="1"
-											>
-												<ListOfSchools />
-											</TabPane>
-											<TabPane tab="List Of ISPs" key="2">
-												Content of Tab Pane 2
-											</TabPane>
-											<TabPane tab="Transfers" key="3">
-												Content of Tab Pane 3
-											</TabPane>
-										</Tabs>
-									</Col>
-								</Row>
-							</div>
-						</Content>
-					</div>
-				) : (
-					<Content style={{ padding: "25px 50px" }}>
-						<div
-							style={{
-								background: "#fff",
-								padding: 10,
-								minHeight: 500
-							}}
-						>
-							<h1>Please Select a Country</h1>
-						</div>
-					</Content>
-				)}
+				{this.props.children}
 
 				<LoginModal
 					loginModalVisibility={this.state.loginModalVisibility}
