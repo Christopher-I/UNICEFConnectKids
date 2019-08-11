@@ -1,0 +1,7 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var mainContractAddress = exports.mainContractAddress = "0x71e26d4eedb882b683049db314a0542f7721010e";
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV0aGVyZXVtL0xpc3RvZlNtYXJ0Q29udHJhY3RBZGRyZXNzZXMuanMiXSwibmFtZXMiOlsibWFpbkNvbnRyYWN0QWRkcmVzcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBTyxJQUFNLG9EQUFzQixBQUE1QiIsImZpbGUiOiJMaXN0b2ZTbWFydENvbnRyYWN0QWRkcmVzc2VzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jaHJpcy9Eb2N1bWVudHMvQmxvY2tjaGFpblByb2plY3RzL1VuaWNlZi9jb25uZWN0S2lkc1VuaWNlZiJ9

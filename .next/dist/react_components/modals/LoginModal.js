@@ -30,6 +30,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _antd = require("antd");
 
+var _routes = require("../../routes");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/react_components/modals/LoginModal.js";
@@ -54,18 +56,13 @@ var LoginModal = function (_React$Component) {
 				onCancel: this.props.loginModalhandleCancel,
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 7
+					lineNumber: 8
 				}
 			}, _react2.default.createElement("div", { style: { marginBottom: 16 }, __source: {
 					fileName: _jsxFileName,
-					lineNumber: 13
-				}
-			}, _react2.default.createElement(_antd.Input, { addonBefore: "UserName", defaultValue: "username..", __source: {
-					fileName: _jsxFileName,
 					lineNumber: 14
 				}
-			}), _react2.default.createElement("br", {
-				__source: {
+			}, _react2.default.createElement(_antd.Input, { addonBefore: "UserName", defaultValue: "username..", __source: {
 					fileName: _jsxFileName,
 					lineNumber: 15
 				}
@@ -74,15 +71,29 @@ var LoginModal = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 16
 				}
+			}), _react2.default.createElement("br", {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 17
+				}
 			}), _react2.default.createElement(_antd.Input, {
 				addonBefore: "Password",
 				defaultValue: "******",
 				type: "password",
 				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 17
+					lineNumber: 18
 				}
-			})));
+			})), _react2.default.createElement(_routes.Link, { route: "/admin", __source: {
+					fileName: _jsxFileName,
+					lineNumber: 24
+				}
+			}, _react2.default.createElement(_antd.Button, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 25
+				}
+			}, "Log In")));
 		}
 	}]);
 
@@ -90,4 +101,4 @@ var LoginModal = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = LoginModal;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvbW9kYWxzL0xvZ2luTW9kYWwuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJNb2RhbCIsIklucHV0IiwiTG9naW5Nb2RhbCIsInByb3BzIiwibG9naW5Nb2RhbFZpc2liaWxpdHkiLCJsb2dpbk1vZGFsaGFuZGxlT2siLCJsb2dpbk1vZGFsaGFuZGxlQ2FuY2VsIiwibWFyZ2luQm90dG9tIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFTLEFBQU87Ozs7Ozs7SUFFVixBOzs7Ozs7Ozs7OzsyQkFDSSxBQUNSOzBCQUNDLEFBQUM7V0FBRCxBQUNPLEFBQ047YUFBUyxLQUFBLEFBQUssTUFGZixBQUVxQixBQUNwQjtVQUFNLEtBQUEsQUFBSyxNQUhaLEFBR2tCLEFBQ2pCO2NBQVUsS0FBQSxBQUFLLE1BSmhCLEFBSXNCOztlQUp0QjtpQkFBQSxBQU1DO0FBTkQ7QUFDQyxJQURELGtCQU1DLGNBQUEsU0FBSyxPQUFPLEVBQUUsY0FBZCxBQUFZLEFBQWdCO2VBQTVCO2lCQUFBLEFBQ0M7QUFERDtzQkFDQyxBQUFDLDZCQUFNLGFBQVAsQUFBbUIsWUFBVyxjQUE5QixBQUEyQztlQUEzQztpQkFERCxBQUNDLEFBQ0E7QUFEQTs7O2VBQ0E7aUJBRkQsQUFFQyxBQUNBO0FBREE7QUFBQTs7ZUFDQTtpQkFIRCxBQUdDLEFBQ0E7QUFEQTtBQUFBLHVCQUNBLEFBQUM7aUJBQUQsQUFDYSxBQUNaO2tCQUZELEFBRWMsQUFDYjtVQUhELEFBR007O2VBSE47aUJBWEgsQUFDQyxBQU1DLEFBSUMsQUFRSDtBQVJHO0FBQ0M7Ozs7O0VBZG1CLGdCQUFNLEEsQUF3Qi9COztrQkFBQSxBQUFlIiwiZmlsZSI6IkxvZ2luTW9kYWwuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NocmlzL0RvY3VtZW50cy9CbG9ja2NoYWluUHJvamVjdHMvVW5pY2VmL2Nvbm5lY3RLaWRzVW5pY2VmIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvbW9kYWxzL0xvZ2luTW9kYWwuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJNb2RhbCIsIklucHV0IiwiQnV0dG9uIiwiTGluayIsIkxvZ2luTW9kYWwiLCJwcm9wcyIsImxvZ2luTW9kYWxWaXNpYmlsaXR5IiwibG9naW5Nb2RhbGhhbmRsZU9rIiwibG9naW5Nb2RhbGhhbmRsZUNhbmNlbCIsIm1hcmdpbkJvdHRvbSIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPOzs7O0FBQ1AsQUFBUyxBQUFPLEFBQU87O0FBQ3ZCLEFBQVMsQUFBWTs7Ozs7OztJQUVmLEE7Ozs7Ozs7Ozs7OzJCQUNJLEFBQ1I7MEJBQ0MsQUFBQztXQUFELEFBQ08sQUFDTjthQUFTLEtBQUEsQUFBSyxNQUZmLEFBRXFCLEFBQ3BCO1VBQU0sS0FBQSxBQUFLLE1BSFosQUFHa0IsQUFDakI7Y0FBVSxLQUFBLEFBQUssTUFKaEIsQUFJc0I7O2VBSnRCO2lCQUFBLEFBTUM7QUFORDtBQUNDLElBREQsa0JBTUMsY0FBQSxTQUFLLE9BQU8sRUFBRSxjQUFkLEFBQVksQUFBZ0I7ZUFBNUI7aUJBQUEsQUFDQztBQUREO3NCQUNDLEFBQUMsNkJBQU0sYUFBUCxBQUFtQixZQUFXLGNBQTlCLEFBQTJDO2VBQTNDO2lCQURELEFBQ0MsQUFDQTtBQURBOzs7ZUFDQTtpQkFGRCxBQUVDLEFBQ0E7QUFEQTtBQUFBOztlQUNBO2lCQUhELEFBR0MsQUFDQTtBQURBO0FBQUEsdUJBQ0EsQUFBQztpQkFBRCxBQUNhLEFBQ1o7a0JBRkQsQUFFYyxBQUNiO1VBSEQsQUFHTTs7ZUFITjtpQkFWRixBQU1DLEFBSUMsQUFNRDtBQU5DO0FBQ0Msd0JBS0YsQUFBQyw4QkFBSyxPQUFOLEFBQWE7ZUFBYjtpQkFBQSxBQUNDO0FBREQ7c0JBQ0MsQUFBQzs7ZUFBRDtpQkFBQTtBQUFBO0FBQUEsTUFsQkgsQUFDQyxBQWdCQyxBQUNDLEFBSUg7Ozs7O0VBeEJ1QixnQkFBTSxBLEFBMkIvQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJMb2dpbk1vZGFsLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jaHJpcy9Eb2N1bWVudHMvQmxvY2tjaGFpblByb2plY3RzL1VuaWNlZi9jb25uZWN0S2lkc1VuaWNlZiJ9

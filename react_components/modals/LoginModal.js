@@ -1,5 +1,6 @@
 import React from "react";
-import { Modal, Input } from "antd";
+import { Modal, Input, Button } from "antd";
+import { Link } from "../../routes";
 
 class LoginModal extends React.Component {
 	render() {
@@ -20,6 +21,9 @@ class LoginModal extends React.Component {
 						type="password"
 					/>
 				</div>
+				<Link route={"/admin"}>
+					<Button>Log In</Button>
+				</Link>
 			</Modal>
 		);
 	}
