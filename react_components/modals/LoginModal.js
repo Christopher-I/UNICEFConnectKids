@@ -21,9 +21,6 @@ class LoginModal extends React.Component {
 						type="password"
 					/>
 				</div>
-				<Link route={"/admin"}>
-					<Button>Log In</Button>
-				</Link>
 			</Modal>
 		);
 	}

@@ -4,6 +4,14 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _regenerator = require("babel-runtime/regenerator");
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _asyncToGenerator2 = require("babel-runtime/helpers/asyncToGenerator");
+
+var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+
 var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -30,30 +38,282 @@ var _react2 = _interopRequireDefault(_react);
 
 var _antd = require("antd");
 
-var _ISPTableColumnAndData = require("./ISPTableColumnAndData");
+var _sample = require("../../pages/chart/sample");
+
+var _sample2 = _interopRequireDefault(_sample);
+
+var _getListOfCountryManagers = require("../../ethereum/deployedContractCalls/main/getListOfCountryManagers");
+
+var _getListOfCountryManagers2 = _interopRequireDefault(_getListOfCountryManagers);
+
+var _createNewCountryManager = require("../../ethereum/deployedContractCalls/main/createNewCountryManager");
+
+var _createNewCountryManager2 = _interopRequireDefault(_createNewCountryManager);
+
+var _ListofSmartContractAddresses = require("../../ethereum/ListofSmartContractAddresses");
+
+var _getContractSummary = require("../../ethereum/deployedContractCalls/getContractSummary");
+
+var _getSummaryOfAllSchoolsInCountry = require("../../ethereum/deployedContractCalls/countryManager/getSummaryOfAllSchoolsInCountry");
+
+var _getSummaryOfAllSchoolsInCountry2 = _interopRequireDefault(_getSummaryOfAllSchoolsInCountry);
+
+var _getSummaryOfAll_ISPsInCountry = require("../../ethereum/deployedContractCalls/countryManager/getSummaryOfAll_ISPsInCountry");
+
+var _getSummaryOfAll_ISPsInCountry2 = _interopRequireDefault(_getSummaryOfAll_ISPsInCountry);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/react_components/tables/SchoolTable.js";
+//import { columns, data } from "./SchoolTableColumnAndData";
 
+
+var columns = [{
+	title: "School Name",
+	dataIndex: "0",
+	key: "0",
+	render: function render(text) {
+		return _react2.default.createElement("a", { href: "javascript:;", __source: {
+				fileName: _jsxFileName,
+				lineNumber: 23
+			}
+		}, text);
+	}
+}, {
+	title: "Population",
+	dataIndex: "3",
+	key: "3"
+}, {
+	title: "Location",
+	dataIndex: "2",
+	key: "2"
+}, {
+	title: "Status",
+	key: "tags",
+	dataIndex: "4",
+	render: function render(bool) {
+		if (bool === true) {
+			return _react2.default.createElement(_antd.Tag, { color: "green", __source: {
+					fileName: _jsxFileName,
+					lineNumber: 42
+				}
+			}, "Connected");
+		} else {
+			return _react2.default.createElement(_antd.Tag, { color: "red", __source: {
+					fileName: _jsxFileName,
+					lineNumber: 44
+				}
+			}, "Not Connected");
+		}
+	}
+}, {
+	title: "",
+	key: "action",
+	render: function render(text, record) {
+		return _react2.default.createElement("span", {
+			__source: {
+				fileName: _jsxFileName,
+				lineNumber: 52
+			}
+		}, _react2.default.createElement("a", { href: "javascript:;", __source: {
+				fileName: _jsxFileName,
+				lineNumber: 53
+			}
+		}, "Details"));
+	}
+}];
 
 var SchoolTable = function (_React$Component) {
 	(0, _inherits3.default)(SchoolTable, _React$Component);
 
 	function SchoolTable() {
+		var _ref;
+
+		var _temp, _this, _ret;
+
 		(0, _classCallCheck3.default)(this, SchoolTable);
 
-		return (0, _possibleConstructorReturn3.default)(this, (SchoolTable.__proto__ || (0, _getPrototypeOf2.default)(SchoolTable)).apply(this, arguments));
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
+
+		return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = SchoolTable.__proto__ || (0, _getPrototypeOf2.default)(SchoolTable)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+			data: "",
+			connectivityModalVisibility: false,
+			columns1: [{
+				title: "School Name",
+				dataIndex: "0",
+				key: "0",
+				render: function render(text) {
+					return _react2.default.createElement("a", { href: "javascript:;", __source: {
+							fileName: _jsxFileName,
+							lineNumber: 68
+						}
+					}, text);
+				}
+			}, {
+				title: "Population",
+				dataIndex: "3",
+				key: "3"
+			}, {
+				title: "Location",
+				dataIndex: "2",
+				key: "2"
+			}, {
+				title: "Status",
+				key: "tags",
+				dataIndex: "4",
+				render: function render(bool) {
+					if (bool === true) {
+						return _react2.default.createElement(_antd.Tag, { color: "green", __source: {
+								fileName: _jsxFileName,
+								lineNumber: 87
+							}
+						}, "Connected");
+					} else {
+						return _react2.default.createElement(_antd.Tag, { color: "red", __source: {
+								fileName: _jsxFileName,
+								lineNumber: 89
+							}
+						}, "Not Connected");
+					}
+				}
+			}, {
+				title: "",
+				key: "action",
+				render: function render(text, record) {
+					return _react2.default.createElement("span", {
+						__source: {
+							fileName: _jsxFileName,
+							lineNumber: 97
+						}
+					}, _react2.default.createElement("a", {
+						onClick: _this.openConnectivityModal,
+						href: "javascript:;",
+						__source: {
+							fileName: _jsxFileName,
+							lineNumber: 98
+						}
+					}, "Details"));
+				}
+			}]
+		}, _this.openConnectivityModal = function (e) {
+			_this.setState({
+				connectivityModalVisibility: true
+			});
+		}, _this.connectivityModalhandleCancel = function (e) {
+			_this.setState({
+				connectivityModalVisibility: false
+			});
+		}, _this.connectivityModalhandleOk = function (e) {
+			_this.setState({
+				connectivityModalVisibility: false
+			});
+		}, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
 	}
 
 	(0, _createClass3.default)(SchoolTable, [{
+		key: "componentDidMount",
+		value: function () {
+			var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+				var result, countryManagerNigeria, countryManagerNigeriaSummary, schoolSummary;
+				return _regenerator2.default.wrap(function _callee$(_context) {
+					while (1) {
+						switch (_context.prev = _context.next) {
+							case 0:
+								_context.prev = 0;
+								_context.next = 3;
+								return (0, _getListOfCountryManagers2.default)(_ListofSmartContractAddresses.mainContractAddress);
+
+							case 3:
+								result = _context.sent;
+
+								//the first country oin the away is Nigeria
+								countryManagerNigeria = result[0];
+								//get the summary of the contract manager of Nigeria
+
+								_context.next = 7;
+								return (0, _getContractSummary.GetCountryManagerSummary)(countryManagerNigeria);
+
+							case 7:
+								countryManagerNigeriaSummary = _context.sent;
+								_context.next = 10;
+								return (0, _getSummaryOfAllSchoolsInCountry2.default)(countryManagerNigeriaSummary);
+
+							case 10:
+								schoolSummary = _context.sent;
+
+								//console.log(JSON.parse(JSON.stringify(schoolSummary)));
+								this.setState({
+									data: schoolSummary
+								});
+
+								// //get summary of all ISP under the contract manager of Nigeria
+								// const ISPSummary = await GetSummaryOfAllISPsInCountry(
+								//   countryManagerNigeriaSummary
+								// );
+								// console.log(ISPSummary);
+								_context.next = 17;
+								break;
+
+							case 14:
+								_context.prev = 14;
+								_context.t0 = _context["catch"](0);
+
+								this.setState({ errorMessage: _context.t0.message });
+
+							case 17:
+							case "end":
+								return _context.stop();
+						}
+					}
+				}, _callee, this, [[0, 14]]);
+			}));
+
+			function componentDidMount() {
+				return _ref2.apply(this, arguments);
+			}
+
+			return componentDidMount;
+		}()
+	}, {
 		key: "render",
 		value: function render() {
-			return _react2.default.createElement(_antd.Table, { columns: _ISPTableColumnAndData.columns, dataSource: _ISPTableColumnAndData.data, __source: {
+			return _react2.default.createElement("div", {
+				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 7
+					lineNumber: 160
 				}
-			});
+			}, _react2.default.createElement(_antd.Table, {
+				columns: this.state.columns1,
+				dataSource: this.state.data,
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 161
+				}
+			}), _react2.default.createElement(_antd.Modal, {
+				title: "ISP Perfomance Chart",
+				visible: this.state.connectivityModalVisibility,
+				onOk: this.connectivityModalhandleOk,
+				onCancel: this.connectivityModalhandleCancel,
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 165
+				}
+			}, "Data Consumption", _react2.default.createElement(_antd.Progress, { percent: 50, showInfo: false, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 172
+				}
+			}), "GB", _react2.default.createElement("div", { style: { marginBottom: 16 }, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 174
+				}
+			}, _react2.default.createElement(_sample2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 175
+				}
+			}), " ")));
 		}
 	}]);
 
@@ -61,4 +321,4 @@ var SchoolTable = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = SchoolTable;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvdGFibGVzL1NjaG9vbFRhYmxlLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiVGFibGUiLCJjb2x1bW5zIiwiZGF0YSIsIlNjaG9vbFRhYmxlIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFTOztBQUNULEFBQVMsQUFBUyxBQUFZOzs7Ozs7O0lBRXhCLEE7Ozs7Ozs7Ozs7OzJCQUNJLEFBQ1I7MEJBQU8sQUFBQyw2QkFBRCxBQUFPLEFBQVMseUNBQWhCLEFBQXlCLEFBQVk7ZUFBckM7aUJBQVAsQUFBTyxBQUNQO0FBRE87SUFBQTs7Ozs7RUFGaUIsZ0JBQU0sQSxBQU1oQzs7a0JBQUEsQUFBZSIsImZpbGUiOiJTY2hvb2xUYWJsZS5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY2hyaXMvRG9jdW1lbnRzL0Jsb2NrY2hhaW5Qcm9qZWN0cy9VbmljZWYvY29ubmVjdEtpZHNVbmljZWYifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvdGFibGVzL1NjaG9vbFRhYmxlLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiVGFibGUiLCJUYWciLCJNb2RhbCIsIlByb2dyZXNzIiwiSW50ZXJuZXRTcGVlZENoYXJ0IiwiR2V0TGlzdE9mQ291bnRyeU1hbmFnZXJzIiwiQ3JlYXRlTmV3Q291bnRyeU1hbmdlciIsIm1haW5Db250cmFjdEFkZHJlc3MiLCJvd25lciIsIkdldENvdW50cnlNYW5hZ2VyU3VtbWFyeSIsIkdldFNjaG9vbFN1bW1hcnkiLCJHZXRTdW1tYXJ5T2ZBbGxTY2hvb2xzSW5Db3VudHJ5IiwiR2V0U3VtbWFyeU9mQWxsSVNQc0luQ291bnRyeSIsImNvbHVtbnMiLCJ0aXRsZSIsImRhdGFJbmRleCIsImtleSIsInJlbmRlciIsInRleHQiLCJib29sIiwicmVjb3JkIiwiU2Nob29sVGFibGUiLCJzdGF0ZSIsImRhdGEiLCJjb25uZWN0aXZpdHlNb2RhbFZpc2liaWxpdHkiLCJjb2x1bW5zMSIsIm9wZW5Db25uZWN0aXZpdHlNb2RhbCIsInNldFN0YXRlIiwiY29ubmVjdGl2aXR5TW9kYWxoYW5kbGVDYW5jZWwiLCJjb25uZWN0aXZpdHlNb2RhbGhhbmRsZU9rIiwicmVzdWx0IiwiY291bnRyeU1hbmFnZXJOaWdlcmlhIiwiY291bnRyeU1hbmFnZXJOaWdlcmlhU3VtbWFyeSIsInNjaG9vbFN1bW1hcnkiLCJlcnJvck1lc3NhZ2UiLCJtZXNzYWdlIiwibWFyZ2luQm90dG9tIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQVMsQUFBTyxBQUFLLEFBQU87O0FBQzVCLEFBQU8sQUFBd0I7Ozs7QUFFL0IsQUFBTyxBQUE4Qjs7OztBQUNyQyxBQUFPLEFBQTRCOzs7O0FBQ25DLEFBQ0MsQUFDQSxBQUNNOztBQUNQLEFBQ0MsQUFDQSxBQUNNOztBQUNQLEFBQU8sQUFBcUM7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QUNNO0EsZ0NBQXdCLE9BQUEsQUFBTyxBLEFBQ3JDOzs7O2VBQzJDLGtELEFBQUEsQUFDMUM7O1lBREs7QTs7ZUFJc0IsK0MsQUFBQSxBQUMzQjs7WUFESztBLGlDQUlOOztBQUNBO2FBQUEsQUFBSztlQUFMLEFBQWMsQUFDUCxBQUdQO0FBSmMsQUFDYjs7QUFJRDtBQUNBO0FBQ0E7QUFDQTs7Ozs7Ozt3Q0FFQTs7YUFBQSxBQUFLLFNBQVMsRUFBRSxjQUFjLFlBQTlCLEFBQWMsQUFBb0I7Ozs7Ozs7Ozs7Ozs7Ozs7OzsyQkFJM0IsQUFDUjswQkFDQyxjQUFBOztlQUFBO2lCQUFBLEFBQ0M7QUFERDtBQUFBLElBQUEsa0JBQ0MsQUFBQzthQUNTLEtBQUEsQUFBSyxNQURmLEFBQ3FCLEFBQ3BCO2dCQUFZLEtBQUEsQUFBSyxNQUZsQixBQUV3Qjs7ZUFGeEI7aUJBREQsQUFDQyxBQUlBO0FBSkE7QUFDQyx1QkFHRCxBQUFDO1dBQUQsQUFDTyxBQUNOO2FBQVMsS0FBQSxBQUFLLE1BRmYsQUFFcUIsQUFDcEI7VUFBTSxLQUhQLEFBR1ksQUFDWDtjQUFVLEtBSlgsQUFJZ0I7O2VBSmhCO2lCQUFBO0FBQUE7QUFDQyxNQU1BLG9DQUFBLEFBQUMsZ0NBQVMsU0FBVixBQUFtQixJQUFJLFVBQXZCLEFBQWlDO2VBQWpDO2lCQVBELEFBT0M7QUFBQTtPQUVBLHNCQUFBLGNBQUEsU0FBSyxPQUFPLEVBQUUsY0FBZCxBQUFZLEFBQWdCO2VBQTVCO2lCQUFBLEFBQ0M7QUFERDtzQkFDQyxBQUFDOztlQUFEO2lCQURELEFBQ0MsQUFBdUI7QUFBdkI7QUFBQSxPQWhCSixBQUNDLEFBS0MsQUFTQyxBQU1IOzs7OztFQXpId0IsZ0JBQU0sQSxBQTRIaEM7O2tCQUFBLEFBQWUiLCJmaWxlIjoiU2Nob29sVGFibGUuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NocmlzL0RvY3VtZW50cy9CbG9ja2NoYWluUHJvamVjdHMvVW5pY2VmL2Nvbm5lY3RLaWRzVW5pY2VmIn0=

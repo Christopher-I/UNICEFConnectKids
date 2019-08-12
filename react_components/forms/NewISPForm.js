@@ -11,6 +11,12 @@ import {
   Button,
   AutoComplete
 } from "antd";
+import CreateNewISP from "../../ethereum/deployedContractCalls/countryManager/createNewISP";
+import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
+import {
+  mainContractAddress,
+  owner
+} from "../../ethereum/ListofSmartContractAddresses";
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -19,44 +25,34 @@ const AutoCompleteOption = AutoComplete.Option;
 class RegistrationForm extends React.Component {
   state = {
     confirmDirty: false,
-    autoCompleteResult: []
+    autoCompleteResult: [],
+    ISPOwnerAddress: "",
+    promisedDownloadSpeed: "",
+    promisedUploadSpeed: "",
+    promisedDataSize: "",
+    ISPName: ""
   };
 
-  handleSubmit = e => {
+  //creates a new ISP provider
+  createNewISP = async e => {
     e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-      }
-    });
+    let result = await GetListOfCountryManagers(mainContractAddress);
+
+    const feedback = await CreateNewISP(
+      result[0],
+      this.state.ISPName,
+      this.state.promisedUploadSpeed,
+      this.state.promisedDownloadSpeed,
+      this.state.promisedDataSize,
+      owner
+    );
+    console.log(feedback);
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
     const { autoCompleteResult } = this.state;
 
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 }
-      }
-    };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0
-        },
-        sm: {
-          span: 16,
-          offset: 8
-        }
-      }
-    };
     const prefixSelector = getFieldDecorator("prefix", {
       initialValue: "234"
     })(
@@ -70,29 +66,48 @@ class RegistrationForm extends React.Component {
       <div>
         <br />
         <br />
-        <Form
-          {...formItemLayout}
-          onSubmit={this.handleSubmit}
-          style={{ padding: "50px 100px" }}
-        >
+        <Form onSubmit={this.createNewISP} style={{ padding: "50px 100px" }}>
           <Form.Item label="ISP Name">
-            <Input />
+            <Input
+              value={this.state.ISPName}
+              onChange={event => this.setState({ ISPName: event.target.value })}
+            />
           </Form.Item>
 
           <Form.Item label="Promised Data Size">
-            <Input />
+            <Input
+              value={this.state.promisedDataSize}
+              onChange={event =>
+                this.setState({ promisedDataSize: event.target.value })
+              }
+            />
           </Form.Item>
 
           <Form.Item label="Promised Upload Speed">
-            <Input />
+            <Input
+              value={this.state.promisedUploadSpeed}
+              onChange={event =>
+                this.setState({ promisedUploadSpeed: event.target.value })
+              }
+            />
           </Form.Item>
 
           <Form.Item label="Promised Download Speed">
-            <Input />
+            <Input
+              value={this.state.promisedDownloadSpeed}
+              onChange={event =>
+                this.setState({ promisedDownloadSpeed: event.target.value })
+              }
+            />
           </Form.Item>
 
-          <Form.Item label="Ethereum Address">
-            <Input />
+          <Form.Item label="ISP Owner Address">
+            <Input
+              value={this.state.ISPOwnerAddress}
+              onChange={event =>
+                this.setState({ ISPOwnerAddress: event.target.value })
+              }
+            />
           </Form.Item>
 
           <Form.Item label="Contact Information">
@@ -103,7 +118,7 @@ class RegistrationForm extends React.Component {
             <TextArea rows={4} />
           </Form.Item>
 
-          <Form.Item {...tailFormItemLayout}>
+          <Form.Item>
             <Button type="primary" htmlType="submit">
               Register
             </Button>

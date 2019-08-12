@@ -7,10 +7,17 @@ import {
 	Tabs,
 	Divider,
 	Breadcrumb,
-	Progress
+	Progress,
+	Input,
+	Tag
 } from "antd";
 import ListOfSchools from "./tables/SchoolTable";
+import ListOfISPs from "./tables/ISPTable";
 import NigeriaMap from "./img/NigeriaMap";
+import ListOfTransactions from "./tables/TransactionsTable";
+import SendDonation from "../ethereum/deployedContractCalls/countryManager/sendDonation";
+import { countryManagerAddress } from "../ethereum/ListofSmartContractAddresses";
+import { Link, Router } from "../routes";
 
 //define extract child properties
 const { Header, Content, Footer } = Layout;
@@ -22,13 +29,47 @@ function callback(key) {
 class ViewConnectivity extends React.Component {
 	state = {
 		TotalNumberofSchools: "0",
-		FundingNeededtoConnectAllSchools: "0",
+		FundingNeededtoConnectAllSchools: " X ",
 		FundingReceived: "0",
-		AmountNeededtoFundadditionalSchool: "0",
+		AmountNeededtoFundadditionalSchool: "X ",
 		percentageOfConnectedSchool: "50",
 		loginModalVisibility: false,
 		applyModalVisibility: false,
-		countrySelected: false
+		countrySelected: false,
+		balance: "",
+		donationAmount: ""
+	};
+
+	componentDidMount() {
+		fetch(
+			`https://api-rinkeby.etherscan.io/api?module=account&action=balance&address=${countryManagerAddress}&tag=latest&apikey=YourApiKeyToken`
+		)
+			.then(res => res.json())
+			.then(
+				result => {
+					this.setState({
+						isLoaded: true,
+						loading: false,
+						balance: result.result
+					});
+				},
+
+				// Handle errors.
+				error => {
+					this.setState({
+						isLoaded: true,
+						loading: false,
+						error
+					});
+				}
+			);
+	}
+
+	sendDonationToContract = async e => {
+		e.preventDefault();
+		console.log(
+			await SendDonation(countryManagerAddress, this.state.donationAmount)
+		);
 	};
 
 	render() {
@@ -41,13 +82,13 @@ class ViewConnectivity extends React.Component {
 							style={{
 								background: "#fff",
 								padding: 10,
-								height: 100
+								height: 130
 							}}
 						>
 							<Row>
 								<Col span={22}>
 									<div>
-										Connected Schools:
+										Connected Schools In Nigeria:
 										<Progress
 											type="circle"
 											strokeColor={{
@@ -64,27 +105,63 @@ class ViewConnectivity extends React.Component {
 										Total Number of Schools:{" "}
 										{this.state.TotalNumberofSchools}
 										<Divider type="vertical" />
+										Total School Population: students
+										<Divider type="vertical" />
+										Account Number:{" "}
+										<Link
+											route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
+										>
+											<a>{countryManagerAddress}</a>
+										</Link>
+									</div>
+									<div>
 										Funding Needed to Connect All Schools:{" "}
-										{
-											this.state
-												.FundingNeededtoConnectAllSchools
-										}{" "}
-										ETH
+										<Tag color="red">
+											{
+												this.state
+													.FundingNeededtoConnectAllSchools
+											}{" "}
+											Wei
+										</Tag>
 										<Divider type="vertical" />
 										Funding Received:
-										{this.state.FundingReceived} ETH
+										<Tag color="green">
+											{this.state.balance}Wei
+										</Tag>
 										<Divider type="vertical" />
 										Amount Needed to Fund additional School:{" "}
-										{
-											this.state
-												.AmountNeededtoFundadditionalSchool
-										}{" "}
-										ETH
+										<Tag color="red">
+											{
+												this.state
+													.AmountNeededtoFundadditionalSchool
+											}{" "}
+											Wei
+										</Tag>
 									</div>
 								</Col>
 
 								<Col span={2}>
-									<Button type="primary">Donate</Button>
+									Enter Amount
+									<Input
+										placeholder="Wei"
+										style={{ width: "110px" }}
+										value={this.state.donationAmount}
+										onChange={event =>
+											this.setState({
+												donationAmount:
+													event.target.value
+											})
+										}
+									/>
+									<br />
+									<br />
+									<Button
+										type="primary"
+										style={{ width: "110px" }}
+										onClick={this.sendDonationToContract}
+									>
+										Donate
+									</Button>
 								</Col>
 							</Row>{" "}
 						</div>
@@ -98,11 +175,11 @@ class ViewConnectivity extends React.Component {
 							}}
 						>
 							<Row>
-								<Col span={12}>
+								<Col span={10}>
 									<NigeriaMap />
 								</Col>
 
-								<Col span={12}>
+								<Col span={14}>
 									<Tabs
 										defaultActiveKey="1"
 										onChange={callback}
@@ -111,10 +188,10 @@ class ViewConnectivity extends React.Component {
 											<ListOfSchools />
 										</TabPane>
 										<TabPane tab="List Of ISPs" key="2">
-											Content of Tab Pane 2
+											<ListOfISPs />
 										</TabPane>
-										<TabPane tab="Transfers" key="3">
-											Content of Tab Pane 3
+										<TabPane tab="Transactions" key="3">
+											<ListOfTransactions />
 										</TabPane>
 									</Tabs>
 								</Col>

@@ -56,6 +56,9 @@ class Template extends React.Component {
 	};
 
 	loginModalhandleOk = e => {
+		Router.push({
+			pathname: "/admin"
+		});
 		this.setState({
 			loginModalVisibility: false
 		});
@@ -155,7 +158,7 @@ class Template extends React.Component {
 				/>
 
 				<Footer style={{ position: "bottom", textAlign: "center" }}>
-					<h1>UNICEF CONNECT KIDS AROUND THE WORLD HACKATHON</h1>
+					<h1>UNICEF Challenge: Reducing The Divide</h1>
 				</Footer>
 			</Layout>
 		);

@@ -9,9 +9,7 @@ export default async function getListOfCountryManagers(address) {
     let countryManagers = await result.methods
       .getDeployedCountryManagers()
       .call();
-    console.log(countryManagers);
     return countryManagers;
-    console.log(countryManagers);
   } catch (err) {
     console.log(err);
     return err;

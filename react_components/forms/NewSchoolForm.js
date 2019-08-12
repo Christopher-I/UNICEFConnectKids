@@ -11,6 +11,12 @@ import {
   Button,
   AutoComplete
 } from "antd";
+import CreateNewSchool from "../../ethereum/deployedContractCalls/countryManager/createNewSchool";
+import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
+import {
+  mainContractAddress,
+  owner
+} from "../../ethereum/ListofSmartContractAddresses";
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -19,44 +25,31 @@ const AutoCompleteOption = AutoComplete.Option;
 class RegistrationForm extends React.Component {
   state = {
     confirmDirty: false,
-    autoCompleteResult: []
+    autoCompleteResult: [],
+    schoolName: "",
+    schoolPopulation: "",
+    schoolLocation: "",
+    schoolOwnersETHAddress: ""
   };
 
-  handleSubmit = e => {
+  createNewSchool = async e => {
     e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-      }
-    });
+
+    let result = await GetListOfCountryManagers(mainContractAddress);
+    const feedback = await CreateNewSchool(
+      result[0],
+      this.state.schoolName,
+      this.state.schoolPopulation,
+      this.state.schoolLocation,
+      this.state.schoolOwnersETHAddress
+    );
+    console.log(feedback);
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
     const { autoCompleteResult } = this.state;
 
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 }
-      }
-    };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0
-        },
-        sm: {
-          span: 16,
-          offset: 8
-        }
-      }
-    };
     const prefixSelector = getFieldDecorator("prefix", {
       initialValue: "234"
     })(
@@ -70,25 +63,41 @@ class RegistrationForm extends React.Component {
       <div>
         <br />
         <br />
-        <Form
-          {...formItemLayout}
-          onSubmit={this.handleSubmit}
-          style={{ padding: "50px 100px" }}
-        >
+        <Form onSubmit={this.createNewSchool} style={{ padding: "50px 100px" }}>
           <Form.Item label="School Name">
-            <Input />
+            <Input
+              value={this.state.schoolName}
+              onChange={event =>
+                this.setState({ schoolName: event.target.value })
+              }
+            />
           </Form.Item>
 
           <Form.Item label="Population">
-            <Input />
+            <Input
+              value={this.state.schoolPopulation}
+              onChange={event =>
+                this.setState({ schoolPopulation: event.target.value })
+              }
+            />
           </Form.Item>
 
           <Form.Item label="Location">
-            <Input />
+            <Input
+              value={this.state.schoolLocation}
+              onChange={event =>
+                this.setState({ schoolLocation: event.target.value })
+              }
+            />
           </Form.Item>
 
-          <Form.Item label="Ethereum Address">
-            <Input />
+          <Form.Item label="Owners Address">
+            <Input
+              value={this.state.schoolOwnersETHAddress}
+              onChange={event =>
+                this.setState({ schoolOwnersETHAddress: event.target.value })
+              }
+            />
           </Form.Item>
 
           <Form.Item label="Contact Info">
@@ -99,7 +108,7 @@ class RegistrationForm extends React.Component {
             <TextArea rows={4} />
           </Form.Item>
 
-          <Form.Item {...tailFormItemLayout}>
+          <Form.Item>
             <Button type="primary" htmlType="submit">
               Register
             </Button>

@@ -15,12 +15,22 @@ import { MainDeployed } from "../../ethereum/deployedContractCalls/deployedContr
 import web3 from "../../ethereum/web3";
 import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
 import CreateNewCountryManger from "../../ethereum/deployedContractCalls/main/createNewCountryManager";
-import { mainContractAddress } from "../../ethereum/ListofSmartContractAddresses";
-import { GetCountryManagerSummary } from "../../ethereum/deployedContractCalls/getContractSummary";
+import {
+  mainContractAddress,
+  owner
+} from "../../ethereum/ListofSmartContractAddresses";
+import {
+  GetCountryManagerSummary,
+  GetSchoolSummary
+} from "../../ethereum/deployedContractCalls/getContractSummary";
+import GetSummaryOfAllSchoolsInCountry from "../../ethereum/deployedContractCalls/countryManager/getSummaryOfAllSchoolsInCountry";
+import GetSummaryOfAllISPsInCountry from "../../ethereum/deployedContractCalls/countryManager/getSummaryOfAll_ISPsInCountry";
 
 const { Option } = Select;
 const { TextArea } = Input;
 const AutoCompleteOption = AutoComplete.Option;
+const countryManagersList = [];
+//let summary;
 
 class RegistrationForm extends React.Component {
   state = {
@@ -63,11 +73,25 @@ class RegistrationForm extends React.Component {
   getCountryManagersSummary = async e => {
     e.preventDefault();
     try {
+      //gets a list of country managers
       let result = await GetListOfCountryManagers(mainContractAddress);
-      let result1 = await result.map(async (value, index) => {
-        let result2 = await GetCountryManagerSummary(value);
-        console.log(result2);
-      });
+      //the first country oin the away is Nigeria
+      const countryManagerNigeria = result[0];
+      //get the summary of the contract manager of Nigeria
+      const countryManagerNigeriaSummary = await GetCountryManagerSummary(
+        countryManagerNigeria
+      );
+      // //get summary of all schools under the contract manager of Nigeria
+      // const schoolSummary = await GetSummaryOfAllSchoolsInCountry(
+      //   countryManagerNigeriaSummary
+      // );
+      // //get summary of all ISP under the contract manager of Nigeria
+      // const ISPSummary = await GetSummaryOfAllISPsInCountry(
+      //   countryManagerNigeriaSummary
+      // );
+
+      // console.log(schoolSummary);
+      // console.log(ISPSummary);
     } catch (err) {
       this.setState({ errorMessage: err.message });
     }
