@@ -7,14 +7,14 @@ A Dapp that manages internet provision across various schools in a fair and tran
 ## Table Of Content
 
 -   [link text](#QuickStart)
--   [link text] What's included
--   [link text] Bugs and feature requests
--   [link text] Documentation
--   [link text] Contributing
--   [link text] Versioning
--   [link text] Creators
--   [link text] Thanks
--   [link text] Copyright and license
+-   [link text] (What's included)
+-   [link text] (Bugs and feature requests)
+-   [link text](Documentation)
+-   [link text](Contributing)
+-   [link text](Versioning)
+-   [link text](Creators)
+-   [link text](Thanks)
+-   [link text] (Copyright and license)
 
 <a name="QuickStart"></a>
 
