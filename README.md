@@ -6,15 +6,15 @@ A Dapp that manages internet provision across various schools in a fair and tran
 
 ## Table Of Content
 
--   [link text](#QuickStart)
--   [link text] (What's included)
--   [link text] (Bugs and feature requests)
--   [link text](Documentation)
--   [link text](Contributing)
--   [link text](Versioning)
--   [link text](Creators)
--   [link text](Thanks)
--   [link text] (Copyright and license)
+-   [QuickStart](#QuickStart)
+-   [What's included](#Whatsincluded)
+-   [Bugs and feature requests](#Bugsandfeaturerequests)
+-   [Documentation](#Documentation)
+-   [Contributing](#Contributing)
+-   [Versioning](#Versioning)
+-   [Creators](#Creators)
+-   [Thanks](#Thanks)
+-   [Copyright and license](Copyrightandlicense)
 
 <a name="QuickStart"></a>
 
@@ -22,9 +22,25 @@ A Dapp that manages internet provision across various schools in a fair and tran
 
 2 options are available:
 
--   [link text](1 Click here to visit deployed version)
+-   [Click here to use working version](1Clickheretovisitdeployedversion)
     OR
     2 Clone this repo and follow steps below:
+
+<a name="QuickStart"></a>
+
+<a name="Whatsincluded"></a>
+
+<a name="Bugsandfeaturerequests"></a>
+
+<a name="Documentation"></a>
+
+<a name="#Contributing"></a>
+
+<a name="#Versioning"></a>
+
+<a name="#Creators"></a>
+
+<a name="#Thanks"></a>
 
 ## License and copyright
 
