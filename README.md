@@ -25,9 +25,8 @@ A Dapp that manages internet provision across various schools in a fair and tran
 -   [1) Click here to use working version](1Clickheretovisitdeployedversion)
     <br/>
 
-## OR
+### OR
 
-    <br/>
     2) Clone this repo and follow steps below:
 
 <a name="QuickStart"></a>
