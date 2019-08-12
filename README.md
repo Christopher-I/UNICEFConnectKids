@@ -23,7 +23,8 @@ A Dapp that manages internet provision across various schools in a fair and tran
 2 options are available:
 
 -   [Click here to use working version](1Clickheretovisitdeployedversion)
-    OR
+    <br/> ## OR
+    <br/>
     2 Clone this repo and follow steps below:
 
 <a name="QuickStart"></a>
@@ -34,13 +35,13 @@ A Dapp that manages internet provision across various schools in a fair and tran
 
 <a name="Documentation"></a>
 
-<a name="#Contributing"></a>
+<a name="Contributing"></a>
 
-<a name="#Versioning"></a>
+<a name="Versioning"></a>
 
-<a name="#Creators"></a>
+<a name="Creators"></a>
 
-<a name="#Thanks"></a>
+<a name="Thanks"></a>
 
 ## License and copyright
 
