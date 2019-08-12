@@ -2,7 +2,11 @@
 
 **Version 1.0.0**
 
-Setup Instructions and Explanations
+A Dapp that manages internet provision across various schools in a fair and transparent and self sustaining way.
+
+## Table Of Content
+
+-   [Quick Start](https://www.google.com)
 
 ---
 
