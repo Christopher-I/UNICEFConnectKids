@@ -22,10 +22,13 @@ A Dapp that manages internet provision across various schools in a fair and tran
 
 2 options are available:
 
--   [Click here to use working version](1Clickheretovisitdeployedversion)
-    <br/> ## OR
+-   [1) Click here to use working version](1Clickheretovisitdeployedversion)
     <br/>
-    2 Clone this repo and follow steps below:
+
+## OR
+
+    <br/>
+    2) Clone this repo and follow steps below:
 
 <a name="QuickStart"></a>
 
