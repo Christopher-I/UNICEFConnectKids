@@ -2,8 +2,6 @@
 
 **Version 1.0.0**
 
-A Dapp that manages internet connectivity across various schools in a fair, transparent and self sustaining way.
-
 -   [ Link to working Dapp](1Clickheretovisitdeployedversion)
 
 ## Table Of Content
@@ -31,6 +29,8 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
     - $ npm run dev
 
 <h2 name="Documentation">Documentation</h2>
+
+Goal: Create a dapp that manages internet connectivity and transactions for schools across the world in a fair, transparent and self sustaining approach.
 
 <h3 name="ScopeandOverview">Scope and Overview</h3>
 
@@ -118,4 +118,12 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 A big thank you to UNICEF and gitcoin for providing this opportunity to create a Dapp that can benefit communities across that world that are in need of assistance. The project created with a lot passion for its cause and I hope we can continue the great work!
 
-© Christopher Igbojekwe
+@@ -0,0 +1,21 @@ MIT License
+
+Copyright (c) 2019 Christopher Igbojekwe
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
