@@ -73,7 +73,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
 
 Actors:
-![](img/actors.png)
+![](img/participants.png)
 
 Smart Contract Architecture:
 ![](img/smartContractArchitecture.jpg)
