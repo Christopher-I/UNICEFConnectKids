@@ -73,10 +73,10 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
 
 Inline-style:
-![alt text](https://www.dropbox.com/s/uld76v86bfz9hz9/Screen%20Shot%202019-08-12%20at%205.48.15%20PM.png?dl=0 "Dapp Architecture")
+![alt text](https://previews.dropbox.com/p/thumb/AAiO7j26iI0EViZ1Wl4wvqEbYEIUfE7uKiTC-R_sDkQF96mxxv3wCMCtu7YYkI3qpicWG6xn5oYpMbCwvgJGL7ZVGNHPpBpKpw-9NNkew50ZcQOF7KdNUR8N777gBTK8D3g4EEen7ajNOXhjgOkW42GIhR6VAQLMAQ19RQ61OqX7Z8d-rDqzV6RWtEuDDWspHQ-ayD-xgOGwwA2K7SMnjurdeHf_rc6VjZDKf12ePPSQ5nVIAYEj2Ss-omgxeAR6n-pKy6DPhEveGEG9SmYpSbGAYgpphE4VvwNOtpNA_vFLPmnBVusMRiuZufNHwVUPGwmRzLNie-CRp9gVhR0zjOdl/p.png?fv_content=true&size_mode=5 "Dapp Architecture")
 
 Inline-style:
-![alt text](https://www.dropbox.com/s/mkxnxvau79wjnid/smartContractArchitecture.jpg?dl=0 "Dapp Architecture")
+![alt text]("./img/smartContractArchitecture" "Dapp Architecture")
 
 <h3 name="Improvements">Improvements</h3>
 
