@@ -16,7 +16,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
     - [Assumptions](#Assumptions)
     - [Additional Mechanisms](#AdditionalMechanisms)
     - [Tech Stack and Tools](#TechStackandTools)
-    - [Dapp Architecture](#DappArchitecture)
+    - [Smart Contract Architecture](#SmartContractArchitecture)
     - [Improvements](#Improvements)
 
 3. [Thanks](#Thanks)
@@ -34,11 +34,11 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 <h3 name="ScopeandOverview">Scope and Overview</h3>
 
-Country: Nigeria.
+    -Country: Nigeria.
 
-Participants: The General Public / Donors, ISPs and Schools.
+    -Participants: The General Public / Donors, ISPs and Schools.
 
-Sample size : 3 schools and 3 ISPs.
+    -Sample size : 3 schools and 3 ISPs.
 
 <h3 name="Assumptions">Assumptions</h3>
 
@@ -58,19 +58,25 @@ Sample size : 3 schools and 3 ISPs.
 
     -ISP perfomance are graded at the end of an appriopriate cycle period(example 30 days) and payments are made after grading depending on ISP grade.
 
-    -After every succesful grade at the end of cycle, ISP recieve 'consistency points' which are positive factor when bidding for future ISP opportunities.
+    -After every succesful grade at the end of cycle, ISP recieve 'consistency points' which are a positive factor when bidding for future ISP opportunities.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
-Blockchain protocol - Ethereum(Rinkeby Network).
+    -Blockchain protocol - Ethereum(Rinkeby Network).
 
-Front End - JavaScript, React, Html, CSS.
+    -Front End - JavaScript, React, Html, CSS.
 
-Back End - Solidity, Node.js.
+    -Back End - Solidity, Node.js.
 
-Other Libraries and Tools - ETH Timer, Truffle, Web3.
+    -Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
-<h3 name="DappArchitecture">Dapp Architecture</h3>
+<h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
+
+Inline-style:
+![alt text](https://www.dropbox.com/s/uld76v86bfz9hz9/Screen%20Shot%202019-08-12%20at%205.48.15%20PM.png?dl=0 "Dapp Architecture")
+
+Inline-style:
+![alt text](https://www.dropbox.com/s/mkxnxvau79wjnid/smartContractArchitecture.jpg?dl=0 "Dapp Architecture")
 
 <h3 name="Improvements">Improvements</h3>
 
