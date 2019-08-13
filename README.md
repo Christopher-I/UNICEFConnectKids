@@ -24,10 +24,10 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 <h2 name="Installation">Installation</h2>
 
-    -   \$ git clone https://github.com/Christopher-I/UNICEFConnectKids
-    -   \$ cd UNICEFConnectKids
-    -   \$ npm run i
-    -   \$ npm run dev
+    - git clone https://github.com/Christopher-I/UNICEFConnectKids
+    - cd UNICEFConnectKids
+    - npm run i
+    - $ npm run dev
 
 <h2 name="Documentation">Documentation</h2>
 
