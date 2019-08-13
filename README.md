@@ -4,7 +4,7 @@
 
 A Dapp that manages internet connectivity across various schools in a fair, transparent and self sustaining way.
 
--   [ Click here to use working version](1Clickheretovisitdeployedversion)
+-   [ Link to working Dapp](1Clickheretovisitdeployedversion)
 
 ## Table Of Content
 
@@ -106,11 +106,11 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
     -Improve Admin page to include the option of accepting applications from schools and ISPs.
 
-    -Hook-in ETH timer and run a test model.
+    -Hook-in ETH timer .
 
-    -Include security measures to protect all users incase of a future vunerablity.
+    -Include security measures to protect all participants incase of a future vunerablity to Dapp.
 
-    -Improve smart contract upgradability without compromising user experience and perfomance.
+    -Improve smart contract upgradability without compromising user experience, safety and perfomance.
 
     -Add login pages for ISPs and school to manage their application status. ISPs to place bids on different schools.
 
