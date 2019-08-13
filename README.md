@@ -71,6 +71,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
     -Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
+
 Actors:
 ![](img/participants.png)
 
