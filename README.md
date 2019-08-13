@@ -21,7 +21,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 3. [Thanks](#Thanks)
 
--   [Copyright and license](Copyrightandlicense)
+4. [Copyright and license](Copyrightandlicense)
 
 <h2 name="Installation">Installation</h2>
 
@@ -52,7 +52,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
     -ISPs and Schools apply to be part of the Dapp and are approved by an admin (to prevent spamming of the network and ensure all participants are real).
 
-<h3 name="Additional Mechanisms">Additional Mechanisms</h3>
+<h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
     -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of perfomance. This way the best service providers over time will have a bidding advantage.
 
@@ -71,16 +71,40 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
     -Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
-
 Actors:
 ![](img/participants.png)
 
 Smart Contract Architecture:
 ![](img/smartContractArchitecture.jpg)
 
+    -Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts.
+
+    -Country Manager Contract: It oversees the creation and managment of ISP and school smart contract. It also keeps a record of all financial and data connectivity information within a country.
+
+    -School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract.
+
+     -ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent my smart contracts at the end of each cycle. The controller of this contract should be respresentative of the ISP.
+
 <h3 name="Improvements">Improvements</h3>
 
-<a name="Thanks"></a>
+    -Complete algorithm that switches between different ISP providers based on their offer and repuatation.
+
+    -Add more countries and schools to platform.
+
+    -Include the option of allowing different ISPs to bid on different schools within a country.
+
+    -Improve Admin page to include the option of accepting applications from schools and ISPs.
+
+    -Hook-in ETH timer and run a test model.
+
+    -Include security measures to protect all users incase of a future vunerablity.
+
+    -Improve smart contract upgradability without compromising user experience and perfomance.
+
+    -Add login pages for ISPs and school to manage their application status. ISPs to place bids on different schools.
+
+<h2 name="Thanks">Thanks</h2>
+
 A big thank you to UNICEF and gitcoin for providing this opportunity to create a Dapp that can benefit communities across that world that are in need of assistance. The project created with a lot passion for its cause and I hope we can continue the great work!
 
 © Christopher Igbojekwe
