@@ -19,7 +19,7 @@
 
 3. [Thanks](#Thanks)
 
-4. [Copyright and license](Copyrightandlicense)
+4. [Copyright and license](#License)
 
 <h2 name="Installation">Installation</h2>
 
@@ -117,6 +117,8 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 <h2 name="Thanks">Thanks</h2>
 
 A big thank you to UNICEF and gitcoin for providing this opportunity to create a Dapp that can benefit communities across that world that are in need of assistance. The project created with a lot passion for its cause and I hope we can continue the great work!
+
+<h2 name="License">Copyright and license</h2>
 
 @@ -0,0 +1,21 @@ MIT License
 
