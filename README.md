@@ -33,7 +33,10 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 <h3 name="ScopeandOverview">Scope and Overview</h3>
 Country: Nigeria
+
 Participants: The General Public / Donors, ISPs and Schools.
+
+Sample size : 3 schools and 3 ISPs
 
 <h3 name="Assumptions">Assumptions</h3>
 
@@ -41,7 +44,9 @@ Participants: The General Public / Donors, ISPs and Schools.
 Blockchain protocol - Ethereum(Rinkeby Network)
 
 Front End - JavaScript, React, Html, CSS.
+
 Back End - Solidity, Node.js
+
 Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
 <h3 name="DappArchitecture">Dapp Architecture</h3>
