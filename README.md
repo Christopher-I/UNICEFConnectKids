@@ -66,7 +66,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
     -Front End - JavaScript, React, Html, CSS.
 
-    -Back End - Solidity, Node.js.
+    -Back End - Solidity, Node.js, NextJs.
 
     -Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
@@ -77,6 +77,9 @@ Inline-style:
 
 Inline-style:
 ![alt text]("./img/smartContractArchitecture" "Dapp Architecture")
+
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 <h3 name="Improvements">Improvements</h3>
 
