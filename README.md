@@ -4,11 +4,12 @@
 
 A Dapp that manages internet connectivity across various schools in a fair, transparent and self sustaining way.
 
+-   [ Click here to use working version](1Clickheretovisitdeployedversion)
+
 ## Table Of Content
 
-1. [Quick Start](#QuickStart)
-   -Use deployed version OR
-   -Clone Repo and Install
+1. [Installation](#QuickStart)
+
 2. [Documentation](#Documentation)
 
     - Scope and Overview
@@ -27,16 +28,11 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 2 options are available:
 
--   [ Click here to use working version](1Clickheretovisitdeployedversion)
-    <br/>
-
-### OR
-
 -   Clone this repo and follow steps below:
-    -   i \$ git clone https://github.com/Christopher-I/UNICEFConnectKids
-    -   ii \$ cd UNICEFConnectKids
-    -   iii \$ npm run i
-    -   iv \$ npm run dev
+    -   \$ git clone https://github.com/Christopher-I/UNICEFConnectKids
+    -   \$ cd UNICEFConnectKids
+    -   \$ npm run i
+    -   \$ npm run dev
 
 <h1 name="Documentation">Documentation</h1>
 
