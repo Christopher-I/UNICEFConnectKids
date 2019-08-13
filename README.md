@@ -72,14 +72,11 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
 
-Inline-style:
-![](img/brazil.png)
+Actors:
+![](img/Players.jpg)
 
-Inline-style:
-![alt text]("https://github.com/Christopher-I/UNICEFConnectKids/raw/master/img/brazil.png" "Dapp Architecture")
-
-Inline-style:
-![alt text]("https://github.com/Christopher-I/UNICEFConnectKids/tree/master/img/brazil.png" "Dapp Architecture")
+Smart Contract Architecture:
+![](img/smartContractArchitecture.jpg)
 
 <h3 name="Improvements">Improvements</h3>
 
