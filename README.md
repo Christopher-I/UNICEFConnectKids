@@ -52,6 +52,8 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
     -ISPs and Schools apply to be part of the Dapp and are approved by an admin (to prevent spamming of the network and ensure all participants are real).
 
+    -All participants can use basic ethereum based tools such as metamask  and etherscan.
+
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
     -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of perfomance. This way the best service providers over time will have a bidding advantage.
@@ -59,6 +61,8 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
     -ISP perfomance are graded at the end of an appriopriate cycle period(example 30 days) and payments are made after grading depending on ISP grade.
 
     -After every succesful grade at the end of cycle, ISP recieve 'consistency points' which are a positive factor when bidding for future ISP opportunities.
+
+    -Schools are prioritized for connectivity by the smart contract based on factors such as population and location.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
@@ -80,15 +84,21 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
     -Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts.
 
-    -Country Manager Contract: It oversees the creation and managment of ISP and school smart contract. It also keeps a record of all financial and data connectivity information within a country.
+    -Country Manager Contract: It oversees the creation and managment of ISP and school smart contracts. It also keeps a record of all financial and data connectivity information within a country.
 
     -School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract.
 
-     -ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent my smart contracts at the end of each cycle. The controller of this contract should be respresentative of the ISP.
+     -ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent my smart contracts at the end of each cycle. The controller of this contract should be a respresentative of the ISP.
 
 <h3 name="Improvements">Improvements</h3>
 
-    -Complete algorithm that switches between different ISP providers based on their offer and repuatation.
+    -Complete smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
+
+    -Complete algorithm that prioritized the next school to provide connectivity based on factors such as population and location.
+
+    -Create dispute managment function for cases where ISPs and school provide largely varying data.
+
+    -Create a UI mechanism to easily onbaord new schools on map based on their location.
 
     -Add more countries and schools to platform.
 
