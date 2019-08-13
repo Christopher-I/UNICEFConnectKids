@@ -72,11 +72,11 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
 
-Actors:
 ![](img/participants.png)
 
-Smart Contract Architecture:
 ![](img/smartContractArchitecture.jpg)
+
+    -The Ethereum Alarm Clock is a service that allows scheduling transactions to be executed at a later time on the ethereum blockchain- Eth alarm clock website. This will be used to safely make calls to the smart contracts at the end of each cycle.
 
     -Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts.
 
