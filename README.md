@@ -54,6 +54,10 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -All participants can use basic ethereum based tools such as metamask  and etherscan.
 
+    -All transcations and daily connectivity data is stored on the ethereum blockchain.
+
+    -Dapp automatically manages the selection of ISP providers and the priorization of schools to receive internet connection.
+
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
     -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of perfomance. This way the best service providers over time will have a bidding advantage.
