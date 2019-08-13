@@ -6,14 +6,14 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 ## Table Of Content
 
-1. [QuickStart](#QuickStart)
-   -Use deployed version
+1. [Quick Start](#QuickStart)
+   -Use deployed version OR
    -Clone Repo and Install
 2. [Documentation](#Documentation)
 
     - Scope and Overview
-    - Tech Stack and Tools
     - Assumptions
+    - Tech Stack and Tools
     - Dapp Architecture
     - Improvements
 
@@ -33,23 +33,21 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 ### OR
 
 -   Clone this repo and follow steps below:
-    $ git clone https://github.com/Christopher-I/UNICEFConnectKids
-$ cd UNICEFConnectKids
-    $ npm run i
-$ npm run dev
+    -   i \$ git clone https://github.com/Christopher-I/UNICEFConnectKids
+    -   ii \$ cd UNICEFConnectKids
+    -   iii \$ npm run i
+    -   iv \$ npm run dev
 
 <h1 name="Documentation">Documentation</h1>
 
-###Scope
+### Scope
+
+### Scope
 
 <a name="Contributing"></a>
 
-<a name="Versioning"></a>
-
 <a name="Creators"></a>
+© Christopher Igbojekwe
 
 <a name="Thanks"></a>
-
-## License and copyright
-
-© Christopher Igbojekwe
+A big thank you to UNICEF and gitcoin for providing this opportunity to create a Dapp that can benefit communities across that world that are in need of assistance. The project created with a lot passion for its cause and I hope we can continue the great work!
