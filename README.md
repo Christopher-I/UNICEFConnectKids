@@ -12,11 +12,11 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 2. [Documentation](#Documentation)
 
-    - Scope and Overview
-    - Assumptions
-    - Tech Stack and Tools
-    - Dapp Architecture
-    - Improvements
+    - [Scope and Overview](#ScopeandOverview)
+    - [Assumptions](#Assumptions)
+    - [Tech Stack and Tools](#TechStackandTools)
+    - [Dapp Architecture](#DappArchitecture)
+    - [Improvements](#Improvements)
 
 3. [Thanks](#Thanks)
 
@@ -31,9 +31,15 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
 <h2 name="Documentation">Documentation</h2>
 
-### Scope
+<h3 name="ScopeandOverview">Scope and Overview</h3>
 
-### Assumptions
+<h3 name="Assumptions">Assumptions</h3>
+
+<h3 name="TechStackandTools">Tech Stack and Tools</h3>
+
+<h3 name="DappArchitecture">Dapp Architecture</h3>
+
+<h3 name="Improvements">Improvements</h3>
 
 <a name="Thanks"></a>
 A big thank you to UNICEF and gitcoin for providing this opportunity to create a Dapp that can benefit communities across that world that are in need of assistance. The project created with a lot passion for its cause and I hope we can continue the great work!
