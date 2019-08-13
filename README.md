@@ -2,16 +2,21 @@
 
 **Version 1.0.0**
 
-A Dapp that manages internet provision across various schools in a fair and transparent and self sustaining way.
+A Dapp that manages internet connectivity across various schools in a fair, transparent and self sustaining way.
 
 ## Table Of Content
 
--   [QuickStart](#QuickStart)
--   [What's included](#Whatsincluded)
--   [Bugs and feature requests](#Bugsandfeaturerequests)
--   [Documentation](#Documentation)
--   [Contributing](#Contributing)
--   [Versioning](#Versioning)
+1. [QuickStart](#QuickStart)
+   -Use deployed version
+   -Clone Repo and Install
+2. [Documentation](#Documentation)
+
+    - Scope and Overview
+    - Tech Stack and Tools
+    - Assumptions
+    - Dapp Architecture
+    - Improvements
+
 -   [Creators](#Creators)
 -   [Thanks](#Thanks)
 -   [Copyright and license](Copyrightandlicense)
@@ -22,20 +27,20 @@ A Dapp that manages internet provision across various schools in a fair and tran
 
 2 options are available:
 
--   [1) Click here to use working version](1Clickheretovisitdeployedversion)
+-   [ Click here to use working version](1Clickheretovisitdeployedversion)
     <br/>
 
 ### OR
 
-    2) Clone this repo and follow steps below:
+-   Clone this repo and follow steps below:
+    $ git clone https://github.com/Christopher-I/UNICEFConnectKids
+$ cd UNICEFConnectKids
+    $ npm run i
+$ npm run dev
 
-<a name="QuickStart"></a>
+<h1 name="Documentation">Documentation</h1>
 
-<a name="Whatsincluded"></a>
-
-<a name="Bugsandfeaturerequests"></a>
-
-<a name="Documentation"></a>
+###Scope
 
 <a name="Contributing"></a>
 
