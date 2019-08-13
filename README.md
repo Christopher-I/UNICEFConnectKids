@@ -100,6 +100,10 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Complete algorithm that prioritized the next school to provide connectivity based on factors such as population and location.
 
+    -Create a viable option of accessing Dapp from an internet browser without a wallet or metamask. That way more participants can be use the platform.
+
+    -Limit accessibility(from public to restricted) of relevent smart contract functions after further testing
+
     -Create dispute managment function for cases where ISPs and school provide largely varying data.
 
     -Create a UI mechanism to easily onbaord new schools on map based on their location.
@@ -110,7 +114,7 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Improve Admin page to include the option of accepting applications from schools and ISPs.
 
-    -Hook-in ETH timer .
+    -Hook-in ETH timer.
 
     -Include security measures to protect all participants incase of a future vunerablity to Dapp.
 
