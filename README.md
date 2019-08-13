@@ -14,6 +14,7 @@ A Dapp that manages internet connectivity across various schools in a fair, tran
 
     - [Scope and Overview](#ScopeandOverview)
     - [Assumptions](#Assumptions)
+    - [Additional Mechanisms](#AdditionalMechanisms)
     - [Tech Stack and Tools](#TechStackandTools)
     - [Dapp Architecture](#DappArchitecture)
     - [Improvements](#Improvements)
@@ -40,10 +41,20 @@ Participants: The General Public / Donors, ISPs and Schools.
 Sample size : 3 schools and 3 ISPs.
 
 <h3 name="Assumptions">Assumptions</h3>
+    - Payments to ISPs are in ETH/ERC20
+    - Connectivity information such as upload/download speed is received via a solidity smart contract from ISPs and Schools.
+    - An average mean upload /download speed and data size provision are sent every day from the schools and ISPs.
+    - One ISP at a time is responsible for providing connectivity to all schools within a country(future iterations will allow multiple ISPs to manage different schools within a country).
+    -ISPs and Schools apply to be part of the Dapp and are approved by an admin (to prevent spamming of the network and ensure all participants are real).
+
+<h3 name="Additional Mechanisms">Additional Mechanisms</h3>  
+    -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of perfomance. This way the best service providers over time will have a bidding advantage.
+    -ISP perfomance are graded at the end of an appriopriate cycle period(example 30 days) and payments are made after grading depending on ISP grade. 
+    -After every succesful grade at the end of cycle, ISP recieve 'consistency points' which are positive factor when bidding for future ISP opportunities.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
-Blockchain protocol - Ethereum(Rinkeby Network)
+Blockchain protocol - Ethereum(Rinkeby Network).
 
 Front End - JavaScript, React, Html, CSS.
 
