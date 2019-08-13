@@ -76,7 +76,10 @@ Inline-style:
 ![alt text](https://previews.dropbox.com/p/thumb/AAiO7j26iI0EViZ1Wl4wvqEbYEIUfE7uKiTC-R_sDkQF96mxxv3wCMCtu7YYkI3qpicWG6xn5oYpMbCwvgJGL7ZVGNHPpBpKpw-9NNkew50ZcQOF7KdNUR8N777gBTK8D3g4EEen7ajNOXhjgOkW42GIhR6VAQLMAQ19RQ61OqX7Z8d-rDqzV6RWtEuDDWspHQ-ayD-xgOGwwA2K7SMnjurdeHf_rc6VjZDKf12ePPSQ5nVIAYEj2Ss-omgxeAR6n-pKy6DPhEveGEG9SmYpSbGAYgpphE4VvwNOtpNA_vFLPmnBVusMRiuZufNHwVUPGwmRzLNie-CRp9gVhR0zjOdl/p.png?fv_content=true&size_mode=5 "Dapp Architecture")
 
 Inline-style:
-![alt text]("https://github.com/Christopher-I/UNICEFConnectKids/raw/master/img/smartContractArchitecture.jpg" "Dapp Architecture")
+![alt text]("https://github.com/Christopher-I/UNICEFConnectKids/raw/master/img/brazil.png" "Dapp Architecture")
+
+Inline-style:
+![alt text]("https://github.com/Christopher-I/UNICEFConnectKids/tree/master/img/brazil.png" "Dapp Architecture")
 
 <h3 name="Improvements">Improvements</h3>
 
