@@ -13,6 +13,7 @@
     - [Scope and Overview](#ScopeandOverview)
     - [Assumptions](#Assumptions)
     - [Additional Mechanisms](#AdditionalMechanisms)
+    - [How To Use](#use)
     - [Tech Stack and Tools](#TechStackandTools)
     - [Smart Contract Architecture](#SmartContractArchitecture)
     - [Improvements](#Improvements)
@@ -70,6 +71,57 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Schools are prioritized for connectivity by the smart contract based on factors such as population and location.
 
+<h3 name ="#use" > How To Use </h3>
+
+    - Option 1: <a>Quick Instructional Video</a>
+
+    - Option 2: <a>Guidelines</a>
+
+        Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
+
+        Start
+            - Clone this repo. Then navigate to the root directory of repo.
+            - $ npm i
+
+        Deploy a new contract to Rinkeby
+
+            - $ cd ethereum
+            - $ node compile
+            - $ node deploy
+            - Copy main contract address that will be displayed on command line.
+            - $ touch ListofSmartCOntractAddresses
+            - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
+
+        Deploy a new country manager
+
+            -return to the root folder of the repo
+
+            - $ npm run dev
+
+            - open http://localhost:3000/ in your browser
+
+            - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
+
+            - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
+
+            - $ cd ethereum && touch ListofSmartContractAddressses.
+
+            - paste the address into the variable called "country manager address".
+
+        Deploy a new school/ISP contract
+
+            - open http://localhost:3000/ in your browser
+
+            - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
+
+                - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
+
+                - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
+
+                - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
+
+            - Register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
+
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
     -Blockchain protocol - Ethereum(Rinkeby Network).
@@ -81,8 +133,6 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
     -Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
-
-![](img/participants.png)
 
 ![](img/smartContractArchitecture.jpg)
 

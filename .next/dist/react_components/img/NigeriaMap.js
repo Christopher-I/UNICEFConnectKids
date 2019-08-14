@@ -82,7 +82,7 @@ var NigeriaMap = function (_React$Component) {
 				},
 				type: "environment",
 				theme: "twoTone",
-				twoToneColor: "#52c41a",
+				twoToneColor: "red",
 				__source: {
 					fileName: _jsxFileName,
 					lineNumber: 21

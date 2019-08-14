@@ -1,4 +1,4 @@
-export const mainContractAddress = "0x3f7312e3DF84C75C06221489414d5CCdF44ca2Fb";
+export const mainContractAddress = "0x98ce8a31428d38BA5e19847B2Cec72052165d3f7";
 export const countryManagerAddress =
-	"0x6f22c11b38f104dbf4b9f227b6d0a64501c1d9be";
+	"0x4c88b3a4b1c344cf51ff6c162fa17fb4915d490d";
 export const owner = "0x2386D2ace73e63Bd93191c88fFc674E6FEc4ef64";

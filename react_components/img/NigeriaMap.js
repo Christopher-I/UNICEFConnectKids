@@ -26,7 +26,7 @@ class NigeriaMap extends React.Component {
 						}}
 						type="environment"
 						theme="twoTone"
-						twoToneColor="#52c41a"
+						twoToneColor="red"
 					/>
 				</a>
 				<a>

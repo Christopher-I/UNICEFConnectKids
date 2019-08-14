@@ -108,14 +108,6 @@ class RegistrationForm extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item label="Contact Info">
-            <Input />
-          </Form.Item>
-
-          <Form.Item label="Additional Details">
-            <TextArea rows={4} />
-          </Form.Item>
-
           <Form.Item>
             <Button
               type="primary"

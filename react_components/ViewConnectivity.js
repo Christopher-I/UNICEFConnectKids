@@ -36,14 +36,14 @@ function callback(key) {
 class ViewConnectivity extends React.Component {
 	state = {
 		TotalNumberofSchools: "0",
-		FundingNeededtoConnectAllSchools: " X ",
+		FundingNeededtoConnectAllSchools: " 0 ",
 		FundingReceived: "0",
-		AmountNeededtoFundadditionalSchool: "X ",
-		percentageOfConnectedSchool: "50",
+		AmountNeededtoFundadditionalSchool: "0 ",
+		percentageOfConnectedSchool: "0",
 		loginModalVisibility: false,
 		applyModalVisibility: false,
 		countrySelected: false,
-		balance: "",
+		balance: "0",
 		donationAmount: "",
 		population: "",
 		countryName: "Nigeria",
@@ -84,13 +84,12 @@ class ViewConnectivity extends React.Component {
 		const countryManagerNigeriaSummary = await GetCountryManagerSummary(
 			countryManagerNigeria
 		);
-		console.log(countryManagerNigeriaSummary);
 
 		//get summary of all Schools under the contract manager of Nigeria
 		const SchoolSummary = await GetSummaryOfAllSchoolsInCountry(
 			countryManagerNigeriaSummary
 		);
-
+		console.log(SchoolSummary);
 		// //get summary of all ISP under the contract manager of Nigeria
 		// const ISPSummary = await GetSummaryOfAllISPsInCountry(
 		// 	countryManagerNigeriaSummary
@@ -196,9 +195,11 @@ class ViewConnectivity extends React.Component {
 											}{" "}
 											Wei
 										</Tag>
-										Current ISP :{" "}
+										Current Internet Provider:{" "}
 										<Link
-											route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
+											route={`https://rinkeby.etherscan.io/address/${
+												this.state.currentISPNameAddress
+											}`}
 										>
 											<a>{this.state.currentISPName}</a>
 										</Link>

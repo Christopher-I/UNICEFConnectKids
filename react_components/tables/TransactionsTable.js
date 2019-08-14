@@ -1,6 +1,5 @@
 import React from "react";
-import { Table } from "antd";
-import { columns, data } from "./TransactionsTableColumnAndData";
+import { Table, Tag } from "antd";
 import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
 import {
 	mainContractAddress,
@@ -17,7 +16,72 @@ import {
 
 class TransactionsTable extends React.Component {
 	state = {
-		data: ""
+		data: "",
+		columns: [
+			{
+				title: "Date",
+				dataIndex: "timeStamp",
+				key: "timeStamp",
+				render: text => {
+					let x = new Date(text * 1000);
+					if (text > 0) {
+						return (
+							<p>
+								{x.getDate() +
+									"-" +
+									(x.getMonth() + 1) +
+									"-" +
+									x.getFullYear()}
+							</p>
+						);
+					}
+				}
+			},
+			{
+				title: "From",
+				dataIndex: "from",
+				key: "from",
+				render: text => {
+					if (text === countryManagerAddress) {
+						return (
+							<Tag color="green">Country Managers Account</Tag>
+						);
+					} else {
+						return (
+							<a
+								href={`https://rinkeby.etherscan.io/address/${text}`}
+							>
+								{text}
+							</a>
+						);
+					}
+				}
+			},
+
+			{
+				title: "To",
+				dataIndex: "to",
+				key: "2=to",
+				render: text => {
+					if (text === countryManagerAddress) {
+						return <Tag color="blue">Country Managers Account</Tag>;
+					} else {
+						return (
+							<a
+								href={`https://rinkeby.etherscan.io/address/${text}`}
+							>
+								{text}
+							</a>
+						);
+					}
+				}
+			},
+			{
+				title: "Value(wei)",
+				dataIndex: "value",
+				key: "value"
+			}
+		]
 	};
 
 	async componentDidMount() {
@@ -49,7 +113,7 @@ class TransactionsTable extends React.Component {
 	render() {
 		return (
 			<Table
-				columns={columns}
+				columns={this.state.columns}
 				dataSource={this.state.data}
 				scroll={{ x: 240 }}
 			/>

@@ -38,7 +38,7 @@ contract countryManager{
     School public newSchool;
     School public deployedSchool;
     IspInfo public currentIspProvider;
-    IspInfo public tempIspProvider;
+    string [] public ispNames;
     
     struct IspInfo{
         string name;
@@ -73,12 +73,10 @@ contract countryManager{
         newIsp= new ISP(_name, promisedUploadSpeed,promisedDownloadSpeed, promisedDataSize, ispOwnerAddress);
         deployedIsps.push(newIsp);
         
-        if(deployedIsps.length == 0){
-            tempIspProvider.name = _name;
-        }
+        ispNames.push(_name);
         
         if(deployedSchools.length >0 && deployedIsps.length == 1){
-            updateIspProvider( tempIspProvider.name, deployedSchools[0], deployedIsps[0]);
+            updateIspProvider( ispNames[0], deployedSchools[0], deployedIsps[0]);
         }
     }
     
