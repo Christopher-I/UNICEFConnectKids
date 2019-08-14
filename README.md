@@ -73,56 +73,57 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
 <h3 name ="#HowToUse">How To Use</h3>
 
-    1. [Quick Instructional Video](www.)
+-   [Scope and Overview](#ScopeandOverview)
 
-    2. Guidelines
+OR
 
-        Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
+-   Guidelines
 
-        Start
-            - Clone this repo. Then navigate to the root directory of repo.
-            - $ npm i
+         Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
 
-        Deploy a new contract to Rinkeby
+         Start
 
-            - $ cd ethereum
-            - $ node compile
-            - $ node deploy
-            - Copy main contract address that will be displayed on command line.
-            - $ touch ListofSmartCOntractAddresses
-            - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
+-   Clone this repo. Then navigate to the root directory of repo.
+-             \$ npm i
 
-        Deploy a new country manager
+          Deploy a new contract to Rinkeby
 
-        ⋅⋅* Unordered sub-list.
+              - $ cd ethereum
+              - $ node compile
+              - $ node deploy
+              - Copy main contract address that will be displayed on command line.
+              - $ touch ListofSmartCOntractAddresses
+              - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
 
-            * return to the root folder of the repo
+          Deploy a new country manager
 
-            * $ npm run dev
+              -return to the root folder of the repo
 
-            * open http://localhost:3000/ in your browser
+              - $ npm run dev
 
-            - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
+              - open http://localhost:3000/ in your browser
 
-            - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
+              - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
 
-            - $ cd ethereum && touch ListofSmartContractAddressses.
+              - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
 
-            - paste the address into the variable called "country manager address".
+              - $ cd ethereum && touch ListofSmartContractAddressses.
 
-        Deploy a new school/ISP contract
+              - paste the address into the variable called "country manager address".
 
-            - open http://localhost:3000/ in your browser
+          Deploy a new school/ISP contract
 
-            - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
+              - open http://localhost:3000/ in your browser
 
-                - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
+              - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
 
-                - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
+                  - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
 
-                - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
+                  - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
 
-            - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
+                  - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
+
+              - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
