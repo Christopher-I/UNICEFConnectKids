@@ -38,8 +38,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _antd = require("antd");
 
-var _ISPTableColumnAndData = require("./ISPTableColumnAndData");
-
 var _getListOfCountryManagers = require("../../ethereum/deployedContractCalls/main/getListOfCountryManagers");
 
 var _getListOfCountryManagers2 = _interopRequireDefault(_getListOfCountryManagers);
@@ -51,6 +49,10 @@ var _createNewCountryManager2 = _interopRequireDefault(_createNewCountryManager)
 var _ListofSmartContractAddresses = require("../../ethereum/ListofSmartContractAddresses");
 
 var _getContractSummary = require("../../ethereum/deployedContractCalls/getContractSummary");
+
+var _placeBidModal = require("../modals/placeBidModal");
+
+var _placeBidModal2 = _interopRequireDefault(_placeBidModal);
 
 var _getSummaryOfAllSchoolsInCountry = require("../../ethereum/deployedContractCalls/countryManager/getSummaryOfAllSchoolsInCountry");
 
@@ -80,7 +82,66 @@ var ISPTable = function (_React$Component) {
 		}
 
 		return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = ISPTable.__proto__ || (0, _getPrototypeOf2.default)(ISPTable)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-			data: ""
+			data: "",
+			columns: [{
+				title: "ISP Name",
+				dataIndex: "0",
+				key: "0",
+				render: function render(text) {
+					return _react2.default.createElement("a", { href: "javascript:;", __source: {
+							fileName: _jsxFileName,
+							lineNumber: 25
+						}
+					}, text);
+				}
+			}, {
+				title: "Promised Data Size(GB)",
+				dataIndex: "2",
+				key: "2"
+			}, {
+				title: "Promised Upload Speed(MB/s)",
+				dataIndex: "3",
+				key: "3"
+			}, {
+				title: "Promised Download Speed(MB/s)",
+				dataIndex: "4",
+				key: "4"
+			}, {
+				title: "Reputation/Consistency Score",
+				dataIndex: "6",
+				key: "6"
+			}, {
+				title: "Bid",
+				key: "tags",
+				dataIndex: "4",
+				render: function render(bool) {
+					if (bool === true) {
+						return _react2.default.createElement(_antd.Tag, { color: "green", __source: {
+								fileName: _jsxFileName,
+								lineNumber: 55
+							}
+						}, "Current Provider");
+					} else {
+						return _react2.default.createElement(_antd.Tag, { color: "blue", onClick: _this.placeBidModalOpen, __source: {
+								fileName: _jsxFileName,
+								lineNumber: 58
+							}
+						}, "Place Bid");
+					}
+				}
+			}]
+		}, _this.placeBidModalOpen = function (e) {
+			_this.setState({
+				placeBidVisibility: true
+			});
+		}, _this.placeBidModalhandleCancel = function (e) {
+			_this.setState({
+				placeBidVisibility: false
+			});
+		}, _this.placeBidModalhandleOk = function (e) {
+			_this.setState({
+				placeBidVisibility: false
+			});
 		}, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
 	}
 
@@ -118,23 +179,21 @@ var ISPTable = function (_React$Component) {
 								this.setState({
 									data: ISPSummary
 								});
-
-								console.log(this.state.data);
-								_context.next = 18;
+								_context.next = 17;
 								break;
 
-							case 15:
-								_context.prev = 15;
+							case 14:
+								_context.prev = 14;
 								_context.t0 = _context["catch"](0);
 
 								this.setState({ errorMessage: _context.t0.message });
 
-							case 18:
+							case 17:
 							case "end":
 								return _context.stop();
 						}
 					}
-				}, _callee, this, [[0, 15]]);
+				}, _callee, this, [[0, 14]]);
 			}));
 
 			function componentDidMount() {
@@ -146,11 +205,27 @@ var ISPTable = function (_React$Component) {
 	}, {
 		key: "render",
 		value: function render() {
-			return _react2.default.createElement(_antd.Table, { columns: _ISPTableColumnAndData.columns, dataSource: this.state.data, __source: {
+			return _react2.default.createElement("div", {
+				__source: {
 					fileName: _jsxFileName,
-					lineNumber: 49
+					lineNumber: 112
 				}
-			});
+			}, _react2.default.createElement(_placeBidModal2.default, {
+				placeBidVisibility: this.state.placeBidVisibility,
+				placeBidModalhandleOk: this.placeBidModalhandleOk,
+				placeBidModalhandleCancel: this.placeBidModalhandleCancel,
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 113
+				}
+			}), _react2.default.createElement(_antd.Table, {
+				columns: this.state.columns,
+				dataSource: this.state.data,
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 118
+				}
+			}));
 		}
 	}]);
 
@@ -158,4 +233,4 @@ var ISPTable = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = ISPTable;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvdGFibGVzL0lTUFRhYmxlLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiVGFibGUiLCJjb2x1bW5zIiwiZGF0YSIsIkdldExpc3RPZkNvdW50cnlNYW5hZ2VycyIsIkNyZWF0ZU5ld0NvdW50cnlNYW5nZXIiLCJtYWluQ29udHJhY3RBZGRyZXNzIiwib3duZXIiLCJHZXRDb3VudHJ5TWFuYWdlclN1bW1hcnkiLCJHZXRTY2hvb2xTdW1tYXJ5IiwiR2V0U3VtbWFyeU9mQWxsU2Nob29sc0luQ291bnRyeSIsIkdldFN1bW1hcnlPZkFsbElTUHNJbkNvdW50cnkiLCJJU1BUYWJsZSIsInN0YXRlIiwicmVzdWx0IiwiY291bnRyeU1hbmFnZXJOaWdlcmlhIiwiY291bnRyeU1hbmFnZXJOaWdlcmlhU3VtbWFyeSIsIklTUFN1bW1hcnkiLCJzZXRTdGF0ZSIsImNvbnNvbGUiLCJsb2ciLCJlcnJvck1lc3NhZ2UiLCJtZXNzYWdlIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQVM7O0FBQ1QsQUFBUyxBQUFTLEFBQVk7O0FBQzlCLEFBQU8sQUFBOEI7Ozs7QUFDckMsQUFBTyxBQUE0Qjs7OztBQUNuQyxBQUNDLEFBQ0EsQUFDTTs7QUFDUCxBQUNDLEFBQ0EsQUFDTTs7QUFDUCxBQUFPLEFBQXFDOzs7O0FBQzVDLEFBQU8sQUFBa0M7Ozs7Ozs7OztJLEFBRW5DOzs7Ozs7Ozs7Ozs7Ozs4TSxBQUNMO1MsQUFBUSxBQUNEO0FBREMsQUFDUDs7Ozs7Ozs7Ozs7Ozs7ZUFNb0IsQUFBeUIsQSxBQUF6Qjs7WUFBZjtBLDBCQUNKOztBQUNNO0EsZ0NBQXdCLE9BQUEsQSxBQUFPLEFBQ3JDOzs7O2VBQzJDLGtEQUFBLEEsQUFDMUM7O1lBREs7QTs7ZUFLbUIsNkNBQUEsQUFDeEIsQTs7WUFESztBLDhCQUlOOzthQUFBLEFBQUs7ZUFBTCxBQUFjLEFBQ1AsQUFHUDtBQUpjLEFBQ2I7O2dCQUdELEFBQVEsSUFBSSxLQUFBLEFBQUssTUFBakIsQUFBdUI7Ozs7Ozt3Q0FFdkI7O2FBQUEsQUFBSyxTQUFTLEVBQUUsY0FBYyxZQUE5QixBQUFjLEFBQW9COzs7Ozs7Ozs7Ozs7Ozs7Ozs7MkJBSTNCLEFBQ1I7MEJBQU8sQUFBQyw2QkFBRCxBQUFPLEFBQVMseUNBQVMsWUFBWSxLQUFBLEFBQUssTUFBMUMsQUFBZ0Q7ZUFBaEQ7aUJBQVAsQUFBTyxBQUNQO0FBRE87SUFBQTs7Ozs7RUFoQ2MsZ0JBQU0sQSxBQW9DN0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoiSVNQVGFibGUuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NocmlzL0RvY3VtZW50cy9CbG9ja2NoYWluUHJvamVjdHMvVW5pY2VmL2Nvbm5lY3RLaWRzVW5pY2VmIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvdGFibGVzL0lTUFRhYmxlLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiVGFibGUiLCJUYWciLCJHZXRMaXN0T2ZDb3VudHJ5TWFuYWdlcnMiLCJDcmVhdGVOZXdDb3VudHJ5TWFuZ2VyIiwibWFpbkNvbnRyYWN0QWRkcmVzcyIsIm93bmVyIiwiR2V0Q291bnRyeU1hbmFnZXJTdW1tYXJ5IiwiR2V0U2Nob29sU3VtbWFyeSIsIlBsYWNlQmlkTW9kYWwiLCJHZXRTdW1tYXJ5T2ZBbGxTY2hvb2xzSW5Db3VudHJ5IiwiR2V0U3VtbWFyeU9mQWxsSVNQc0luQ291bnRyeSIsIklTUFRhYmxlIiwic3RhdGUiLCJkYXRhIiwiY29sdW1ucyIsInRpdGxlIiwiZGF0YUluZGV4Iiwia2V5IiwicmVuZGVyIiwidGV4dCIsImJvb2wiLCJwbGFjZUJpZE1vZGFsT3BlbiIsInNldFN0YXRlIiwicGxhY2VCaWRWaXNpYmlsaXR5IiwicGxhY2VCaWRNb2RhbGhhbmRsZUNhbmNlbCIsInBsYWNlQmlkTW9kYWxoYW5kbGVPayIsInJlc3VsdCIsImNvdW50cnlNYW5hZ2VyTmlnZXJpYSIsImNvdW50cnlNYW5hZ2VyTmlnZXJpYVN1bW1hcnkiLCJJU1BTdW1tYXJ5IiwiZXJyb3JNZXNzYWdlIiwibWVzc2FnZSIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFTLEFBQU87O0FBQ2hCLEFBQU8sQUFBOEI7Ozs7QUFDckMsQUFBTyxBQUE0Qjs7OztBQUNuQyxBQUNDLEFBQ0EsQUFDTTs7QUFDUCxBQUNDLEFBQ0EsQUFDTTs7QUFDUCxBQUFPLEFBQW1COzs7O0FBQzFCLEFBQU8sQUFBcUM7Ozs7QUFDNUMsQUFBTyxBQUFrQzs7Ozs7Ozs7O0lBRW5DLEE7Ozs7Ozs7Ozs7Ozs7OzhNQUNMLEE7U0FBUSxBQUNELEFBQ047O1dBQ0MsQUFDUSxBQUNQO2VBRkQsQUFFWSxBQUNYO1NBSEQsQUFHTSxBQUNMO1lBQVEsc0JBQUE7NEJBQVEsY0FBQSxPQUFHLE1BQUgsQUFBUTtpQkFBUjttQkFBQSxBQUF3QjtBQUF4QjtNQUFBLEVBQVIsQUFBUTtBQUxULEFBQ1I7QUFBQSxBQUNDLElBRk87V0FRUixBQUNRLEFBQ1A7ZUFGRCxBQUVZLEFBQ1g7U0FYTyxBQVFSLEFBR007QUFITixBQUNDO1dBSUQsQUFDUSxBQUNQO2VBRkQsQUFFWSxBQUNYO1NBaEJPLEFBYVIsQUFHTTtBQUhOLEFBQ0M7V0FLRCxBQUNRLEFBQ1A7ZUFGRCxBQUVZLEFBQ1g7U0F0Qk8sQUFtQlIsQUFHTTtBQUhOLEFBQ0M7V0FJRCxBQUNRLEFBQ1A7ZUFGRCxBQUVZLEFBQ1g7U0EzQk8sQUF3QlIsQUFHTTtBQUhOLEFBQ0M7V0FJRCxBQUNRLEFBQ1A7U0FGRCxBQUVNLEFBQ0w7ZUFIRCxBQUdZLEFBQ1g7WUFBUSxzQkFBUSxBQUNmO1NBQUksU0FBSixBQUFhLE1BQU0sQUFDbEI7NkJBQU8sQUFBQywyQkFBSSxPQUFMLEFBQVc7a0JBQVg7b0JBQUE7QUFBQTtPQUFBLEVBQVAsQUFBTyxBQUNQO0FBRkQsWUFFTyxBQUNOOzZCQUNDLEFBQUMsMkJBQUksT0FBTCxBQUFXLFFBQU8sU0FBUyxNQUEzQixBQUFnQztrQkFBaEM7b0JBQUE7QUFBQTtPQUFBLEVBREQsQUFDQyxBQUlEO0FBQ0Q7QSxBQTdDSSxBQUVFLEFBNkJSO0FBQUEsQUFDQztBQWhDSyxBQUNQLFcsQUFpREQsb0JBQW9CLGFBQUssQUFDeEI7U0FBQSxBQUFLO3dCQUFMLEFBQWMsQUFDTyxBQUVyQjtBQUhjLEFBQ2I7QSxXQUlGLEEsNEJBQTRCLGFBQUssQUFDaEM7U0FBQSxBQUFLO3dCQUFMLEFBQWMsQUFDTyxBQUVyQjtBQUhjLEFBQ2I7QSxXQUlGLEEsd0JBQXdCLGFBQUssQUFDNUI7U0FBQSxBQUFLO3dCQUFMLEFBQWMsQUFDTyxBQUVyQjtBQUhjLEFBQ2I7QTs7Ozs7Ozs7Ozs7Ozs7ZUFPbUIsQUFBeUIsQTs7WUFBeEM7QSwwQkFDSjs7QUFDTTtBLGdDQUF3QixPQUFBLEFBQU8sQUFDckMsQTs7OztlQUMyQyxrREFBQSxBQUMxQyxBOztZQURLO0E7O2VBS21CLDZDLEFBQUEsQUFDeEI7O1lBREs7QSw4QkFJTjs7YUFBQSxBQUFLO2VBQUwsQUFBYyxBQUNQO0FBRE8sQUFDYjs7Ozs7O3dDQUdEOzthQUFBLEFBQUssU0FBUyxFQUFFLGNBQWMsWUFBOUIsQUFBYyxBQUFvQjs7Ozs7Ozs7Ozs7Ozs7Ozs7OzJCQUkzQixBQUNSOzBCQUNDLGNBQUE7O2VBQUE7aUJBQUEsQUFDQztBQUREO0FBQUEsSUFBQSxrQkFDQyxBQUFDO3dCQUNvQixLQUFBLEFBQUssTUFEMUIsQUFDZ0MsQUFDL0I7MkJBQXVCLEtBRnhCLEFBRTZCLEFBQzVCOytCQUEyQixLQUg1QixBQUdpQzs7ZUFIakM7aUJBREQsQUFDQyxBQUtBO0FBTEE7QUFDQyx1QkFJRCxBQUFDO2FBQ1MsS0FBQSxBQUFLLE1BRGYsQUFDcUIsQUFDcEI7Z0JBQVksS0FBQSxBQUFLLE1BRmxCLEFBRXdCOztlQUZ4QjtpQkFQRixBQUNDLEFBTUMsQUFNRjtBQU5FO0FBQ0M7Ozs7O0VBdEdrQixnQkFBTSxBLEFBOEc3Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJJU1BUYWJsZS5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY2hyaXMvRG9jdW1lbnRzL0Jsb2NrY2hhaW5Qcm9qZWN0cy9VbmljZWYvY29ubmVjdEtpZHNVbmljZWYifQ==

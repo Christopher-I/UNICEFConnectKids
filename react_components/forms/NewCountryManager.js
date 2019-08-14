@@ -112,42 +112,34 @@ class RegistrationForm extends React.Component {
 
     return (
       <div>
-        <h1> Welcome Admin! </h1>
-        <br />
-        <br />
-        <h4> Address: {this.state.address}</h4>
-        <Button type="primary" onClick={this.getListOfCountryManagers}>
-          Get List of Country Managers
-        </Button>
-        <br />
-        <br />
-        <Button type="primary" onClick={this.getCountryManagersSummary}>
-          Get getCountryManagersSummary
-        </Button>
-        <Form
-          onSubmit={this.createNewCountryM}
-          style={{ padding: "50px 100px" }}
-        >
-          <h4> Add new Country Manager </h4>
-          <Form.Item label="Country Name">
-            <Input
-              value={this.state.countryName}
-              onChange={event =>
-                this.setState({ countryName: event.target.value })
-              }
-            />
-          </Form.Item>
+        <h1 style={{ padding: "20px 20px" }}> Welcome Admin! </h1>
+        <Row>
+          <Col span={12} style={{ padding: "20px 20px" }}>
+            <div> List of Pending School Applications Awaiting Decision</div>
+            <br />
+            <div> List of ISP Applications Awaiting Decision</div>
+          </Col>
 
-          <Form.Item label="Additional Details">
-            <TextArea rows={4} />
-          </Form.Item>
+          <Col span={12} style={{ padding: "20px 20px" }}>
+            <Form onSubmit={this.createNewCountryM}>
+              <h4> Add new Country Manager </h4>
+              <Form.Item label="Country Name">
+                <Input
+                  value={this.state.countryName}
+                  onChange={event =>
+                    this.setState({ countryName: event.target.value })
+                  }
+                />
+              </Form.Item>
 
-          <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Register
-            </Button>
-          </Form.Item>
-        </Form>
+              <Form.Item>
+                <Button type="primary" htmlType="submit">
+                  Register
+                </Button>
+              </Form.Item>
+            </Form>
+          </Col>
+        </Row>
       </div>
     );
   }

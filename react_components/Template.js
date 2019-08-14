@@ -83,6 +83,13 @@ class Template extends React.Component {
 	};
 
 	render() {
+		const childrenWithProps = React.Children.map(
+			this.props.children,
+			child =>
+				React.cloneElement(child, {
+					countrySelected: this.state.countrySelected
+				})
+		);
 		return (
 			<Layout>
 				<Head />
@@ -95,7 +102,14 @@ class Template extends React.Component {
 						mode="horizontal"
 						theme="dark"
 					>
-						<Menu.Item>
+						<Menu.Item
+							onClick={() => {
+								console.log("selected!");
+								this.setState({
+									countrySelected: false
+								});
+							}}
+						>
 							<Link route={"/"}>
 								<a> Home</a>
 							</Link>
@@ -113,7 +127,6 @@ class Template extends React.Component {
 								<Menu.Item
 									key="setting:1"
 									onClick={() => {
-										console.log("selected!");
 										this.setState({
 											countrySelected: true
 										});
@@ -144,7 +157,7 @@ class Template extends React.Component {
 					</Menu>
 				</Header>
 
-				{this.props.children}
+				{childrenWithProps}
 
 				<LoginModal
 					loginModalVisibility={this.state.loginModalVisibility}

@@ -69,7 +69,7 @@ var columns = exports.columns = [{
 		}
 	}
 }, {
-	title: "Value",
+	title: "Value(wei)",
 	dataIndex: "value",
 	key: "value"
 }];

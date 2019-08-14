@@ -16,14 +16,14 @@ class sample extends React.Component {
 					],
 					datasets: [
 						{
-							label: "Upload Speed",
+							label: "Average Internet Speed Sent From School",
 							data: [12, 19, 3, 5, 2, 3],
 							backgroundColor: ["rgba(90, 99, 132, 0.2)"],
 							borderColor: ["rgba(90, 99, 132, 0.2)"],
 							borderWidth: 1
 						},
 						{
-							label: "Download Speed",
+							label: "Average Internet Speed Sent From ISP",
 							data: [1, 39, 13, 25, 20, 3],
 							backgroundColor: ["rgba(255, 99, 132, 0.2)"],
 							borderColor: ["rgba(255, 99, 132, 1)"],

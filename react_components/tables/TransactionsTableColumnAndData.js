@@ -47,7 +47,7 @@ export const columns = [
 		}
 	},
 	{
-		title: "Value",
+		title: "Value(wei)",
 		dataIndex: "value",
 		key: "value"
 	}

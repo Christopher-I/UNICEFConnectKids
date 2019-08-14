@@ -1,7 +1,6 @@
 import React from "react";
 import { Table, Tag, Modal, Progress } from "antd";
 import InternetSpeedChart from "../../pages/chart/sample";
-//import { columns, data } from "./SchoolTableColumnAndData";
 import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
 import CreateNewCountryManger from "../../ethereum/deployedContractCalls/main/createNewCountryManager";
 import {
@@ -14,47 +13,6 @@ import {
 } from "../../ethereum/deployedContractCalls/getContractSummary";
 import GetSummaryOfAllSchoolsInCountry from "../../ethereum/deployedContractCalls/countryManager/getSummaryOfAllSchoolsInCountry";
 import GetSummaryOfAllISPsInCountry from "../../ethereum/deployedContractCalls/countryManager/getSummaryOfAll_ISPsInCountry";
-
-const columns = [
-	{
-		title: "School Name",
-		dataIndex: "0",
-		key: "0",
-		render: text => <a href="javascript:;">{text}</a>
-	},
-
-	{
-		title: "Population",
-		dataIndex: "3",
-		key: "3"
-	},
-	{
-		title: "Location",
-		dataIndex: "2",
-		key: "2"
-	},
-	{
-		title: "Status",
-		key: "tags",
-		dataIndex: "4",
-		render: bool => {
-			if (bool === true) {
-				return <Tag color="green">Connected</Tag>;
-			} else {
-				return <Tag color="red">Not Connected</Tag>;
-			}
-		}
-	},
-	{
-		title: "",
-		key: "action",
-		render: (text, record) => (
-			<span>
-				<a href="javascript:;">Details</a>
-			</span>
-		)
-	}
-];
 
 class SchoolTable extends React.Component {
 	state = {

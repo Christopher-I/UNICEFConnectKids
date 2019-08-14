@@ -51,13 +51,13 @@ var sample = function (_React$Component) {
 				data: {
 					labels: ["01/01/2019", "01/02/2019", "01/03/2019", "01/04/2019", "01/05/2019", "01/06/2019"],
 					datasets: [{
-						label: "Upload Speed",
+						label: "Average Internet Speed Sent From School",
 						data: [12, 19, 3, 5, 2, 3],
 						backgroundColor: ["rgba(90, 99, 132, 0.2)"],
 						borderColor: ["rgba(90, 99, 132, 0.2)"],
 						borderWidth: 1
 					}, {
-						label: "Download Speed",
+						label: "Average Internet Speed Sent From ISP",
 						data: [1, 39, 13, 25, 20, 3],
 						backgroundColor: ["rgba(255, 99, 132, 0.2)"],
 						borderColor: ["rgba(255, 99, 132, 1)"],

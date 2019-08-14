@@ -30,7 +30,7 @@
 
 <h2 name="Documentation">Documentation</h2>
 
-Goal: Create a dapp that manages internet connectivity and transactions for schools across the world in a fair, transparent and self sustaining approach.
+Goal: Create a dapp that manages internet connectivity and transactions for schools across the world in a fair, transparent and self-sustaining approach.
 
 <h3 name="ScopeandOverview">Scope and Overview</h3>
 
@@ -38,11 +38,13 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Participants: The General Public / Donors, ISPs and Schools.
 
-    -Sample size : 3 schools and 3 ISPs.
+    -Sample Size : 3 schools and 3 ISPs.
 
 <h3 name="Assumptions">Assumptions</h3>
 
     - Payments to ISPs are in ETH/ERC20
+
+    -Data Source: All data connectivity information and crypto-currency transctions used in Dapp are retrieved from the ethereum blockchain.
 
     - Connectivity information such as upload/download speed is received via a solidity smart contract from ISPs and Schools.
 
@@ -54,17 +56,17 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -All participants can use basic ethereum based tools such as metamask  and etherscan.
 
-    -All transcations and daily connectivity data is stored on the ethereum blockchain.
+    -All transactions and daily connectivity data is stored on the ethereum blockchain.
 
-    -Dapp automatically manages the selection of ISP providers and the priorization of schools to receive internet connection.
+    -Dapp automatically manages the selection of ISP providers and the prioritization of schools to receive internet connection.
 
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
-    -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of perfomance. This way the best service providers over time will have a bidding advantage.
+    -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of performance. This way the best service providers over time will have a bidding advantage.
 
-    -ISP perfomance are graded at the end of an appriopriate cycle period(example 30 days) and payments are made after grading depending on ISP grade.
+    -ISPs perfomance are graded at the end of an appropriate cycle period(example 30 days) and payments are made after grading depending on ISP grade.
 
-    -After every succesful grade at the end of cycle, ISP recieve 'consistency points' which are a positive factor when bidding for future ISP opportunities.
+    -After every succesful grade at the end of cycle, ISP receive 'consistency points' which are a positive factor when bidding for future ISP opportunities.
 
     -Schools are prioritized for connectivity by the smart contract based on factors such as population and location.
 
@@ -88,11 +90,11 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts.
 
-    -Country Manager Contract: It oversees the creation and managment of ISP and school smart contracts. It also keeps a record of all financial and data connectivity information within a country.
+    -Country Manager Contract: It oversees the creation and management of ISP and school smart contracts. It also keeps a record of all financial and data connectivity information within a country.
 
     -School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract.
 
-     -ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent my smart contracts at the end of each cycle. The controller of this contract should be a respresentative of the ISP.
+     -ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent my smart contracts at the end of each cycle. The controller of this contract should be a representative of the ISP.
 
 <h3 name="Improvements">Improvements</h3>
 
@@ -104,9 +106,9 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Limit accessibility(from public to restricted) of relevent smart contract functions after further testing
 
-    -Create dispute managment function for cases where ISPs and school provide largely varying data.
+    -Create dispute management function for cases where ISPs and school provide largely varying data.
 
-    -Create a UI mechanism to easily onbaord new schools on map based on their location.
+    -Create a UI mechanism to easily onboard new schools on map based on their location.
 
     -Add more countries and schools to platform.
 
@@ -116,9 +118,9 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Hook-in ETH timer.
 
-    -Include security measures to protect all participants incase of a future vunerablity to Dapp.
+    -Include security measures to protect all participants in case of a future vulnerability to Dapp.
 
-    -Improve smart contract upgradability without compromising user experience, safety and perfomance.
+    -Improve smart contract upgradability without compromising user experience, safety and performance.
 
     -Add login pages for ISPs and school to manage their application status. ISPs to place bids on different schools.
 
