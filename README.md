@@ -13,7 +13,7 @@
     - [Scope and Overview](#ScopeandOverview)
     - [Assumptions](#Assumptions)
     - [Additional Mechanisms](#AdditionalMechanisms)
-    - [How To Use](#use)
+    - [How To Use](#HowToUse)
     - [Tech Stack and Tools](#TechStackandTools)
     - [Smart Contract Architecture](#SmartContractArchitecture)
     - [Improvements](#Improvements)
@@ -71,11 +71,11 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Schools are prioritized for connectivity by the smart contract based on factors such as population and location.
 
-<h3 name ="#use" > How To Use </h3>
+<h3 name ="#HowToUse">How To Use</h3>
 
-    - Option 1: <a>Quick Instructional Video</a>
+    1. [Quick Instructional Video](www.)
 
-    - Option 2: <a>Guidelines</a>
+    2. Guidelines
 
         Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
 
@@ -94,11 +94,11 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
         Deploy a new country manager
 
-            -return to the root folder of the repo
+            * return to the root folder of the repo
 
-            - $ npm run dev
+            * $ npm run dev
 
-            - open http://localhost:3000/ in your browser
+            * open http://localhost:3000/ in your browser
 
             - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
 
@@ -120,7 +120,7 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
                 - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
 
-            - Register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
+            - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
@@ -148,9 +148,9 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
 <h3 name="Improvements">Improvements</h3>
 
-    -Complete smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
+    -Refine smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
 
-    -Complete algorithm that prioritized the next school to provide connectivity based on factors such as population and location.
+    -Refine  algorithm that prioritized the next school to provide connectivity based on factors such as population and location.
 
     -Create a viable option of accessing Dapp from an internet browser without a wallet or metamask. That way more participants can be use the platform.
 
