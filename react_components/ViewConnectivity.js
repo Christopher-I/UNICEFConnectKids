@@ -36,14 +36,14 @@ function callback(key) {
 class ViewConnectivity extends React.Component {
 	state = {
 		TotalNumberofSchools: "0",
-		FundingNeededtoConnectAllSchools: " 0 ",
-		FundingReceived: "0",
-		AmountNeededtoFundadditionalSchool: "0 ",
+		FundingNeededtoConnectAllSchools: "X",
+		FundingReceived: "",
+		AmountNeededtoFundadditionalSchool: "X",
 		percentageOfConnectedSchool: "0",
 		loginModalVisibility: false,
 		applyModalVisibility: false,
 		countrySelected: false,
-		balance: "0",
+		balance: "",
 		donationAmount: "",
 		population: "",
 		countryName: "Nigeria",
@@ -164,7 +164,7 @@ class ViewConnectivity extends React.Component {
 										Total Student Population:
 										{this.state.population}
 										<Divider type="vertical" />
-										Country Account Number:{" "}
+										Country ETH Address:{" "}
 										<Link
 											route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
 										>

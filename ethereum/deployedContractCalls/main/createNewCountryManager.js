@@ -13,7 +13,7 @@ export default async function createNewCountryManager(address, name) {
       .send({
         from: accounts[0]
       });
-    console.log(countryManager);
+
     return countryManager;
   } catch (err) {
     console.log(err);

@@ -52,7 +52,7 @@ contract countryManager{
     }
     
     // creates new schools  
-    function createNewSchool(string name, uint population,string location, address schoolOwnersAddress) public {
+    function createNewSchool(string name, uint population,string location, address schoolOwnersAddress) public returns (address){
         newSchool = new School(name,population, location,schoolOwnersAddress);
         deployedSchools.push(newSchool);
         
@@ -60,6 +60,7 @@ contract countryManager{
              deployedSchool = School(deployedSchools[0]);
             deployedSchool.updateStatus(true);
         }
+        return newSchool;
     }
     
     // returns a list of addresses of created schools
@@ -69,7 +70,7 @@ contract countryManager{
          
     
     // creates new ISPs  
-    function createNewIsp(string _name, int promisedUploadSpeed, int promisedDownloadSpeed, int promisedDataSize, address ispOwnerAddress) public {
+    function createNewIsp(string _name, int promisedUploadSpeed, int promisedDownloadSpeed, int promisedDataSize, address ispOwnerAddress) public returns(address){
         newIsp= new ISP(_name, promisedUploadSpeed,promisedDownloadSpeed, promisedDataSize, ispOwnerAddress);
         deployedIsps.push(newIsp);
         
@@ -78,6 +79,8 @@ contract countryManager{
         if(deployedSchools.length >0 && deployedIsps.length == 1){
             updateIspProvider( ispNames[0], deployedSchools[0], deployedIsps[0]);
         }
+        
+        return newIsp;
     }
     
     function getDeployedIsps() public view returns(address [] memory) { 

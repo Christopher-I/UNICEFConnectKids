@@ -42,7 +42,10 @@ class TransactionsTable extends React.Component {
 				dataIndex: "from",
 				key: "from",
 				render: text => {
-					if (text === countryManagerAddress) {
+					if (
+						text.toUpperCase() ===
+						countryManagerAddress.toUpperCase()
+					) {
 						return (
 							<Tag color="green">Country Managers Account</Tag>
 						);
@@ -63,7 +66,10 @@ class TransactionsTable extends React.Component {
 				dataIndex: "to",
 				key: "2=to",
 				render: text => {
-					if (text === countryManagerAddress) {
+					if (
+						text.toUpperCase() ===
+						countryManagerAddress.toUpperCase()
+					) {
 						return <Tag color="blue">Country Managers Account</Tag>;
 					} else {
 						return (
