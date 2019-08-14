@@ -30,12 +30,17 @@ class RegistrationForm extends React.Component {
     promisedDownloadSpeed: "",
     promisedUploadSpeed: "",
     promisedDataSize: "",
-    ISPName: ""
+    ISPName: "",
+    response: "",
+    loading: ""
   };
 
   //creates a new ISP provider
   createNewISP = async e => {
     e.preventDefault();
+    this.setState({
+      loading: true
+    });
     let result = await GetListOfCountryManagers(mainContractAddress);
 
     const feedback = await CreateNewISP(
@@ -46,7 +51,11 @@ class RegistrationForm extends React.Component {
       this.state.promisedDataSize,
       owner
     );
-    console.log(feedback);
+
+    this.setState({
+      loading: false,
+      response: feedback.to
+    });
   };
 
   render() {
@@ -74,7 +83,7 @@ class RegistrationForm extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item label="Promised Data Size">
+          <Form.Item label="Promised Data Size (GB)">
             <Input
               value={this.state.promisedDataSize}
               onChange={event =>
@@ -83,7 +92,7 @@ class RegistrationForm extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item label="Promised Upload Speed">
+          <Form.Item label="Promised Upload Speed (MB/s)">
             <Input
               value={this.state.promisedUploadSpeed}
               onChange={event =>
@@ -92,7 +101,7 @@ class RegistrationForm extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item label="Promised Download Speed">
+          <Form.Item label="Promised Download Speed (MB/s)">
             <Input
               value={this.state.promisedDownloadSpeed}
               onChange={event =>
@@ -110,20 +119,20 @@ class RegistrationForm extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item label="Contact Information">
-            <Input />
-          </Form.Item>
-
-          <Form.Item label="Additional Details">
-            <TextArea rows={4} />
-          </Form.Item>
-
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={this.state.loading}
+            >
               Register
             </Button>
           </Form.Item>
         </Form>
+        <h3 style={{ padding: "10px 100px" }}>
+          {" "}
+          Deployed ISP address: {this.state.response}{" "}
+        </h3>
       </div>
     );
   }

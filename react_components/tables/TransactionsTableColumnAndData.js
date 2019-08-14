@@ -18,7 +18,7 @@ export const columns = [
 		dataIndex: "from",
 		key: "from",
 		render: text => {
-			if (text === "0xbd4cccde1c1c7eb3c702d3a3c37e51e2928d1bd8") {
+			if (text === countryManagerAddress) {
 				return <Tag color="green">Country Managers Account</Tag>;
 			} else {
 				return (
@@ -35,7 +35,7 @@ export const columns = [
 		dataIndex: "to",
 		key: "2=to",
 		render: text => {
-			if (text === "0xbd4cccde1c1c7eb3c702d3a3c37e51e2928d1bd8") {
+			if (text === countryManagerAddress) {
 				return <Tag color="blue">Country Managers Account</Tag>;
 			} else {
 				return (

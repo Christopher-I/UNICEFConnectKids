@@ -1,6 +1,14 @@
 pragma solidity ^0.4.25;
 //counrty manager 0x755014Da263Fc47d238078Bb47d217F743E5B6a5
 //ISP 0xd19f982DBf2F8C7f5B4C78Ce8dEB1715BDCc5AFA school 0x1163C90F4F22ca7294f2E0206B4a2bDE45e27e1e
+//"ISP 1", 500,500,50,"0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B"
+//"Holy Trinity Primary School", 1000, "Lagos",0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B
+//"Garam Primary School", 300, "Kaduna",0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B
+//"Glisten Academy", 1000, "Abuja",0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B
+//"ISP1",300,300,100, 0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B
+//"ISP2",500,500,500, 0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B
+//"ISP3",1000,300,300, 0xc582Ec7Fb245c6E55bd26b7F968eF5028218AC3B
+
 
 contract Main{
     countryManager public newCountryManager;
@@ -26,7 +34,16 @@ contract countryManager{
     address[] public deployedSchools;
     address[] public deployedIsps;    
     ISP public newIsp;
+    ISP public deployedIsp;
     School public newSchool;
+    School public deployedSchool;
+    IspInfo public currentIspProvider;
+    IspInfo public tempIspProvider;
+    
+    struct IspInfo{
+        string name;
+        address addy;
+    }
     
     mapping (address=>uint) public receivedDonationsLog;
     
@@ -35,21 +52,36 @@ contract countryManager{
     }
     
     // creates new schools  
-    function createNewSchool(string name, uint population,string location, address schoolAddress) public {
-        newSchool = new School(name,population, location,schoolAddress);
+    function createNewSchool(string name, uint population,string location, address schoolOwnersAddress) public {
+        newSchool = new School(name,population, location,schoolOwnersAddress);
         deployedSchools.push(newSchool);
+        
+        if(deployedSchools.length ==1){
+             deployedSchool = School(deployedSchools[0]);
+            deployedSchool.updateStatus(true);
+        }
     }
     
     // returns a list of addresses of created schools
     function getDeployedSchools() public view returns(address [] memory) { 
         return deployedSchools;    
          }  
+         
     
     // creates new ISPs  
-    function createNewIsp(string name, int promisedUploadSpeed, int promisedDownloadSpeed, int promisedDataSize, address ispAddress) public {
-        newIsp= new ISP(name, promisedUploadSpeed,promisedDownloadSpeed,promisedDataSize,ispAddress);
+    function createNewIsp(string _name, int promisedUploadSpeed, int promisedDownloadSpeed, int promisedDataSize, address ispOwnerAddress) public {
+        newIsp= new ISP(_name, promisedUploadSpeed,promisedDownloadSpeed, promisedDataSize, ispOwnerAddress);
         deployedIsps.push(newIsp);
+        
+        if(deployedIsps.length == 0){
+            tempIspProvider.name = _name;
+        }
+        
+        if(deployedSchools.length >0 && deployedIsps.length == 1){
+            updateIspProvider( tempIspProvider.name, deployedSchools[0], deployedIsps[0]);
+        }
     }
+    
     function getDeployedIsps() public view returns(address [] memory) { 
         return deployedIsps;    
     }
@@ -63,9 +95,20 @@ contract countryManager{
         return address(this).balance;
     }
     
+    //make a copy of deployed School and ISP Contract and update them with new ISP information
+    function updateIspProvider(string _name, address _schoolAddress,address _ispAddress) public {
+        currentIspProvider.name = _name;
+        currentIspProvider.addy = _ispAddress;
+        deployedSchool = School(_schoolAddress);
+        deployedIsp = ISP(_ispAddress);
+  
+        deployedSchool.updateIspProvider(_name, _ispAddress);
+        deployedIsp.updateIspProvider(_name, _ispAddress);
+    }
+    
     //get general summary of smart contract information
-    function getSummary () public view returns (string, address[]memory,address[]memory){
-        return(countryName, deployedSchools,deployedIsps);
+    function getSummary () public view returns (string, address[]memory,address[]memory,string,address){
+        return(countryName, deployedSchools,deployedIsps,currentIspProvider.name, currentIspProvider.addy);
     }
 }
 
@@ -77,6 +120,7 @@ contract ISP{
     int public promisedUploadSpeed;
     int public promisedDownloadSpeed;
     int public promisedDataSize;
+    IspInfo public currentIspProvider;
     
     //organizes the structure for receiving daily average of connectivity information from the the ISP
     struct connectivityInfo{
@@ -84,6 +128,11 @@ contract ISP{
         int dataSize;
         int uploadSpeed;
         int downloadSpeed;
+    }
+    
+    struct IspInfo{
+        string name;
+        address addy;
     }
     
     // stores daily connectivity information
@@ -109,6 +158,12 @@ contract ISP{
         connectivityRegistry[info.date] = info;
     }
     
+    // updates ISP provider
+    function updateIspProvider(string _ispName, address _ispAddy) public {
+        currentIspProvider.name = _ispName;
+        currentIspProvider.addy = _ispAddy;
+    }
+    
     // returns general information of this smart contract
     function getSummary()public view returns(string,address,int, int,int) {
         return (
@@ -129,6 +184,7 @@ contract School{
     uint public schoolPopulation;
     string public schoolLocation;
     bool public status;
+    IspInfo public currentIspProvider;
  
     
     //organizes the daily average of connectivity information from the the ISP
@@ -137,6 +193,11 @@ contract School{
         uint uploadSpeed;
         uint downloadSpeed;
         uint gigabytes;
+    }
+    
+    struct IspInfo{
+        string name;
+        address addy;
     }
     
     // stores daily connectivity information
@@ -197,6 +258,12 @@ contract School{
     
     // updates ISP consistency score if they perfomed above the agreed base line
     function updateISPConsistencyScore()public {
+    }
+    
+    // updates ISP provider
+    function updateIspProvider(string _ispName, address _ispAddy) public {
+        currentIspProvider.name = _ispName;
+        currentIspProvider.addy = _ispAddy;
     }
     
     // returns general information of this smart contract

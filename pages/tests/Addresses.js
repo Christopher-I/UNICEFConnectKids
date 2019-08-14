@@ -24,7 +24,7 @@ class showMeAddresses extends React.Component {
 	}
 
 	render() {
-		return <div>Nothing to show here</div>;
+		return <div>Open Inspect Console to view addresses</div>;
 	}
 }
 

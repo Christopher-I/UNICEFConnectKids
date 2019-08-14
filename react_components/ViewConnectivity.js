@@ -114,7 +114,8 @@ class ViewConnectivity extends React.Component {
 			percentageOfConnectedSchool:
 				(connectedSchools / SchoolSummary.length) * 100,
 			currentISPName: countryManagerNigeriaSummary[3],
-			currentISPNameAddress: countryManagerNigeriaSummary[4]
+			currentISPNameAddress: countryManagerNigeriaSummary[4],
+			TotalNumberofSchools: SchoolSummary.length
 		});
 	}
 
@@ -128,164 +129,141 @@ class ViewConnectivity extends React.Component {
 	render() {
 		return (
 			<Layout>
-				{this.props.countrySelected ? (
-					<div>
-						{" "}
-						<Content style={{ padding: "25px 50px" }}>
-							<div
-								style={{
-									background: "#fff",
-									padding: 10,
-									height: 190
-								}}
-							>
-								<Row>
-									<Col span={22}>
-										<div>
-											<h2>{this.state.countryName}</h2>
-											Connected Schools:
-											{this.state.connectedSchools}
-											<Divider type="vertical" />
-											Total Number of Schools:{" "}
-											{this.state.schoolSummary.length}
-											<Divider type="vertical" />
-											<Progress
-												type="circle"
-												strokeColor={{
-													"0%": "#108ee9",
-													"100%": "#87d068"
-												}}
-												percent={
-													this.state
-														.percentageOfConnectedSchool
-												}
-												width={80}
-											/>
-											<Divider type="vertical" />
-											Total Student Population:
-											{this.state.population}
-											<Divider type="vertical" />
-											Country Account Number:{" "}
-											<Link
-												route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
-											>
-												<a>{countryManagerAddress}</a>
-											</Link>
-										</div>
-										<br />
-										<div>
-											Funding Needed to Connect All
-											Schools:{" "}
-											<Tag color="red">
-												{
-													this.state
-														.FundingNeededtoConnectAllSchools
-												}{" "}
-												Wei
-											</Tag>
-											<Divider type="vertical" />
-											Funding Received:
-											<Tag color="green">
-												{this.state.balance}Wei
-											</Tag>
-											<Divider type="vertical" />
-											Amount Needed to Fund additional
-											School:{" "}
-											<Tag color="red">
-												{
-													this.state
-														.AmountNeededtoFundadditionalSchool
-												}{" "}
-												Wei
-											</Tag>
-											Current ISP :{" "}
-											<Link
-												route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
-											>
-												<a>
-													{this.state.currentISPName}
-												</a>
-											</Link>
-										</div>
-									</Col>
-
-									<Col span={2}>
-										Enter Amount
-										<Input
-											placeholder="Wei"
-											style={{ width: "110px" }}
-											value={this.state.donationAmount}
-											onChange={event =>
-												this.setState({
-													donationAmount:
-														event.target.value
-												})
-											}
-										/>
-										<br />
-										<br />
-										<Button
-											type="primary"
-											style={{ width: "110px" }}
-											onClick={
-												this.sendDonationToContract
-											}
-										>
-											Donate
-										</Button>
-									</Col>
-								</Row>{" "}
-							</div>
-						</Content>
-						<Content style={{ padding: "0 50px" }}>
-							<div
-								style={{
-									background: "#fff",
-									padding: 24,
-									minHeight: 500
-								}}
-							>
-								<Row>
-									<Col span={10}>
-										<NigeriaMap />
-									</Col>
-
-									<Col span={14}>
-										<Tabs
-											defaultActiveKey="1"
-											onChange={callback}
-										>
-											<TabPane
-												tab="List Of Schools"
-												key="1"
-											>
-												<ListOfSchools />
-											</TabPane>
-											<TabPane tab="List Of ISPs" key="2">
-												<ListOfISPs />
-											</TabPane>
-											<TabPane tab="Transactions" key="3">
-												<ListOfTransactions />
-											</TabPane>
-										</Tabs>
-									</Col>
-								</Row>
-							</div>
-						</Content>
-					</div>
-				) : (
+				<div>
+					{" "}
 					<Content style={{ padding: "25px 50px" }}>
 						<div
 							style={{
 								background: "#fff",
 								padding: 10,
+								height: 190
+							}}
+						>
+							<Row>
+								<Col span={22}>
+									<div>
+										<h2>{this.state.countryName}</h2>
+										Connected Schools:
+										{this.state.connectedSchools}
+										<Divider type="vertical" />
+										Total Number of Schools:{" "}
+										{this.state.TotalNumberofSchools}
+										<Divider type="vertical" />
+										<Progress
+											type="circle"
+											strokeColor={{
+												"0%": "#108ee9",
+												"100%": "#87d068"
+											}}
+											percent={Math.round(
+												this.state
+													.percentageOfConnectedSchool
+											)}
+											width={80}
+										/>
+										<Divider type="vertical" />
+										Total Student Population:
+										{this.state.population}
+										<Divider type="vertical" />
+										Country Account Number:{" "}
+										<Link
+											route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
+										>
+											<a>{countryManagerAddress}</a>
+										</Link>
+									</div>
+									<br />
+									<div>
+										Funding Needed to Connect All Schools:{" "}
+										<Tag color="red">
+											{
+												this.state
+													.FundingNeededtoConnectAllSchools
+											}{" "}
+											Wei
+										</Tag>
+										<Divider type="vertical" />
+										Funding Received:
+										<Tag color="green">
+											{this.state.balance}Wei
+										</Tag>
+										<Divider type="vertical" />
+										Amount Needed to Fund additional School:{" "}
+										<Tag color="red">
+											{
+												this.state
+													.AmountNeededtoFundadditionalSchool
+											}{" "}
+											Wei
+										</Tag>
+										Current ISP :{" "}
+										<Link
+											route={`https://rinkeby.etherscan.io/address/${countryManagerAddress}`}
+										>
+											<a>{this.state.currentISPName}</a>
+										</Link>
+									</div>
+								</Col>
+
+								<Col span={2}>
+									Enter Amount
+									<Input
+										placeholder="Wei"
+										style={{ width: "110px" }}
+										value={this.state.donationAmount}
+										onChange={event =>
+											this.setState({
+												donationAmount:
+													event.target.value
+											})
+										}
+									/>
+									<br />
+									<br />
+									<Button
+										type="primary"
+										style={{ width: "110px" }}
+										onClick={this.sendDonationToContract}
+									>
+										Donate
+									</Button>
+								</Col>
+							</Row>{" "}
+						</div>
+					</Content>
+					<Content style={{ padding: "0 50px" }}>
+						<div
+							style={{
+								background: "#fff",
+								padding: 24,
 								minHeight: 500
 							}}
 						>
-							<h1>Please Select a Country</h1>
+							<Row>
+								<Col span={10}>
+									<NigeriaMap />
+								</Col>
+
+								<Col span={14}>
+									<Tabs
+										defaultActiveKey="1"
+										onChange={callback}
+									>
+										<TabPane tab="List Of Schools" key="1">
+											<ListOfSchools />
+										</TabPane>
+										<TabPane tab="List Of ISPs" key="2">
+											<ListOfISPs />
+										</TabPane>
+										<TabPane tab="Transactions" key="3">
+											<ListOfTransactions />
+										</TabPane>
+									</Tabs>
+								</Col>
+							</Row>
 						</div>
 					</Content>
-				)}
+				</div>
 			</Layout>
 		);
 	}

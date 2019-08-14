@@ -34,6 +34,9 @@ class RegistrationForm extends React.Component {
 
   createNewSchool = async e => {
     e.preventDefault();
+    this.setState({
+      loading: true
+    });
 
     let result = await GetListOfCountryManagers(mainContractAddress);
     const feedback = await CreateNewSchool(
@@ -44,6 +47,11 @@ class RegistrationForm extends React.Component {
       this.state.schoolOwnersETHAddress
     );
     console.log(feedback);
+
+    this.setState({
+      loading: false,
+      response: feedback.to
+    });
   };
 
   render() {
@@ -109,11 +117,18 @@ class RegistrationForm extends React.Component {
           </Form.Item>
 
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={this.state.loading}
+            >
               Register
             </Button>
           </Form.Item>
         </Form>
+        <h3 style={{ padding: "10px 100px" }}>
+          Deployed School Address : {this.state.response}
+        </h3>
       </div>
     );
   }

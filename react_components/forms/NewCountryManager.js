@@ -37,7 +37,9 @@ class RegistrationForm extends React.Component {
     countryName: "",
     confirmDirty: false,
     autoCompleteResult: [],
-    errorMessage: ""
+    errorMessage: "",
+    response: "",
+    loading: false
   };
 
   async componentDidMount() {}
@@ -45,6 +47,7 @@ class RegistrationForm extends React.Component {
   //creates a new country manager
   createNewCountryM = async e => {
     e.preventDefault();
+    this.setState({ loading: true });
     try {
       let result = await MainDeployed(mainContractAddress);
 
@@ -52,8 +55,7 @@ class RegistrationForm extends React.Component {
         mainContractAddress,
         this.state.countryName
       );
-
-      console.log(address);
+      this.setState({ response: address.to, loading: false });
     } catch (err) {
       console.log(err);
       this.setState({ errorMessage: err.message });
@@ -72,6 +74,7 @@ class RegistrationForm extends React.Component {
 
   getCountryManagersSummary = async e => {
     e.preventDefault();
+
     try {
       //gets a list of country managers
       let result = await GetListOfCountryManagers(mainContractAddress);
@@ -133,11 +136,17 @@ class RegistrationForm extends React.Component {
               </Form.Item>
 
               <Form.Item>
-                <Button type="primary" htmlType="submit">
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  loading={this.state.loading}
+                >
                   Register
                 </Button>
               </Form.Item>
             </Form>
+            <br />
+            <h3>Country Manager Address : {this.state.response}</h3>
           </Col>
         </Row>
       </div>
