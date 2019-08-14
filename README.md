@@ -61,6 +61,8 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Dapp automatically manages the selection of ISP providers and the prioritization of schools to receive internet connection.
 
+    -By default the country manager smart contract picks the school with highest population as priority in providing internet service and an ISP is randomly chosen as a start when a new country contract is created and then subsequently ISP providers are chosen based on merit.
+
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
     -The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of performance. This way the best service providers over time will have a bidding advantage.
@@ -71,20 +73,20 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     -Schools are prioritized for connectivity by the smart contract based on factors such as population and location.
 
-<h3 name ="#HowToUse">How To Use</h3>
+<h3 name="HowToUse">How To Use</h3>
 
--   [Scope and Overview](#ScopeandOverview)
+-   [Quick Instructional Video](#ScopeandOverview)
 
 OR
 
 -   Guidelines
 
-         Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
+          Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
 
-         Start
+          Start
 
--   Clone this repo. Then navigate to the root directory of repo.
--             \$ npm i
+              -   Clone this repo. Then navigate to the root directory of repo.
+              -   $ npm i
 
           Deploy a new contract to Rinkeby
 
@@ -125,6 +127,10 @@ OR
 
               - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
 
+          Make donation
+
+              - In the overview page, enter and amount into the donation section and click enter and a successful transaction, the transaction information will be displayed in the accounting table on the same page.
+
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
     -Blockchain protocol - Ethereum(Rinkeby Network).
@@ -153,7 +159,7 @@ OR
 
     -Refine smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
 
-    -Refine  algorithm that prioritized the next school to provide connectivity based on factors such as population and location.
+    -Refine  algorithm to prioritize next school connectivity selection based on additional factors such as location.
 
     -Create a viable option of accessing Dapp from an internet browser without a wallet or metamask. That way more participants can be use the platform.
 
