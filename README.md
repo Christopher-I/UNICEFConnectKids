@@ -94,6 +94,8 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
         Deploy a new country manager
 
+        ⋅⋅* Unordered sub-list.
+
             * return to the root folder of the repo
 
             * $ npm run dev
