@@ -2,7 +2,7 @@
 
 **Version 1.0.0**
 
-- [ Link to working Dapp](https://jovial-carson-20282c.netlify.com/)
+- [ Link to working Dapp](https://jovial-carson-20282c.netlify.com/) (Please make sure you signed into metamask Rinkeby network)
 
 ## Table Of Content
 
