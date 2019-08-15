@@ -337,7 +337,7 @@ var ViewConnectivity = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 175
 				}
-			}, "Funding Needed to Connect All Schools:", " ", _react2.default.createElement(_antd.Tag, { color: "red", __source: {
+			}, "Funding Needed to Connect All Schools:", " ", _react2.default.createElement(_antd.Tag, { color: "grey", __source: {
 					fileName: _jsxFileName,
 					lineNumber: 177
 				}
@@ -353,7 +353,7 @@ var ViewConnectivity = function (_React$Component) {
 					fileName: _jsxFileName,
 					lineNumber: 189
 				}
-			}), "Amount Needed to Fund additional School:", " ", _react2.default.createElement(_antd.Tag, { color: "red", __source: {
+			}), "Amount Needed to Fund additional School:", " ", _react2.default.createElement(_antd.Tag, { color: "grey", __source: {
 					fileName: _jsxFileName,
 					lineNumber: 191
 				}

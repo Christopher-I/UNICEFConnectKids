@@ -174,7 +174,7 @@ class ViewConnectivity extends React.Component {
 									<br />
 									<div>
 										Funding Needed to Connect All Schools:{" "}
-										<Tag color="red">
+										<Tag color="grey">
 											{
 												this.state
 													.FundingNeededtoConnectAllSchools
@@ -188,7 +188,7 @@ class ViewConnectivity extends React.Component {
 										</Tag>
 										<Divider type="vertical" />
 										Amount Needed to Fund additional School:{" "}
-										<Tag color="red">
+										<Tag color="grey">
 											{
 												this.state
 													.AmountNeededtoFundadditionalSchool

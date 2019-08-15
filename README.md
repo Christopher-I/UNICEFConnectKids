@@ -2,7 +2,7 @@
 
 **Version 1.0.0**
 
-- [ Link to working Dapp](1Clickheretovisitdeployedversion)
+-   [ Link to working Dapp](1Clickheretovisitdeployedversion)
 
 ## Table Of Content
 
@@ -10,13 +10,13 @@
 
 2. [Documentation](#Documentation)
 
-   - [Scope and Overview](#ScopeandOverview)
-   - [Assumptions](#Assumptions)
-   - [Additional Mechanisms](#AdditionalMechanisms)
-   - [How To Use](#HowToUse)
-   - [Tech Stack and Tools](#TechStackandTools)
-   - [Smart Contract Architecture](#SmartContractArchitecture)
-   - [Improvements](#Improvements)
+    - [Scope and Overview](#ScopeandOverview)
+    - [Assumptions](#Assumptions)
+    - [Additional Mechanisms](#AdditionalMechanisms)
+    - [How To Use](#HowToUse)
+    - [Tech Stack and Tools](#TechStackandTools)
+    - [Smart Contract Architecture](#SmartContractArchitecture)
+    - [Improvements](#Improvements)
 
 3. [Thanks](#Thanks)
 
@@ -41,13 +41,25 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     - Sample Size : 3 schools and 3 ISPs.
 
+    - Important Variables
+
+        Cycle Period : An agreed period of time between the ISP and school, during this time the ISP provides internet service to a school. At the end of this period, the ISP is graded on their Internet service perfomance and either compensated in crypto or a new service provider is automatically chosen by a smart contract function.
+
+        Amount Needed to Fund Additional School: To minimize internet service interuptions in schools. X amount of cypto needs to accumulate in a smart contract before a new ISP agreemenent is automatically triggered. For example, to engange a new ISP 6 months of minimum funding should be available before an ISP is engaged.
+
+        ** School Prioritazation Factors: How does the Dapp know which school to connect next if funds are available? In the current version of this Dapp population is used as the determining factor, future iterations will account for other factors such as location and target more resource poor areas.
+
 <h3 name="Assumptions">Assumptions</h3>
 
-    - Payments to ISPs are in ETH/ERC20
+    - All important variables listed in the scope and overview section can temporarily be manipulated from an Admin console . After further testing and gathering reliable information, these variables can be hard coded into the smart contracts.
+
+    - Payments to ISPs are in ETH(Wei).
+
+    - To build a truly self-sustaining Dapp, ISPs and schools will need accept to the terms and conditions that the Dapp requires to make decisions.
 
     - Data Source: All data connectivity information and crypto-currency transctions used in Dapp are retrieved from the ethereum blockchain.
 
-    - Connectivity information such as upload/download speed is received via a solidity smart contract from ISPs and Schools.
+    - Connectivity information such as upload/download speeds are received via a solidity smart contract from ISPs and Schools.
 
     - An average mean upload /download speed and data size provision are sent every day from the schools and ISPs.
 
@@ -55,71 +67,69 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     - ISPs and Schools apply to be part of the Dapp and are approved by an admin (to prevent spamming of the network and ensure all participants are real).
 
-    - All participants can use basic ethereum based tools such as metamask  and etherscan.
+    - Participants can use metamask, future iterations will not require this.
 
-    - All transactions and daily connectivity data is stored on the ethereum blockchain.
+    - Transactions and daily connectivity data is stored on the ethereum blockchain.
 
     - Dapp automatically manages the selection of ISP providers and the prioritization of schools to receive internet connection.
 
-    - By default the country manager smart contract picks the school with highest population as priority in providing internet service and an ISP is randomly chosen as a start when a new country contract is created and then subsequently ISP providers are chosen based on merit.
+    - On initial launch, by default the country manager smart contract picks the first school and ISP applicants and then at the end of a cycle period, ISP providers are chosen based on merit and schools based on population.
 
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
-    - The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of performance. This way the best service providers over time will have a bidding advantage.
+    -At the end of every cycle period 'X days', an ETH alarm clock (https://www.ethereum-alarm-clock.com/) automatically triggers certain solidity functions to compute the average daily performace of the ISP provider and subsequently pays the ISP provider based on their perfomance (number of days they achieved the minimum service requirements) OR switch to a different provider if the ISP was unable to meet the minimum requirement at the end of the cycle.
 
-    - ISPs perfomance are graded at the end of an appropriate cycle period(example 30 days) and payments are made after grading depending on ISP grade.
+    - The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of performance. This way the best service providers over time will have a bidding advantage.
 
     - After every succesful grade at the end of cycle, ISP receive 'consistency points' which are a positive factor when bidding for future ISP opportunities.
 
-    - Schools are prioritized for connectivity by the smart contract based on factors such as population and location.
-
 <h3 name="HowToUse">How To Use</h3>
 
-- [Quick Instructional Video](#ScopeandOverview)
+-   [Quick Instructional Video](#ScopeandOverview)
 
 OR
 
-- Guidelines
+-   Guidelines
 
-        Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
+          Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
 
-        Start
+          Start
 
-            -   Clone this repo. Then navigate to the root directory of repo.
-            -   $ npm i
+              -   Clone this repo. Then navigate to the root directory of repo.
+              -   $ npm i
 
-        Deploy a new contract to Rinkeby
+          Deploy a new contract to Rinkeby
 
-            - $ cd ethereum
-            - $ node compile && node deploy
-            - Copy main contract address that will be displayed on command line.
-            - $ touch ListofSmartCOntractAddresses
-            - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
+              - $ cd ethereum
+              - $ node compile && node deploy
+              - Copy main contract address that will be displayed on command line.
+              - $ touch ListofSmartCOntractAddresses
+              - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
 
-        Deploy a new country manager
+          Deploy a new country manager
 
-            -return to the root folder of the repo
-            - $ npm run dev
-            - open http://localhost:3000/ in your browser
-            - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
-            - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
-            - $ cd ethereum && touch ListofSmartContractAddressses.
-            - paste the address into the variable called "country manager address".
+              -return to the root folder of the repo
+              - $ npm run dev
+              - open http://localhost:3000/ in your browser
+              - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
+              - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
+              - $ cd ethereum && touch ListofSmartContractAddressses.
+              - paste the address into the variable called "country manager address".
 
-        Deploy a new school/ISP contract
+          Deploy a new school/ISP contract
 
-            - open http://localhost:3000/ in your browser
-            - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
+              - open http://localhost:3000/ in your browser
+              - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
 
-                - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
-                - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
-                - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
+                  - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
+                  - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
+                  - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
 
-            - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
+              - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
 
-        Make donation
+          Make donation
 
-            - In the overview page, enter and amount into the donation section and click enter and a successful transaction, the transaction information will be displayed in the accounting table on the same page.
+              - In the overview page, enter and amount into the donation section and click enter and a successful transaction, the transaction information will be displayed in the accounting table on the same page.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
