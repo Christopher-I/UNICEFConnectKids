@@ -38,6 +38,9 @@ var _NewISPForm2 = _interopRequireDefault(_NewISPForm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/pages/applicationForms/ISPApplication.js?entry";
+
+
 var Home = function (_React$Component) {
 	(0, _inherits3.default)(Home, _React$Component);
 
@@ -50,7 +53,17 @@ var Home = function (_React$Component) {
 	(0, _createClass3.default)(Home, [{
 		key: "render",
 		value: function render() {
-			return _react2.default.createElement(_Template2.default, null, _react2.default.createElement(_NewISPForm2.default, null));
+			return _react2.default.createElement(_Template2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 8
+				}
+			}, _react2.default.createElement(_NewISPForm2.default, {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 9
+				}
+			}));
 		}
 	}]);
 
@@ -58,3 +71,4 @@ var Home = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Home;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2FwcGxpY2F0aW9uRm9ybXMvSVNQQXBwbGljYXRpb24uanMiXSwibmFtZXMiOlsiUmVhY3QiLCJUZW1wbGF0ZSIsIk5ld0lTUEZvcm0iLCJIb21lIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTyxBQUFnQjs7Ozs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7OzJCQUNJLEFBQ1I7MEJBQ0MsQUFBQzs7ZUFBRDtpQkFBQSxBQUNDO0FBREQ7QUFBQSxJQUFBLGtCQUNDLEFBQUM7O2VBQUQ7aUJBRkYsQUFDQyxBQUNDLEFBR0Y7QUFIRTtBQUFBOzs7OztFQUplLGdCQUFNLEEsQUFVekI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiSVNQQXBwbGljYXRpb24uanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NocmlzL0RvY3VtZW50cy9CbG9ja2NoYWluUHJvamVjdHMvVW5pY2VmL2Nvbm5lY3RLaWRzVW5pY2VmIn0=

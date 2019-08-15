@@ -34,6 +34,9 @@ var _routes = require("../../routes");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/react_components/modals/LoginModal.js";
+
+
 var LoginModal = function (_React$Component) {
 	(0, _inherits3.default)(LoginModal, _React$Component);
 
@@ -50,11 +53,37 @@ var LoginModal = function (_React$Component) {
 				title: "Login",
 				visible: this.props.loginModalVisibility,
 				onOk: this.props.loginModalhandleOk,
-				onCancel: this.props.loginModalhandleCancel
-			}, _react2.default.createElement("div", { style: { marginBottom: 16 } }, _react2.default.createElement(_antd.Input, { addonBefore: "UserName", defaultValue: "username.." }), _react2.default.createElement("br", null), _react2.default.createElement("br", null), _react2.default.createElement(_antd.Input, {
+				onCancel: this.props.loginModalhandleCancel,
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 8
+				}
+			}, _react2.default.createElement("div", { style: { marginBottom: 16 }, __source: {
+					fileName: _jsxFileName,
+					lineNumber: 14
+				}
+			}, _react2.default.createElement(_antd.Input, { addonBefore: "UserName", defaultValue: "username..", __source: {
+					fileName: _jsxFileName,
+					lineNumber: 15
+				}
+			}), _react2.default.createElement("br", {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 16
+				}
+			}), _react2.default.createElement("br", {
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 17
+				}
+			}), _react2.default.createElement(_antd.Input, {
 				addonBefore: "Password",
 				defaultValue: "******",
-				type: "password"
+				type: "password",
+				__source: {
+					fileName: _jsxFileName,
+					lineNumber: 18
+				}
 			})));
 		}
 	}]);
@@ -63,3 +92,4 @@ var LoginModal = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = LoginModal;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvbW9kYWxzL0xvZ2luTW9kYWwuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJNb2RhbCIsIklucHV0IiwiQnV0dG9uIiwiTGluayIsIkxvZ2luTW9kYWwiLCJwcm9wcyIsImxvZ2luTW9kYWxWaXNpYmlsaXR5IiwibG9naW5Nb2RhbGhhbmRsZU9rIiwibG9naW5Nb2RhbGhhbmRsZUNhbmNlbCIsIm1hcmdpbkJvdHRvbSIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPOzs7O0FBQ1AsQUFBUyxBQUFPLEFBQU87O0FBQ3ZCLEFBQVMsQUFBWTs7Ozs7OztJLEFBRWY7Ozs7Ozs7Ozs7OzJCQUNJLEFBQ1I7MEJBQ0MsQUFBQztXQUFELEFBQ08sQUFDTjthQUFTLEtBQUEsQUFBSyxNQUZmLEFBRXFCLEFBQ3BCO1VBQU0sS0FBQSxBQUFLLE1BSFosQUFHa0IsQUFDakI7Y0FBVSxLQUFBLEFBQUssTUFKaEIsQUFJc0I7O2VBSnRCO2lCQUFBLEFBTUM7QUFORDtBQUNDLElBREQsa0JBTUMsY0FBQSxTQUFLLE9BQU8sRUFBRSxjQUFkLEFBQVksQUFBZ0I7ZUFBNUI7aUJBQUEsQUFDQztBQUREO3NCQUNDLEFBQUMsNkJBQU0sYUFBUCxBQUFtQixZQUFXLGNBQTlCLEFBQTJDO2VBQTNDO2lCQURELEFBQ0MsQUFDQTtBQURBOzs7ZUFDQTtpQkFGRCxBQUVDLEFBQ0E7QUFEQTtBQUFBOztlQUNBO2lCQUhELEFBR0MsQUFDQTtBQURBO0FBQUEsdUJBQ0EsQUFBQztpQkFBRCxBQUNhLEFBQ1o7a0JBRkQsQUFFYyxBQUNiO1VBSEQsQUFHTTs7ZUFITjtpQkFYSCxBQUNDLEFBTUMsQUFJQyxBQVFIO0FBUkc7QUFDQzs7Ozs7RUFkbUIsZ0JBQU0sQSxBQXdCL0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoiTG9naW5Nb2RhbC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY2hyaXMvRG9jdW1lbnRzL0Jsb2NrY2hhaW5Qcm9qZWN0cy9VbmljZWYvY29ubmVjdEtpZHNVbmljZWYifQ==

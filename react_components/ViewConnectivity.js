@@ -252,11 +252,11 @@ class ViewConnectivity extends React.Component {
 							}}
 						>
 							<Row>
-								<Col span={10}>
+								<Col span={12}>
 									<NigeriaMap />
 								</Col>
 
-								<Col span={14}>
+								<Col span={12}>
 									<Tabs
 										defaultActiveKey="1"
 										onChange={callback}
