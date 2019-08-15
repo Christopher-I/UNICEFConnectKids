@@ -24,10 +24,10 @@
 
 <h2 name="Installation">Installation</h2>
 
-        - git clone https://github.com/Christopher-I/UNICEFConnectKids
-        - cd UNICEFConnectKids
-        - npm run i
-        - \$ npm run dev
+    - git clone https://github.com/Christopher-I/UNICEFConnectKids
+    - cd UNICEFConnectKids
+    - npm run i
+    - \$ npm run dev
 
 <h2 name="Documentation">Documentation</h2>
 
@@ -138,43 +138,43 @@ OR
 
 ![](img/smartContractArchitecture.jpg)
 
-    - The Ethereum Alarm Clock is a service that allows scheduling transactions to be executed at a later time on the ethereum blockchain- Eth alarm clock website. This will be used to safely make calls to the smart contracts at the end of each cycle.
+- The Ethereum Alarm Clock is a service that allows scheduling transactions to be executed at a later time on the ethereum blockchain- Eth alarm clock website. This will be used to safely make calls to the smart contracts at the end of each cycle.
 
-    - Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts and sets important overeaching varaibles such as cycle period and minimum perfomance requirement of ISPs.
+- Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts and sets important overeaching varaibles such as cycle period and minimum perfomance requirement of ISPs.
 
-    - Country Manager Contract: It oversees the creation and management of ISP and school smart contracts. It also keeps a record of all financial and data connectivity information within a country.
+- Country Manager Contract: It oversees the creation and management of ISP and school smart contracts. It also keeps a record of all financial and data connectivity information within a country.
 
-    - School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract. This contract owner can also be an IOT device.
+- School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract. This contract owner can also be an IOT device.
 
-     - ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent by smart contracts at the end of each cycle. The controller of this contract should be a representative of the ISP.
+- ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent by smart contracts at the end of each cycle. The controller of this contract should be a representative of the ISP.
 
 <h3 name="Improvements">Improvements</h3>
 
-    - Refine smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
+- Refine smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
 
-    - Refine  algorithm to prioritize next school connectivity selection based on additional factors such as location.
+- Refine algorithm to prioritize next school connectivity selection based on additional factors such as location.
 
-    - Create a viable option of accessing Dapp from an internet browser without a wallet or metamask. That way more participants can be use the platform.
+- Create a viable option of accessing Dapp from an internet browser without a wallet or metamask. That way more participants can be use the platform.
 
-    - Limit accessibility(from public to restricted) of relevent smart contract functions after further testing
+- Limit accessibility(from public to restricted) of relevent smart contract functions after further testing
 
-    - Create dispute management function for cases where ISPs and school provide largely varying data.
+- Create dispute management function for cases where ISPs and school provide largely varying data.
 
-    - Create a UI mechanism to easily onboard new schools on map based on their location.
+- Create a UI mechanism to easily onboard new schools on map based on their location.
 
-    - Add more countries and schools to platform.
+- Add more countries and schools to platform.
 
-    - Include the option of allowing different ISPs to bid on different schools within a country.
+- Include the option of allowing different ISPs to bid on different schools within a country.
 
-    - Improve Admin page to include the option of accepting applications from schools and ISPs.
+- Improve Admin page to include the option of accepting applications from schools and ISPs.
 
-    - Hook-in ETH timer.
+- Hook-in ETH timer.
 
-    - Include security measures to protect all participants in case of a future vulnerability to Dapp.
+- Include security measures to protect all participants in case of a future vulnerability to Dapp.
 
-    - Improve smart contract upgradability without compromising user experience, safety and performance.
+- Improve smart contract upgradability without compromising user experience, safety and performance.
 
-    - Add login pages for ISPs and school to manage their application status. ISPs to place bids on different schools.
+- Add login pages for ISPs and school to manage their application status. ISPs to place bids on different schools.
 
 <h2 name="Thanks">Thanks</h2>
 
