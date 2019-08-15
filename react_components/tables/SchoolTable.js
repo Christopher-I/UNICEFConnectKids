@@ -126,8 +126,12 @@ class SchoolTable extends React.Component {
 					onOk={this.connectivityModalhandleOk}
 					onCancel={this.connectivityModalhandleCancel}
 				>
-					Data Consumption
-					<Progress percent={50} showInfo={false} />
+					Data Consumption Blue-School, Green - ISP
+					<Progress
+						percent={50}
+						successPercent={30}
+						showInfo={false}
+					/>
 					GB
 					<div style={{ marginBottom: 16 }}>
 						<InternetSpeedChart />{" "}

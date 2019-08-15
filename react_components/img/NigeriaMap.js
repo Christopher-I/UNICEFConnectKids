@@ -233,3 +233,5 @@ class NigeriaMap extends React.Component {
 }
 
 export default NigeriaMap;
+
+//source nigeria map used was from wikipedia

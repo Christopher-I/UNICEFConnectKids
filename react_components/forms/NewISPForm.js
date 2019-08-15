@@ -12,6 +12,7 @@ import {
   AutoComplete
 } from "antd";
 import CreateNewISP from "../../ethereum/deployedContractCalls/countryManager/createNewISP";
+import { CountryManagerDeployed } from "../../ethereum/deployedContractCalls/deployedContracts";
 import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
 import {
   mainContractAddress,
@@ -52,9 +53,14 @@ class RegistrationForm extends React.Component {
       owner
     );
 
+    let countryManager = await CountryManagerDeployed(result[0]);
+    let isps = await countryManager.methods.getDeployedIsps().call();
+
+    console.log(isps);
+
     this.setState({
       loading: false,
-      response: feedback.to
+      response: isps[isps.length - 1]
     });
   };
 

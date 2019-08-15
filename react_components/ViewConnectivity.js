@@ -48,7 +48,8 @@ class ViewConnectivity extends React.Component {
 		population: "",
 		countryName: "Nigeria",
 		currentISPName: "Pending..",
-		currentISPNameAddress: "Pending.."
+		currentISPNameAddress: "Pending..",
+		donationButtonLoading: false
 	};
 
 	async componentDidMount() {
@@ -120,9 +121,16 @@ class ViewConnectivity extends React.Component {
 
 	sendDonationToContract = async e => {
 		e.preventDefault();
+		this.setState({
+			donationButtonLoading: true
+		});
 		console.log(
 			await SendDonation(countryManagerAddress, this.state.donationAmount)
 		);
+
+		this.setState({
+			donationButtonLoading: false
+		});
 	};
 
 	render() {
@@ -225,6 +233,9 @@ class ViewConnectivity extends React.Component {
 										type="primary"
 										style={{ width: "110px" }}
 										onClick={this.sendDonationToContract}
+										loading={
+											this.state.donationButtonLoading
+										}
 									>
 										Donate
 									</Button>

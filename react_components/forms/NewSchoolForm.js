@@ -13,6 +13,7 @@ import {
 } from "antd";
 import CreateNewSchool from "../../ethereum/deployedContractCalls/countryManager/createNewSchool";
 import GetListOfCountryManagers from "../../ethereum/deployedContractCalls/main/getListOfCountryManagers";
+import { CountryManagerDeployed } from "../../ethereum/deployedContractCalls/deployedContracts";
 import {
   mainContractAddress,
   owner
@@ -46,11 +47,14 @@ class RegistrationForm extends React.Component {
       this.state.schoolLocation,
       this.state.schoolOwnersETHAddress
     );
-    console.log(feedback);
+    let countryManager = await CountryManagerDeployed(result[0]);
+    let schools = await countryManager.methods.getDeployedSchools().call();
+
+    console.log(schools);
 
     this.setState({
       loading: false,
-      response: feedback.to
+      response: schools[schools.length - 1]
     });
   };
 

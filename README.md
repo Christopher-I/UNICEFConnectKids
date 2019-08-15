@@ -158,7 +158,7 @@ OR
 
 - Working back and front end.
 
-- Front end and front end connected.
+- Back and front end connected.
 
 - Details:
 
@@ -178,7 +178,7 @@ OR
 
   - Users can view a chart of daily ISP service performance.
 
-  - Accept donations and displays a transparent record of all transactions that be easily verified on etherscan.
+  - Users can send donations and view transparent record of all transactions that can be easily verified on etherscan.
 
 <h3 name="Improvements">Improvements</h3>
 
@@ -216,12 +216,5 @@ A big thank you to UNICEF and gitcoin for providing this opportunity to create a
 
 <h2 name="License">Copyright and license</h2>
 
-@@ -0,0 +1,21 @@ MIT License
-
 Copyright (c) 2019 Christopher Igbojekwe
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
