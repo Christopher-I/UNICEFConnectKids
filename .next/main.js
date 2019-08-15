@@ -38,7 +38,7 @@ window.next = next;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.renderError = exports.render = exports.ErrorComponent = exports.router = undefined;
+exports.renderError = exports.render = exports.emitter = exports.ErrorComponent = exports.router = undefined;
 
 var _regenerator = __webpack_require__(24);
 
@@ -173,7 +173,8 @@ var doRender = function () {
         props = _ref8.props,
         hash = _ref8.hash,
         err = _ref8.err,
-        emitter = _ref8.emitter;
+        _ref8$emitter = _ref8.emitter,
+        emitterProp = _ref8$emitter === undefined ? emitter : _ref8$emitter;
 
     var _router, _pathname, _query, _asPath, appProps;
 
@@ -196,10 +197,6 @@ var doRender = function () {
 
           case 5:
 
-            if (emitter) {
-              emitter.emit('before-reactdom-render', { Component: Component, ErrorComponent: ErrorComponent });
-            }
-
             Component = Component || lastAppProps.Component;
             props = props || lastAppProps.props;
 
@@ -208,13 +205,13 @@ var doRender = function () {
             };
             lastAppProps = appProps;
 
+            emitterProp.emit('before-reactdom-render', { Component: Component, ErrorComponent: ErrorComponent, appProps: appProps });
+
             // We need to clear any existing runtime error messages
             _reactDom2.default.unmountComponentAtNode(errorContainer);
             renderReactElement((0, _react.createElement)(_app2.default, appProps), appContainer);
 
-            if (emitter) {
-              emitter.emit('after-reactdom-render', { Component: Component, ErrorComponent: ErrorComponent });
-            }
+            emitterProp.emit('after-reactdom-render', { Component: Component, ErrorComponent: ErrorComponent, appProps: appProps });
 
           case 13:
           case 'end':
@@ -313,12 +310,14 @@ var stripAnsi = function stripAnsi(s) {
   return s;
 };
 
+var emitter = exports.emitter = new _EventEmitter2.default();
+
 exports.default = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
   var _ref4 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
       passedDebugComponent = _ref4.ErrorDebugComponent,
       passedStripAnsi = _ref4.stripAnsi;
 
-  var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, chunkName, emitter, hash;
+  var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, chunkName, hash;
 
   return _regenerator2.default.wrap(function _callee$(_context) {
     while (1) {
@@ -414,9 +413,6 @@ exports.default = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.de
             err: err
           });
 
-          emitter = new _EventEmitter2.default();
-
-
           router.subscribe(function (_ref5) {
             var Component = _ref5.Component,
                 props = _ref5.props,
@@ -432,7 +428,7 @@ exports.default = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.de
 
           return _context.abrupt('return', emitter);
 
-        case 47:
+        case 46:
         case 'end':
           return _context.stop();
       }
@@ -852,7 +848,7 @@ var _EventEmitter2 = _interopRequireDefault(_EventEmitter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var webpackModule = module; /* global window, document, __NEXT_DATA__ */
+var webpackModule = module; /* global window, document */
 
 var PageLoader = function () {
   function PageLoader(buildId, assetPrefix) {
@@ -935,10 +931,7 @@ var PageLoader = function () {
       var _this2 = this;
 
       route = this.normalizeRoute(route);
-
-      if (__NEXT_DATA__.nextExport) {
-        route = route === '/' ? '/index.js' : route + '/index.js';
-      }
+      route = route === '/' ? '/index.js' : route + '.js';
 
       var script = document.createElement('script');
       var url = this.assetPrefix + '/_next/' + encodeURIComponent(this.buildId) + '/page' + route;
