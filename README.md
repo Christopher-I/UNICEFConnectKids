@@ -126,13 +126,13 @@ OR
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
-    - Blockchain protocol - Ethereum(Rinkeby Network).
+- Blockchain protocol - Ethereum(Rinkeby Network).
 
-    - Front End - JavaScript, React, Html, CSS.
+- Front End - JavaScript, React, Html, CSS.
 
-    - Back End - Solidity, Node.js, NextJs.
+- Back End - Solidity, Node.js, NextJs.
 
-    - Other Libraries and Tools - ETH Timer, Truffle, Web3.
+- Other Libraries and Tools - ETH Timer, Truffle, Web3.
 
 <h3 name="SmartContractArchitecture">Smart Contract Architecture</h3>
 
