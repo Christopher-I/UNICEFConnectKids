@@ -40,9 +40,9 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 - Sample Size : 3 schools and 3 ISPs.
 - Important Variables
 
-      - Cycle Period : An agreed period of time between the ISP and school, during this time the ISP provides internet service to a school. At the end of this period, the ISP is graded on their service perfomance and either compensated in crypto or a new service provider is automatically chosen by a smart contract function.
-      - Amount Needed to Fund Additional School: To minimize internet service interuptions in schools. X amount of cypto needs to accumulate in a smart contract before a new ISP agreemenent is automatically triggered. For example, to engange a new ISP 6 months of minimum funding should be available before an ISP is engaged.
-      - School Prioritazation Factors: How does the Dapp know which school to connect next if funds are available? In the current version of this Dapp population is used as the determining factor, future iterations will account for other factors such as location and target more resource poor areas.
+  - Cycle Period : An agreed period of time between the ISP and school, during this time the ISP provides internet service to a school. At the end of this period, the ISP is graded on their service perfomance and either compensated in crypto or a new service provider is automatically chosen by a smart contract function.
+  - Amount Needed to Fund Additional School: To minimize internet service interuptions in schools. X amount of cypto needs to accumulate in a smart contract before a new ISP agreemenent is automatically triggered. For example, to engange a new ISP 6 months of minimum funding should be available before an ISP is engaged.
+  - School Prioritazation Factors: How does the Dapp know which school to connect next if funds are available? In the current version of this Dapp population is used as the determining factor, future iterations will account for other factors such as location and target more resource poor areas.
 
 <h3 name="Assumptions">Assumptions</h3>
 
