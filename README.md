@@ -16,6 +16,7 @@
    - [How To Use](#HowToUse)
    - [Tech Stack and Tools](#TechStackandTools)
    - [Smart Contract Architecture](#SmartContractArchitecture)
+   - [Progress](#Progress)
    - [Improvements](#Improvements)
 
 3. [Thanks](#Thanks)
@@ -27,7 +28,7 @@
     - git clone https://github.com/Christopher-I/UNICEFConnectKids
     - cd UNICEFConnectKids
     - npm run i
-    - \$ npm run dev
+    - $ npm run dev
 
 <h2 name="Documentation">Documentation</h2>
 
@@ -154,6 +155,28 @@ OR
 
 - ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent by smart contracts at the end of each cycle. The controller of this contract should be a representative of the ISP.
 
+<h3 name="Progress">Progress</h3>
+
+- Back end and smart contracts mvp complete
+
+- Front mvp complete
+
+- Front end and front end connected.
+
+- The Dapp can currently:
+
+  - Accept new ISP and school application metadata and integrate them into its smart contract functions and keeps track of all participants state changes such as which schools are connected and who is the provider.
+
+  - Display school information on a map, organize details of ths ISP/schools that allows users know where service needs could be met.
+
+  - Allow admin to create new country manager smart contracts.
+
+  - Show a chart of daily ISP service performance.
+
+  - Accept donations and displays a transparent record of all transactions that be easily verified on etherscan.
+
+  - Make basic decision on changing ISPs based on perfomance and prioritizing school selection.
+
 <h3 name="Improvements">Improvements</h3>
 
 - Refine smart contract algorithm that automatically switches between different ISP providers based on their offer and reputation.
@@ -181,6 +204,8 @@ OR
 - Improve smart contract upgradability without compromising user experience, safety and performance.
 
 - Add login pages for ISPs and school to manage their application status. ISPs to place bids on different schools.
+
+- Integrate redux to manage state.
 
 <h2 name="Thanks">Thanks</h2>
 
