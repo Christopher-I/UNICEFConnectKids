@@ -34,9 +34,6 @@ var _routes = require("../../routes");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/react_components/modals/ApplyModal.js";
-
-
 var ApplyModal = function (_React$Component) {
 	(0, _inherits3.default)(ApplyModal, _React$Component);
 
@@ -53,42 +50,8 @@ var ApplyModal = function (_React$Component) {
 				title: "Apply",
 				visible: this.props.applyModalVisibility,
 				onOk: this.props.applyModalhandleOk,
-				onCancel: this.props.applyModalhandleCancel,
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 8
-				}
-			}, _react2.default.createElement("div", { style: { marginBottom: 16 }, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 14
-				}
-			}, _react2.default.createElement(_routes.Link, { route: "/applicationForms/schoolApplication", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 15
-				}
-			}, _react2.default.createElement(_antd.Button, { block: true, onClick: true, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 16
-				}
-			}, "Apply As School")), _react2.default.createElement("br", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 20
-				}
-			}), _react2.default.createElement("br", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 21
-				}
-			}), _react2.default.createElement(_routes.Link, { route: "/applicationForms/ISPApplication", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 22
-				}
-			}, _react2.default.createElement(_antd.Button, { block: true, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 23
-				}
-			}, "Apply As ISP"))));
+				onCancel: this.props.applyModalhandleCancel
+			}, _react2.default.createElement("div", { style: { marginBottom: 16 } }, _react2.default.createElement(_routes.Link, { route: "/applicationForms/schoolApplication" }, _react2.default.createElement(_antd.Button, { block: true, onClick: true }, "Apply As School")), _react2.default.createElement("br", null), _react2.default.createElement("br", null), _react2.default.createElement(_routes.Link, { route: "/applicationForms/ISPApplication" }, _react2.default.createElement(_antd.Button, { block: true }, "Apply As ISP"))));
 		}
 	}]);
 
@@ -96,4 +59,3 @@ var ApplyModal = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = ApplyModal;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvbW9kYWxzL0FwcGx5TW9kYWwuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJNb2RhbCIsIkJ1dHRvbiIsIkxpbmsiLCJBcHBseU1vZGFsIiwicHJvcHMiLCJhcHBseU1vZGFsVmlzaWJpbGl0eSIsImFwcGx5TW9kYWxoYW5kbGVPayIsImFwcGx5TW9kYWxoYW5kbGVDYW5jZWwiLCJtYXJnaW5Cb3R0b20iLCJDb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQVMsQUFBTzs7QUFDaEIsQUFBUyxBQUFZOzs7Ozs7O0lBRWYsQTs7Ozs7Ozs7Ozs7MkJBQ0ksQUFDUjswQkFDQyxBQUFDO1dBQUQsQUFDTyxBQUNOO2FBQVMsS0FBQSxBQUFLLE1BRmYsQUFFcUIsQUFDcEI7VUFBTSxLQUFBLEFBQUssTUFIWixBQUdrQixBQUNqQjtjQUFVLEtBQUEsQUFBSyxNQUpoQixBQUlzQjs7ZUFKdEI7aUJBQUEsQUFNQztBQU5EO0FBQ0MsSUFERCxrQkFNQyxjQUFBLFNBQUssT0FBTyxFQUFFLGNBQWQsQUFBWSxBQUFnQjtlQUE1QjtpQkFBQSxBQUNDO0FBREQ7c0JBQ0MsQUFBQyw4QkFBSyxPQUFOLEFBQWE7ZUFBYjtpQkFBQSxBQUNDO0FBREQ7c0JBQ0MsQUFBQyw4QkFBTyxPQUFSLE1BQWMsU0FBZDtlQUFBO2lCQUFBO0FBQUE7TUFGRixBQUNDLEFBQ0MsQUFJRDs7ZUFBQTtpQkFORCxBQU1DLEFBQ0E7QUFEQTtBQUFBOztlQUNBO2lCQVBELEFBT0MsQUFDQTtBQURBO0FBQUEsdUJBQ0EsQUFBQyw4QkFBSyxPQUFOLEFBQWE7ZUFBYjtpQkFBQSxBQUNDO0FBREQ7c0JBQ0MsQUFBQyw4QkFBTyxPQUFSO2VBQUE7aUJBQUE7QUFBQTtNQWhCSixBQUNDLEFBTUMsQUFRQyxBQUNDLEFBS0o7Ozs7O0VBdkJ1QixnQkFBTSxBLEFBMEIvQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJBcHBseU1vZGFsLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jaHJpcy9Eb2N1bWVudHMvQmxvY2tjaGFpblByb2plY3RzL1VuaWNlZi9jb25uZWN0S2lkc1VuaWNlZiJ9

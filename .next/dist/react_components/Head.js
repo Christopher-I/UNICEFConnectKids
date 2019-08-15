@@ -34,9 +34,6 @@ var _head2 = _interopRequireDefault(_head);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/react_components/Head.js";
-
-
 var CustomHead = function (_React$Component) {
 	(0, _inherits3.default)(CustomHead, _React$Component);
 
@@ -49,18 +46,9 @@ var CustomHead = function (_React$Component) {
 	(0, _createClass3.default)(CustomHead, [{
 		key: "render",
 		value: function render() {
-			return _react2.default.createElement(_head2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 7
-				}
-			}, _react2.default.createElement("link", {
+			return _react2.default.createElement(_head2.default, null, _react2.default.createElement("link", {
 				rel: "stylesheet",
-				href: "https://cdnjs.cloudflare.com/ajax/libs/antd/3.17.0/antd.min.css",
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 8
-				}
+				href: "https://cdnjs.cloudflare.com/ajax/libs/antd/3.17.0/antd.min.css"
 			}));
 		}
 	}]);
@@ -69,4 +57,3 @@ var CustomHead = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = CustomHead;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvSGVhZC5qcyJdLCJuYW1lcyI6WyJyZWFjdCIsIkhlYWQiLCJDdXN0b21IZWFkIiwiUmVhY3QiLCJDb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQU87Ozs7Ozs7OztJQUVELEE7Ozs7Ozs7Ozs7OzJCQUNJLEFBQ1I7MEJBQ0MsQUFBQzs7ZUFBRDtpQkFBQSxBQUNDO0FBREQ7QUFBQSxJQUFBO1NBQ0MsQUFDSyxBQUNKO1VBRkQsQUFFTTs7ZUFGTjtpQkFGRixBQUNDLEFBQ0MsQUFNRjtBQU5FO0FBQ0M7Ozs7O0VBTG9CLGdCQUFNLEEsQUFhL0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoiSGVhZC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY2hyaXMvRG9jdW1lbnRzL0Jsb2NrY2hhaW5Qcm9qZWN0cy9VbmljZWYvY29ubmVjdEtpZHNVbmljZWYifQ==

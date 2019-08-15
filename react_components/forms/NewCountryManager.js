@@ -58,11 +58,7 @@ class RegistrationForm extends React.Component {
 
       const addressesOfAllCountryManagers = await GetListOfCountryManagers(
         mainContractAddress
-      );
-
-      console.log(addressesOfAllCountryManagers[0]);
-
-      this.setState({
+      ).this.setState({
         response:
           addressesOfAllCountryManagers[
             addressesOfAllCountryManagers.length - 1

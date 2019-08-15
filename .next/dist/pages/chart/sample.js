@@ -32,9 +32,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/pages/chart/sample.js";
-
-
 var sample = function (_React$Component) {
 	(0, _inherits3.default)(sample, _React$Component);
 
@@ -72,11 +69,7 @@ var sample = function (_React$Component) {
 				},
 				width: 500,
 				height: 500,
-				options: { maintainAspectRatio: false },
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 7
-				}
+				options: { maintainAspectRatio: false }
 			});
 		}
 	}]);
@@ -85,4 +78,3 @@ var sample = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = sample;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2NoYXJ0L3NhbXBsZS5qcyJdLCJuYW1lcyI6WyJMaW5lIiwiUmVhY3QiLCJzYW1wbGUiLCJsYWJlbHMiLCJkYXRhc2V0cyIsImxhYmVsIiwiZGF0YSIsImJhY2tncm91bmRDb2xvciIsImJvcmRlckNvbG9yIiwiYm9yZGVyV2lkdGgiLCJtYWludGFpbkFzcGVjdFJhdGlvIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQVM7O0FBQ1QsQUFBTzs7Ozs7Ozs7O0lBRUQsQTs7Ozs7Ozs7Ozs7MkJBQ0ksQUFDUjswQkFDQyxBQUFDOzthQUVTLENBQUEsQUFDUCxjQURPLEFBRVAsY0FGTyxBQUdQLGNBSE8sQUFJUCxjQUpPLEFBS1AsY0FOSSxBQUNHLEFBTVAsQUFFRDs7YUFDQyxBQUNRLEFBQ1A7WUFBTSxDQUFBLEFBQUMsSUFBRCxBQUFLLElBQUwsQUFBUyxHQUFULEFBQVksR0FBWixBQUFlLEdBRnRCLEFBRU8sQUFBa0IsQUFDeEI7dUJBQWlCLENBSGxCLEFBR2tCLEFBQUMsQUFDbEI7bUJBQWEsQ0FKZCxBQUljLEFBQUMsQUFDZDttQkFOUSxBQUNULEFBS2M7QUFMZCxBQUNDLE1BRlE7YUFRVCxBQUNRLEFBQ1A7WUFBTSxDQUFBLEFBQUMsR0FBRCxBQUFJLElBQUosQUFBUSxJQUFSLEFBQVksSUFBWixBQUFnQixJQUZ2QixBQUVPLEFBQW9CLEFBQzFCO3VCQUFpQixDQUhsQixBQUdrQixBQUFDLEFBQ2xCO21CQUFhLENBSmQsQUFJYyxBQUFDLEFBQ2Q7bUJBYlEsQUFRVCxBQUtjO0FBTGQsQUFDQzthQU1ELEFBQ1EsQUFDUDtZQUFNLENBQUEsQUFBQyxJQUFELEFBQUssSUFBTCxBQUFTLElBQVQsQUFBYSxJQUFiLEFBQWlCLElBRnhCLEFBRU8sQUFBcUIsQUFDM0I7dUJBQWlCLENBSGxCLEFBR2tCLEFBQUMsQUFDbEI7bUJBQWEsQ0FKZCxBQUljLEFBQUMsQUFDZDttQkE5QkosQUFDTyxBQVNLLEFBZVQsQUFLYyxBQUloQjtBQVRFLEFBQ0M7QUF6QkcsQUFDTDtXQUZGLEFBa0NRLEFBQ1A7WUFuQ0QsQUFtQ1MsQUFDUjthQUFTLEVBQUUscUJBcENaLEFBb0NVLEFBQXVCOztlQXBDakM7aUJBREQsQUFDQyxBQXVDRDtBQXZDQztBQUNDLElBREQ7Ozs7O0VBSGtCLGdCQUFNLEEsQUE2QzNCOztrQkFBQSxBQUFlIiwiZmlsZSI6InNhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY2hyaXMvRG9jdW1lbnRzL0Jsb2NrY2hhaW5Qcm9qZWN0cy9VbmljZWYvY29ubmVjdEtpZHNVbmljZWYifQ==

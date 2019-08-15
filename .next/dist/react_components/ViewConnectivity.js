@@ -74,9 +74,6 @@ var _getContractSummary = require("../ethereum/deployedContractCalls/getContract
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "/Users/chris/Documents/BlockchainProjects/Unicef/connectKidsUnicef/react_components/ViewConnectivity.js";
-
-
 //define extract child properties
 var Header = _antd.Layout.Header,
     Content = _antd.Layout.Content,
@@ -253,134 +250,25 @@ var ViewConnectivity = function (_React$Component) {
 		value: function render() {
 			var _this4 = this;
 
-			return _react2.default.createElement(_antd.Layout, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 138
-				}
-			}, _react2.default.createElement("div", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 139
-				}
-			}, " ", _react2.default.createElement(Content, { style: { padding: "25px 50px" }, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 141
-				}
-			}, _react2.default.createElement("div", {
+			return _react2.default.createElement(_antd.Layout, null, _react2.default.createElement("div", null, " ", _react2.default.createElement(Content, { style: { padding: "25px 50px" } }, _react2.default.createElement("div", {
 				style: {
 					background: "#fff",
 					padding: 10,
 					height: 190
-				},
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 142
 				}
-			}, _react2.default.createElement(_antd.Row, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 149
-				}
-			}, _react2.default.createElement(_antd.Col, { span: 22, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 150
-				}
-			}, _react2.default.createElement("div", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 151
-				}
-			}, _react2.default.createElement("h2", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 152
-				}
-			}, this.state.countryName), "Connected Schools:", this.state.connectedSchools, _react2.default.createElement(_antd.Divider, { type: "vertical", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 155
-				}
-			}), "Total Number of Schools:", " ", this.state.TotalNumberofSchools, _react2.default.createElement(_antd.Divider, { type: "vertical", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 158
-				}
-			}), _react2.default.createElement(_antd.Progress, {
+			}, _react2.default.createElement(_antd.Row, null, _react2.default.createElement(_antd.Col, { span: 22 }, _react2.default.createElement("div", null, _react2.default.createElement("h2", null, this.state.countryName), "Connected Schools:", this.state.connectedSchools, _react2.default.createElement(_antd.Divider, { type: "vertical" }), "Total Number of Schools:", " ", this.state.TotalNumberofSchools, _react2.default.createElement(_antd.Divider, { type: "vertical" }), _react2.default.createElement(_antd.Progress, {
 				type: "circle",
 				strokeColor: {
 					"0%": "#108ee9",
 					"100%": "#87d068"
 				},
 				percent: Math.round(this.state.percentageOfConnectedSchool),
-				width: 80,
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 159
-				}
-			}), _react2.default.createElement(_antd.Divider, { type: "vertical", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 171
-				}
-			}), "Total Student Population:", this.state.population, _react2.default.createElement(_antd.Divider, { type: "vertical", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 174
-				}
-			}), "Country ETH Address:", " ", _react2.default.createElement(_routes.Link, {
-				route: "https://rinkeby.etherscan.io/address/" + _ListofSmartContractAddresses.countryManagerAddress,
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 176
-				}
-			}, _react2.default.createElement("a", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 179
-				}
-			}, _ListofSmartContractAddresses.countryManagerAddress))), _react2.default.createElement("br", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 182
-				}
-			}), _react2.default.createElement("div", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 183
-				}
-			}, "Funding Needed to Connect All Schools:", " ", _react2.default.createElement(_antd.Tag, { color: "grey", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 185
-				}
-			}, this.state.FundingNeededtoConnectAllSchools, " ", "Wei"), _react2.default.createElement(_antd.Divider, { type: "vertical", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 192
-				}
-			}), "Funding Received:", _react2.default.createElement(_antd.Tag, { color: "green", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 194
-				}
-			}, this.state.balance, "Wei"), _react2.default.createElement(_antd.Divider, { type: "vertical", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 197
-				}
-			}), "Amount Needed to Fund additional School:", " ", _react2.default.createElement(_antd.Tag, { color: "grey", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 199
-				}
-			}, this.state.AmountNeededtoFundadditionalSchool, " ", "Wei"), "Current Internet Provider:", " ", _react2.default.createElement(_routes.Link, {
-				route: "https://rinkeby.etherscan.io/address/" + this.state.currentISPNameAddress,
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 207
-				}
-			}, _react2.default.createElement("a", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 212
-				}
-			}, this.state.currentISPName)))), _react2.default.createElement(_antd.Col, { span: 2, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 217
-				}
-			}, "Enter Amount", _react2.default.createElement(_antd.Input, {
+				width: 80
+			}), _react2.default.createElement(_antd.Divider, { type: "vertical" }), "Total Student Population:", this.state.population, _react2.default.createElement(_antd.Divider, { type: "vertical" }), "Country ETH Address:", " ", _react2.default.createElement(_routes.Link, {
+				route: "https://rinkeby.etherscan.io/address/" + _ListofSmartContractAddresses.countryManagerAddress
+			}, _react2.default.createElement("a", null, _ListofSmartContractAddresses.countryManagerAddress))), _react2.default.createElement("br", null), _react2.default.createElement("div", null, "Funding Needed to Connect All Schools:", " ", _react2.default.createElement(_antd.Tag, { color: "grey" }, this.state.FundingNeededtoConnectAllSchools, " ", "Wei"), _react2.default.createElement(_antd.Divider, { type: "vertical" }), "Funding Received:", _react2.default.createElement(_antd.Tag, { color: "green" }, this.state.balance, "Wei"), _react2.default.createElement(_antd.Divider, { type: "vertical" }), "Amount Needed to Fund additional School:", " ", _react2.default.createElement(_antd.Tag, { color: "grey" }, this.state.AmountNeededtoFundadditionalSchool, " ", "Wei"), "Current Internet Provider:", " ", _react2.default.createElement(_routes.Link, {
+				route: "https://rinkeby.etherscan.io/address/" + this.state.currentISPNameAddress
+			}, _react2.default.createElement("a", null, this.state.currentISPName)))), _react2.default.createElement(_antd.Col, { span: 2 }, "Enter Amount", _react2.default.createElement(_antd.Input, {
 				placeholder: "Wei",
 				style: { width: "110px" },
 				value: this.state.donationAmount,
@@ -388,97 +276,22 @@ var ViewConnectivity = function (_React$Component) {
 					return _this4.setState({
 						donationAmount: event.target.value
 					});
-				},
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 219
 				}
-			}), _react2.default.createElement("br", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 230
-				}
-			}), _react2.default.createElement("br", {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 231
-				}
-			}), _react2.default.createElement(_antd.Button, {
+			}), _react2.default.createElement("br", null), _react2.default.createElement("br", null), _react2.default.createElement(_antd.Button, {
 				type: "primary",
 				style: { width: "110px" },
 				onClick: this.sendDonationToContract,
-				loading: this.state.donationButtonLoading,
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 232
-				}
-			}, "Donate"))), " ")), _react2.default.createElement(Content, { style: { padding: "0 50px" }, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 246
-				}
-			}, _react2.default.createElement("div", {
+				loading: this.state.donationButtonLoading
+			}, "Donate"))), " ")), _react2.default.createElement(Content, { style: { padding: "0 50px" } }, _react2.default.createElement("div", {
 				style: {
 					background: "#fff",
 					padding: 24,
 					minHeight: 500
-				},
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 247
 				}
-			}, _react2.default.createElement(_antd.Row, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 254
-				}
-			}, _react2.default.createElement(_antd.Col, { span: 10, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 255
-				}
-			}, _react2.default.createElement(_NigeriaMap2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 256
-				}
-			})), _react2.default.createElement(_antd.Col, { span: 14, __source: {
-					fileName: _jsxFileName,
-					lineNumber: 259
-				}
-			}, _react2.default.createElement(_antd.Tabs, {
+			}, _react2.default.createElement(_antd.Row, null, _react2.default.createElement(_antd.Col, { span: 10 }, _react2.default.createElement(_NigeriaMap2.default, null)), _react2.default.createElement(_antd.Col, { span: 14 }, _react2.default.createElement(_antd.Tabs, {
 				defaultActiveKey: "1",
-				onChange: callback,
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 260
-				}
-			}, _react2.default.createElement(TabPane, { tab: "List Of Schools", key: "1", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 264
-				}
-			}, _react2.default.createElement(_SchoolTable2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 265
-				}
-			})), _react2.default.createElement(TabPane, { tab: "List Of ISPs", key: "2", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 267
-				}
-			}, _react2.default.createElement(_ISPTable2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 268
-				}
-			})), _react2.default.createElement(TabPane, { tab: "Transactions", key: "3", __source: {
-					fileName: _jsxFileName,
-					lineNumber: 270
-				}
-			}, _react2.default.createElement(_TransactionsTable2.default, {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 271
-				}
-			})))))))));
+				onChange: callback
+			}, _react2.default.createElement(TabPane, { tab: "List Of Schools", key: "1" }, _react2.default.createElement(_SchoolTable2.default, null)), _react2.default.createElement(TabPane, { tab: "List Of ISPs", key: "2" }, _react2.default.createElement(_ISPTable2.default, null)), _react2.default.createElement(TabPane, { tab: "Transactions", key: "3" }, _react2.default.createElement(_TransactionsTable2.default, null)))))))));
 		}
 	}]);
 
@@ -486,4 +299,3 @@ var ViewConnectivity = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = ViewConnectivity;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlYWN0X2NvbXBvbmVudHMvVmlld0Nvbm5lY3Rpdml0eS5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkxheW91dCIsIlJvdyIsIkNvbCIsIkJ1dHRvbiIsIlRhYnMiLCJEaXZpZGVyIiwiQnJlYWRjcnVtYiIsIlByb2dyZXNzIiwiSW5wdXQiLCJUYWciLCJMaXN0T2ZTY2hvb2xzIiwiTGlzdE9mSVNQcyIsIk5pZ2VyaWFNYXAiLCJMaXN0T2ZUcmFuc2FjdGlvbnMiLCJTZW5kRG9uYXRpb24iLCJjb3VudHJ5TWFuYWdlckFkZHJlc3MiLCJMaW5rIiwiUm91dGVyIiwiR2V0TGlzdE9mQ291bnRyeU1hbmFnZXJzIiwiR2V0U3VtbWFyeU9mQWxsU2Nob29sc0luQ291bnRyeSIsIkdldENvdW50cnlNYW5hZ2VyU3VtbWFyeSIsIkdldFNjaG9vbFN1bW1hcnkiLCJtYWluQ29udHJhY3RBZGRyZXNzIiwiSGVhZGVyIiwiQ29udGVudCIsIkZvb3RlciIsIlRhYlBhbmUiLCJjYWxsYmFjayIsImtleSIsImNvbnNvbGUiLCJsb2ciLCJWaWV3Q29ubmVjdGl2aXR5Iiwic3RhdGUiLCJUb3RhbE51bWJlcm9mU2Nob29scyIsIkZ1bmRpbmdOZWVkZWR0b0Nvbm5lY3RBbGxTY2hvb2xzIiwiRnVuZGluZ1JlY2VpdmVkIiwiQW1vdW50TmVlZGVkdG9GdW5kYWRkaXRpb25hbFNjaG9vbCIsInBlcmNlbnRhZ2VPZkNvbm5lY3RlZFNjaG9vbCIsImxvZ2luTW9kYWxWaXNpYmlsaXR5IiwiYXBwbHlNb2RhbFZpc2liaWxpdHkiLCJjb3VudHJ5U2VsZWN0ZWQiLCJiYWxhbmNlIiwiZG9uYXRpb25BbW91bnQiLCJwb3B1bGF0aW9uIiwiY291bnRyeU5hbWUiLCJjdXJyZW50SVNQTmFtZSIsImN1cnJlbnRJU1BOYW1lQWRkcmVzcyIsImRvbmF0aW9uQnV0dG9uTG9hZGluZyIsInNlbmREb25hdGlvblRvQ29udHJhY3QiLCJlIiwicHJldmVudERlZmF1bHQiLCJzZXRTdGF0ZSIsImZldGNoIiwidGhlbiIsInJlcyIsImpzb24iLCJpc0xvYWRlZCIsImxvYWRpbmciLCJyZXN1bHQiLCJlcnJvciIsImNvdW50cnlNYW5hZ2VyTmlnZXJpYSIsImNvdW50cnlNYW5hZ2VyTmlnZXJpYVN1bW1hcnkiLCJTY2hvb2xTdW1tYXJ5IiwiY29ubmVjdGVkU2Nob29scyIsImkiLCJsZW5ndGgiLCJwYXJzZUludCIsInNjaG9vbFN1bW1hcnkiLCJwYWRkaW5nIiwiYmFja2dyb3VuZCIsImhlaWdodCIsIk1hdGgiLCJyb3VuZCIsIndpZHRoIiwiZXZlbnQiLCJ0YXJnZXQiLCJ2YWx1ZSIsIm1pbkhlaWdodCIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUNDLEFBQ0EsQUFDQSxBQUNBLEFBQ0EsQUFDQSxBQUNBLEFBQ0EsQUFDQSxBQUNBOztBQUVELEFBQU8sQUFBbUI7Ozs7QUFDMUIsQUFBTyxBQUFnQjs7OztBQUN2QixBQUFPLEFBQWdCOzs7O0FBQ3ZCLEFBQU8sQUFBd0I7Ozs7QUFDL0IsQUFBTyxBQUFrQjs7OztBQUN6QixBQUFTLEFBQTZCOztBQUN0QyxBQUFTLEFBQU0sQUFBYzs7QUFDN0IsQUFBTyxBQUE4Qjs7OztBQUNyQyxBQUFPLEFBQXFDOzs7O0FBQzVDLEFBQ0MsQUFDQSxBQUNNLEFBQ1AsQUFBUyxBQUEyQjs7Ozs7OztBQUVwQztJQUNRLEEsUyxBQUE0QixhLEFBQTVCO0ksQUFBUSxVQUFvQixBLGFBQXBCLEE7SUFBUyxBLFMsQUFBVyxhLEFBQVg7SUFDakIsQSxVQUFZLEEsVyxBQUFaOztBQUVSLFNBQUEsQUFBUyxTQUFULEFBQWtCLEtBQUssQUFDdEI7U0FBQSxBQUFRLElBQVIsQUFBWSxBQUNaOzs7SUFDSyxBOzs7Ozs7Ozs7Ozs7Ozs7OE5BQ0wsQTt5QkFBUSxBQUNlLEFBQ3RCO3FDQUZPLEFBRTJCLEFBQ2xDO29CQUhPLEFBR1UsQUFDakI7dUNBSk8sQUFJNkIsQUFDcEM7Z0NBTE8sQUFL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aUJBQUEsQUFDQztBQUREO3NCQUNDLGNBQUE7O2lCQUNRLEFBQ00sQUFDWjtjQUZNLEFBRUcsQUFDVDtnQkFKRixBQUNRLEFBR0s7QUFITCxBQUNOOztlQUZGO2lCQUFBLEFBT0M7QUFQRDtBQUNDLHNCQU1BLEFBQUM7O2VBQUQ7aUJBQUEsQUFDQztBQUREO0FBQUEsc0JBQ0MsQUFBQywyQkFBSSxNQUFMLEFBQVc7ZUFBWDtpQkFBQSxBQUNDO0FBREQ7c0JBQ0MsQUFBQzs7ZUFBRDtpQkFGRixBQUNDLEFBQ0MsQUFHRDtBQUhDO0FBQUEsd0JBR0QsQUFBQywyQkFBSSxNQUFMLEFBQVc7ZUFBWDtpQkFBQSxBQUNDO0FBREQ7c0JBQ0MsQUFBQztzQkFBRCxBQUNrQixBQUNqQjtjQUZELEFBRVc7O2VBRlg7aUJBQUEsQUFJQztBQUpEO0FBQ0Msc0JBR0MsY0FBRCxXQUFTLEtBQVQsQUFBYSxtQkFBa0IsS0FBL0IsQUFBbUM7ZUFBbkM7aUJBQUEsQUFDQztBQUREO3NCQUNDLEFBQUM7O2VBQUQ7aUJBTEYsQUFJQyxBQUNDLEFBRUQ7QUFGQztBQUFBLHdCQUVBLGNBQUQsV0FBUyxLQUFULEFBQWEsZ0JBQWUsS0FBNUIsQUFBZ0M7ZUFBaEM7aUJBQUEsQUFDQztBQUREO3NCQUNDLEFBQUM7O2VBQUQ7aUJBUkYsQUFPQyxBQUNDLEFBRUQ7QUFGQztBQUFBLHdCQUVBLGNBQUQsV0FBUyxLQUFULEFBQWEsZ0JBQWUsS0FBNUIsQUFBZ0M7ZUFBaEM7aUJBQUEsQUFDQztBQUREO3NCQUNDLEFBQUM7O2VBQUQ7aUJBdElULEFBQ0MsQUFDQyxBQTJHQyxBQUNDLEFBT0MsQUFLQyxBQUNDLEFBVUMsQUFDQyxBQVVUO0FBVlM7QUFBQTs7Ozs7RUEzT29CLGdCQUFNLEEsQUF3UHJDOztrQkFBQSxBQUFlIiwiZmlsZSI6IlZpZXdDb25uZWN0aXZpdHkuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NocmlzL0RvY3VtZW50cy9CbG9ja2NoYWluUHJvamVjdHMvVW5pY2VmL2Nvbm5lY3RLaWRzVW5pY2VmIn0=

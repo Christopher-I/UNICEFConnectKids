@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var mainContractAddress = exports.mainContractAddress = "0xC554c5596FfD5A92E0Dc93F5F49169abC689544b";
-var countryManagerAddress = exports.countryManagerAddress = "0x8B02F7Fb0DF539A061cA286aF3F687AADDFDBad6";
+var mainContractAddress = exports.mainContractAddress = "0xa9b8D682ac54a81550BF3e4013E1b57eab4770dB";
+var countryManagerAddress = exports.countryManagerAddress = "0xE74993A4e5A94C940bdBcA2DFBF206799737f8cf";
 var owner = exports.owner = "0x2386D2ace73e63Bd93191c88fFc674E6FEc4ef64";
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV0aGVyZXVtL0xpc3RvZlNtYXJ0Q29udHJhY3RBZGRyZXNzZXMuanMiXSwibmFtZXMiOlsibWFpbkNvbnRyYWN0QWRkcmVzcyIsImNvdW50cnlNYW5hZ2VyQWRkcmVzcyIsIm93bmVyIl0sIm1hcHBpbmdzIjoiOzs7OztBQUFPLElBQU0sb0RBQXNCLEFBQTVCLEFBQ1A7QUFBTyxJQUFNLHdEQUNaLEFBRE0sQUFFUDtBQUFPLElBQU0sd0JBQVEsQUFBZCIsImZpbGUiOiJMaXN0b2ZTbWFydENvbnRyYWN0QWRkcmVzc2VzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jaHJpcy9Eb2N1bWVudHMvQmxvY2tjaGFpblByb2plY3RzL1VuaWNlZi9jb25uZWN0S2lkc1VuaWNlZiJ9
