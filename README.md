@@ -84,7 +84,7 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
 <h3 name="HowToUse">How To Use</h3>
 
-[Quick Instructional Video](#ScopeandOverview)
+[Quick Instructional Video](https://www.youtube.com/watch?v=Kk1J_WwTgGg)
 
 OR
 
@@ -129,6 +129,10 @@ OR
 - Make donation
 
   - In the overview page, enter and amount into the donation section and click enter and a successful transaction, the transaction information will be displayed in the accounting table on the same page.
+
+- View Connectivity
+
+  - Click on on details on the right-most side of the School tab on the home page.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
