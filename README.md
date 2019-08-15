@@ -167,7 +167,7 @@ OR
 
   - Accept new ISP and school application metadata and integrate them into its smart contract functions and keeps track of all participants state changes such as which schools are connected and who is the provider.
 
-  - Display school information on a map, organize details of ths ISP/schools that allows users know where service needs could be met.
+  - Display connectivity information on a map, organize details of ths ISP/schools that allows users know where service needs could be met.
 
   - Allow admin to create new country manager smart contracts.
 
