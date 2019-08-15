@@ -24,10 +24,10 @@
 
 <h2 name="Installation">Installation</h2>
 
-    - git clone https://github.com/Christopher-I/UNICEFConnectKids
-    - cd UNICEFConnectKids
-    - npm run i
-    - $ npm run dev
+-   git clone https://github.com/Christopher-I/UNICEFConnectKids
+-   cd UNICEFConnectKids
+-   npm run i
+-   \$ npm run dev
 
 <h2 name="Documentation">Documentation</h2>
 
@@ -35,19 +35,19 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
 <h3 name="ScopeandOverview">Scope and Overview</h3>
 
-    - Country: Nigeria.
+-   Country: Nigeria.
 
-    - Participants: The General Public / Donors, ISPs and Schools.
+-   Participants: The General Public / Donors, ISPs and Schools.
 
-    - Sample Size : 3 schools and 3 ISPs.
+-   Sample Size : 3 schools and 3 ISPs.
 
-    - Important Variables
+-   Important Variables
 
-        Cycle Period : An agreed period of time between the ISP and school, during this time the ISP provides internet service to a school. At the end of this period, the ISP is graded on their Internet service perfomance and either compensated in crypto or a new service provider is automatically chosen by a smart contract function.
+        Cycle Period : An agreed period of time between the ISP and school, during this time the ISP provides internet service to a school. At the end of this period, the ISP is graded on their service perfomance and either compensated in crypto or a new service provider is automatically chosen by a smart contract function.
 
         Amount Needed to Fund Additional School: To minimize internet service interuptions in schools. X amount of cypto needs to accumulate in a smart contract before a new ISP agreemenent is automatically triggered. For example, to engange a new ISP 6 months of minimum funding should be available before an ISP is engaged.
 
-        ** School Prioritazation Factors: How does the Dapp know which school to connect next if funds are available? In the current version of this Dapp population is used as the determining factor, future iterations will account for other factors such as location and target more resource poor areas.
+        School Prioritazation Factors: How does the Dapp know which school to connect next if funds are available? In the current version of this Dapp population is used as the determining factor, future iterations will account for other factors such as location and target more resource poor areas.
 
 <h3 name="Assumptions">Assumptions</h3>
 
@@ -55,7 +55,7 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     - Payments to ISPs are in ETH(Wei).
 
-    - To build a truly self-sustaining Dapp, ISPs and schools will need accept to the terms and conditions that the Dapp requires to make decisions.
+    - To build a truly self-sustaining Dapp, ISPs and schools will need to digitally sign a terms and conditions agreement that the Dapp requires to make decisions such as choosing terminating the contract of a poorly performing ISP.
 
     - Data Source: All data connectivity information and crypto-currency transctions used in Dapp are retrieved from the ethereum blockchain.
 
@@ -67,13 +67,13 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
     - ISPs and Schools apply to be part of the Dapp and are approved by an admin (to prevent spamming of the network and ensure all participants are real).
 
-    - Participants can use metamask, future iterations will not require this.
+    - Participants can use metamask, future iterations allow any one with a web browser to access the platform without the need of a wallet.
 
     - Transactions and daily connectivity data is stored on the ethereum blockchain.
 
-    - Dapp automatically manages the selection of ISP providers and the prioritization of schools to receive internet connection.
+    - Dapp automatically manages the selection of ISP providers and the prioritization of schools to receive service.
 
-    - On initial launch, by default the country manager smart contract picks the first school and ISP applicants and then at the end of a cycle period, ISP providers are chosen based on merit and schools based on population.
+    - On initial launch, by default the country manager smart contract picks the first school and ISP applicants and then at the end of the first cycle period, ISP providers are chosen based on merit and schools based on population. This is designed this way to encourage early adoption of the Dapp.
 
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
@@ -147,13 +147,13 @@ OR
 
     - The Ethereum Alarm Clock is a service that allows scheduling transactions to be executed at a later time on the ethereum blockchain- Eth alarm clock website. This will be used to safely make calls to the smart contracts at the end of each cycle.
 
-    - Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts.
+    - Main Smart Contract: It oversees the creation and managment of 'country manager' smart contracts and sets important overeaching varaibles such as cycle period and minimum perfomance requirement of ISPs.
 
     - Country Manager Contract: It oversees the creation and management of ISP and school smart contracts. It also keeps a record of all financial and data connectivity information within a country.
 
-    - School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract.
+    - School Contract : Defines the identity of each school on the platform and sends connectivity information to its overseeing country manager smart contract. This contract owner can also be an IOT device.
 
-     - ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent my smart contracts at the end of each cycle. The controller of this contract should be a representative of the ISP.
+     - ISP Contract : Defines the identity of each ISP on the platform and sends connectivity information to its overseeing country manager smart contract. It also receives funds sent by smart contracts at the end of each cycle. The controller of this contract should be a representative of the ISP.
 
 <h3 name="Improvements">Improvements</h3>
 
