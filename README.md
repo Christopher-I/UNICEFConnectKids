@@ -156,25 +156,29 @@ OR
 
 <h3 name="Progress">Progress</h3>
 
-- Back end and smart contracts mvp complete
-
-- Front mvp complete
+- Working back and front end.
 
 - Front end and front end connected.
 
-- The Dapp can currently:
+- Details:
 
-  - Accept new ISP and school application metadata and integrate them into its smart contract functions and keeps track of all participants state changes such as which schools are connected and who is the provider.
+  - Users can see a list of countries
 
-  - Display connectivity information on a map, organize details of ths ISP/schools that allows users know where service needs could be met.
+  - Users can select a specific country and view the schools related to the selected item.
 
-  - Allow admin to create new country manager smart contracts.
+  - Users can view the schools that are connected and not connected for that country.
 
-  - Show a chart of daily ISP service performance.
+  - Users can see the status of that country (e.g. if donors have provided funding, if ISPs are engaged, number of schools connected and not connected etc.)
+
+  - Users can create and upload new ISP and school application metadata .
+
+  - Users can view connectivity information on a map.
+
+  - Admin can create new country manager smart contracts.
+
+  - Users can view a chart of daily ISP service performance.
 
   - Accept donations and displays a transparent record of all transactions that be easily verified on etherscan.
-
-  - Make basic decision on changing ISPs based on perfomance and prioritizing school selection.
 
 <h3 name="Improvements">Improvements</h3>
 
