@@ -105,8 +105,7 @@ OR
 
 - Deploy a new country manager
 
-  -return to the root folder of the repo
-
+  - return to the root folder of the repo
   - \$ npm run dev
   - open http://localhost:3000/ in your browser
   - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
