@@ -41,7 +41,9 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 - Important Variables
 
   - Cycle Period : An agreed period of time between the ISP and school, during this time the ISP provides internet service to a school. At the end of this period, the ISP is graded on their service perfomance and either compensated in crypto or a new service provider is automatically chosen by a smart contract function.
+
   - Amount Needed to Fund Additional School: To minimize internet service interuptions in schools. X amount of cypto needs to accumulate in a smart contract before a new ISP agreemenent is automatically triggered. For example, to engange a new ISP 6 months of minimum funding should be available before an ISP is engaged.
+
   - School Prioritazation Factors: How does the Dapp know which school to connect next if funds are available? In the current version of this Dapp population is used as the determining factor, future iterations will account for other factors such as location and target more resource poor areas.
 
 <h3 name="Assumptions">Assumptions</h3>
@@ -49,7 +51,7 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 - All important variables listed in the scope and overview section can temporarily be manipulated from an Admin console . After further testing and gathering reliable information, these variables can be hard coded into the smart contracts.
 - Payments to ISPs are in ETH(Wei).
 
-- To build a truly self-sustaining Dapp, ISPs and schools will need to digitally sign a terms and conditions agreement that the Dapp requires to make decisions such as choosing terminating the contract of a poorly performing ISP.
+- To build a truly self-sustaining Dapp, ISPs and schools will need to digitally sign a terms and conditions agreement that the Dapp requires to make decisions such as prioritizing schools for service provision or terminating the contract of a poorly performing ISP.
 
 - Data Source: All data connectivity information and crypto-currency transctions used in Dapp are retrieved from the ethereum blockchain.
 
@@ -66,6 +68,8 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 - Transactions and daily connectivity data is stored on the ethereum blockchain.
 
 - Dapp automatically manages the selection of ISP providers and the prioritization of schools to receive service.
+
+- An ISP can dispute a report of its performance.
 
 - On initial launch, by default the country manager smart contract picks the first school and ISP applicants and then at the end of the first cycle period, ISP providers are chosen based on merit and schools based on population. This is designed this way to encourage early adoption of the Dapp.
 
@@ -115,7 +119,9 @@ OR
   - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
 
     - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
+
     - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
+
     - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
 
   - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
