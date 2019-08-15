@@ -24,10 +24,10 @@
 
 <h2 name="Installation">Installation</h2>
 
-- git clone https://github.com/Christopher-I/UNICEFConnectKids
-- cd UNICEFConnectKids
-- npm run i
-- \$ npm run dev
+        - git clone https://github.com/Christopher-I/UNICEFConnectKids
+        - cd UNICEFConnectKids
+        - npm run i
+        - \$ npm run dev
 
 <h2 name="Documentation">Documentation</h2>
 
@@ -71,59 +71,58 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
 <h3 name="AdditionalMechanisms">Additional Mechanisms</h3>
 
-    -At the end of every cycle period 'X days', an ETH alarm clock (https://www.ethereum-alarm-clock.com/) automatically triggers certain solidity functions to compute the average daily performace of the ISP provider and subsequently pays the ISP provider based on their perfomance (number of days they achieved the minimum service requirements) OR switch to a different provider if the ISP was unable to meet the minimum requirement at the end of the cycle.
+- At the end of every cycle period 'X days', an ETH alarm clock (https://www.ethereum-alarm-clock.com/) automatically triggers certain solidity functions to compute the average daily performace of the ISP provider and subsequently pays the ISP provider based on their perfomance (number of days they achieved the minimum service requirements) OR switch to a different provider if the ISP was unable to meet the minimum requirement at the end of the cycle.
 
-    - The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of performance. This way the best service providers over time will have a bidding advantage.
+- The current ISP provider is chosen by a bidding system via a smart contract based on quality of service it promises to provide( faster download/upload speeds) and its previous history of performance. This way the best service providers over time will have a bidding advantage.
 
-    - After every succesful grade at the end of cycle, ISP receive 'consistency points' which are a positive factor when bidding for future ISP opportunities.
+- After every succesful grade at the end of cycle, ISP receive 'consistency points' which are a positive factor when bidding for future ISP opportunities.
 
 <h3 name="HowToUse">How To Use</h3>
 
-- [Quick Instructional Video](#ScopeandOverview)
+[Quick Instructional Video](#ScopeandOverview)
 
 OR
 
-- Guidelines
+- Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
 
-        Wallet Settings : This Dapp was designed to work with metamask, so please sign into metamask and ensure you are on the Rinkeby Network.
+- Start
 
-        Start
+  - Clone this repo. Then navigate to the root directory of repo.
+  - \$ npm i
 
-            -   Clone this repo. Then navigate to the root directory of repo.
-            -   $ npm i
+- Deploy a new contract to Rinkeby
 
-        Deploy a new contract to Rinkeby
+  - \$ cd ethereum
+  - \$ node compile && node deploy
+  - Copy main contract address that will be displayed on command line.
+  - \$ touch ListofSmartCOntractAddresses
+  - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
 
-            - $ cd ethereum
-            - $ node compile && node deploy
-            - Copy main contract address that will be displayed on command line.
-            - $ touch ListofSmartCOntractAddresses
-            - Paste main contract address into variable called Main Contract Address ALSO paste your address into the owner address variable, this will be used to access all the smart contracts during the test phase.
+- Deploy a new country manager
 
-        Deploy a new country manager
+  -return to the root folder of the repo
 
-            -return to the root folder of the repo
-            - $ npm run dev
-            - open http://localhost:3000/ in your browser
-            - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
-            - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
-            - $ cd ethereum && touch ListofSmartContractAddressses.
-            - paste the address into the variable called "country manager address".
+  - \$ npm run dev
+  - open http://localhost:3000/ in your browser
+  - Click Log In button at the top right of the menu bar and then click ok when prompted for user name/password(no need to enter any information). You should be automatically redirected to the admin console.
+  - In the section labelled "Add New Country Manager", enter the name of the country(Nigeria) you wish to create and click register. Copy the newly deployed country contract address which will be displayed on the screen below the register button.
+  - \$ cd ethereum && touch ListofSmartContractAddressses.
+  - paste the address into the variable called "country manager address".
 
-        Deploy a new school/ISP contract
+- Deploy a new school/ISP contract
 
-            - open http://localhost:3000/ in your browser
-            - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
+  - open http://localhost:3000/ in your browser
+  - Click apply as School / ISP and completely fill all the information in the forms. It is recommended you use the following school names and locations below as they are already preconfigured to display on the map and are also real schools in Nigeria that are a part of the Unicef program - http://school-mapping.azurewebsites.net/
 
-                - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
-                - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
-                - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
+    - Name: "Holy Trinity Primary School", Population: "enter a number", Location: "Lagos", OwnersAddress: "enter your eth address or any prefrred eth address"
+    - Name: "Garam Primary School", Population:"enter a number", Location:"Kaduna",OwnersAddress:"enter your eth address or any prefrred eth address"
+    - Name: "Glisten Academy", Population:"enter a number", Location:"Abuja",OwnersAddress:"enter your eth address or any prefrred eth address"
 
-            - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
+  - Click register, and the newly deployed schools address will display at bottom of the screen. Return to overview page by clicking the home buttom at the top right corner in the menu. You should all see all the newly created ISP and school information displayed.
 
-        Make donation
+- Make donation
 
-            - In the overview page, enter and amount into the donation section and click enter and a successful transaction, the transaction information will be displayed in the accounting table on the same page.
+  - In the overview page, enter and amount into the donation section and click enter and a successful transaction, the transaction information will be displayed in the accounting table on the same page.
 
 <h3 name="TechStackandTools">Tech Stack and Tools</h3>
 
