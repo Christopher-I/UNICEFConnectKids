@@ -84,7 +84,7 @@ Goal: Create a dapp that manages internet connectivity and transactions for scho
 
 <h3 name="HowToUse">How To Use</h3>
 
-[Quick Instructional Video](https://www.youtube.com/watch?v=Kk1J_WwTgGg)
+[Quick Instructional Video](https://www.youtube.com/watch?v=HZrZe98BbqA&feature=youtu.be)
 
 OR
 
